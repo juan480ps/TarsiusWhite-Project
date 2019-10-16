@@ -1,0 +1,20 @@
+D:\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
+D:\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
+D:\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe
+D:\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.pdb
+D:\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmArticulo.resources
+D:\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPrincipal.resources
+D:\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.Properties.Resources.resources
+D:\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.Cache
+D:\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
+D:\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.pdb
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmArticulo.resources
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPrincipal.resources
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.Properties.Resources.resources
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.cache
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CoreCompileInputs.cache
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
+C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
