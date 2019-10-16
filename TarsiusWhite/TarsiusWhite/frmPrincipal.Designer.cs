@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mnuPrincipal = new System.Windows.Forms.MenuStrip();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,26 +46,26 @@
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockDeArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.stuPrincipal = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.mnuPrincipal.SuspendLayout();
+            this.stuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // mnuPrincipal
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenimientoToolStripMenuItem,
             this.procesosToolStripMenuItem,
             this.comprasToolStripMenuItem,
             this.ventasToolStripMenuItem,
             this.mantenimientoToolStripMenuItem1,
             this.consultasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(691, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnuPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.mnuPrincipal.Name = "mnuPrincipal";
+            this.mnuPrincipal.Size = new System.Drawing.Size(691, 24);
+            this.mnuPrincipal.TabIndex = 0;
+            this.mnuPrincipal.Text = "menuStrip1";
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -104,12 +104,14 @@
             this.categoriasToolStripMenuItem1.Name = "categoriasToolStripMenuItem1";
             this.categoriasToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
             this.categoriasToolStripMenuItem1.Text = "Categorias";
+            this.categoriasToolStripMenuItem1.Click += new System.EventHandler(this.categoriasToolStripMenuItem1_Click);
             // 
             // presentacionesToolStripMenuItem1
             // 
             this.presentacionesToolStripMenuItem1.Name = "presentacionesToolStripMenuItem1";
             this.presentacionesToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
             this.presentacionesToolStripMenuItem1.Text = "Presentaciones";
+            this.presentacionesToolStripMenuItem1.Click += new System.EventHandler(this.presentacionesToolStripMenuItem1_Click);
             // 
             // comprasToolStripMenuItem
             // 
@@ -166,6 +168,7 @@
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -181,20 +184,20 @@
             this.stockDeArticulosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.stockDeArticulosToolStripMenuItem.Text = "Stock de Articulos";
             // 
-            // statusStrip1
+            // stuPrincipal
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 381);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(691, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            this.stuPrincipal.Location = new System.Drawing.Point(0, 381);
+            this.stuPrincipal.Name = "stuPrincipal";
+            this.stuPrincipal.Size = new System.Drawing.Size(691, 22);
+            this.stuPrincipal.TabIndex = 1;
+            this.stuPrincipal.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(77, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(76, 17);
             this.toolStripStatusLabel1.Text = "Tarsius White";
             // 
             // frmPrincipal
@@ -205,18 +208,18 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(691, 403);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.stuPrincipal);
+            this.Controls.Add(this.mnuPrincipal);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.mnuPrincipal;
             this.Name = "frmPrincipal";
             this.Text = "frmMenu";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.mnuPrincipal.ResumeLayout(false);
+            this.mnuPrincipal.PerformLayout();
+            this.stuPrincipal.ResumeLayout(false);
+            this.stuPrincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +227,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip mnuPrincipal;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
@@ -241,7 +244,7 @@
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockDeArticulosToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip stuPrincipal;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

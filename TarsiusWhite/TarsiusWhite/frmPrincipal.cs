@@ -17,11 +17,6 @@ namespace TarsiusWhite
             InitializeComponent();
         }
 
-        private void cleinteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -30,9 +25,25 @@ namespace TarsiusWhite
         private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmArticulo frmarticulo = new frmArticulo();
-            //frmarticulo.MdiParent = this;
             frmarticulo.Show();
+        }
 
+        private void categoriasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmCategoria frmcategoria = new frmCategoria();
+            frmcategoria.Show();
+        }
+
+        private void presentacionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPresentaciones frmpresentaciones = new frmPresentaciones();
+            frmpresentaciones.Show();
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEmpleados frmempleados = new frmEmpleados();
+            frmempleados.Show();
         }
     }
 }

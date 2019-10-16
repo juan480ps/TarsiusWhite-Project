@@ -28,251 +28,251 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabControldd1 = new System.Windows.Forms.TabControl();
-            this.Listado = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Name = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabControldd1.SuspendLayout();
-            this.Listado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.tapMantenimientoPresen = new System.Windows.Forms.TabPage();
+            this.grbMantenimientoPresen = new System.Windows.Forms.GroupBox();
+            this.btnGuardarMantPresen = new System.Windows.Forms.Button();
+            this.btnEditarMantPresen = new System.Windows.Forms.Button();
+            this.btnCancelarMantPresen = new System.Windows.Forms.Button();
+            this.btnNuevoMantPresen = new System.Windows.Forms.Button();
+            this.txtNombreMantPresen = new System.Windows.Forms.TextBox();
+            this.lblNombreMantPresen = new System.Windows.Forms.Label();
+            this.txtDescripcionMantPresen = new System.Windows.Forms.TextBox();
+            this.lblDescripcionMantPresen = new System.Windows.Forms.Label();
+            this.txtCodigoMantPresen = new System.Windows.Forms.TextBox();
+            this.lblCodigoMantPresen = new System.Windows.Forms.Label();
+            this.tapListadoPresen = new System.Windows.Forms.TabPage();
+            this.dgvPresentacionesList = new System.Windows.Forms.DataGridView();
+            this.btnImprimirPresenList = new System.Windows.Forms.Button();
+            this.btnEliminarPresenList = new System.Windows.Forms.Button();
+            this.btnBuscarPresenList = new System.Windows.Forms.Button();
+            this.txtNombrePresenList = new System.Windows.Forms.TextBox();
+            this.lblNombrePresenList = new System.Windows.Forms.Label();
+            this.tbcPresentaciones = new System.Windows.Forms.TabControl();
+            this.lblPresentaciones = new System.Windows.Forms.Label();
+            this.tapMantenimientoPresen.SuspendLayout();
+            this.grbMantenimientoPresen.SuspendLayout();
+            this.tapListadoPresen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPresentacionesList)).BeginInit();
+            this.tbcPresentaciones.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // tapMantenimientoPresen
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 55);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Presentaciones";
+            this.tapMantenimientoPresen.Controls.Add(this.grbMantenimientoPresen);
+            this.tapMantenimientoPresen.Location = new System.Drawing.Point(4, 22);
+            this.tapMantenimientoPresen.Name = "tapMantenimientoPresen";
+            this.tapMantenimientoPresen.Padding = new System.Windows.Forms.Padding(3);
+            this.tapMantenimientoPresen.Size = new System.Drawing.Size(544, 290);
+            this.tapMantenimientoPresen.TabIndex = 1;
+            this.tapMantenimientoPresen.Text = "Mantenimiento";
+            this.tapMantenimientoPresen.UseVisualStyleBackColor = true;
             // 
-            // tabControldd1
+            // grbMantenimientoPresen
             // 
-            this.tabControldd1.Controls.Add(this.Listado);
-            this.tabControldd1.Controls.Add(this.tabPage2);
-            this.tabControldd1.Location = new System.Drawing.Point(12, 67);
-            this.tabControldd1.Name = "tabControldd1";
-            this.tabControldd1.SelectedIndex = 0;
-            this.tabControldd1.Size = new System.Drawing.Size(552, 316);
-            this.tabControldd1.TabIndex = 8;
+            this.grbMantenimientoPresen.Controls.Add(this.btnGuardarMantPresen);
+            this.grbMantenimientoPresen.Controls.Add(this.btnEditarMantPresen);
+            this.grbMantenimientoPresen.Controls.Add(this.btnCancelarMantPresen);
+            this.grbMantenimientoPresen.Controls.Add(this.btnNuevoMantPresen);
+            this.grbMantenimientoPresen.Controls.Add(this.txtNombreMantPresen);
+            this.grbMantenimientoPresen.Controls.Add(this.lblNombreMantPresen);
+            this.grbMantenimientoPresen.Controls.Add(this.txtDescripcionMantPresen);
+            this.grbMantenimientoPresen.Controls.Add(this.lblDescripcionMantPresen);
+            this.grbMantenimientoPresen.Controls.Add(this.txtCodigoMantPresen);
+            this.grbMantenimientoPresen.Controls.Add(this.lblCodigoMantPresen);
+            this.grbMantenimientoPresen.Location = new System.Drawing.Point(20, 23);
+            this.grbMantenimientoPresen.Name = "grbMantenimientoPresen";
+            this.grbMantenimientoPresen.Size = new System.Drawing.Size(499, 241);
+            this.grbMantenimientoPresen.TabIndex = 0;
+            this.grbMantenimientoPresen.TabStop = false;
+            this.grbMantenimientoPresen.Text = "Articulos";
             // 
-            // Listado
+            // btnGuardarMantPresen
             // 
-            this.Listado.Controls.Add(this.dataGridView1);
-            this.Listado.Controls.Add(this.button3);
-            this.Listado.Controls.Add(this.button2);
-            this.Listado.Controls.Add(this.button1);
-            this.Listado.Controls.Add(this.textBox1);
-            this.Listado.Controls.Add(this.Name);
-            this.Listado.Location = new System.Drawing.Point(4, 22);
-            this.Listado.Name = "Listado";
-            this.Listado.Padding = new System.Windows.Forms.Padding(3);
-            this.Listado.Size = new System.Drawing.Size(544, 290);
-            this.Listado.TabIndex = 0;
-            this.Listado.Text = "Listado";
-            this.Listado.UseVisualStyleBackColor = true;
+            this.btnGuardarMantPresen.Location = new System.Drawing.Point(338, 70);
+            this.btnGuardarMantPresen.Name = "btnGuardarMantPresen";
+            this.btnGuardarMantPresen.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarMantPresen.TabIndex = 15;
+            this.btnGuardarMantPresen.Text = "Guardar";
+            this.btnGuardarMantPresen.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // btnEditarMantPresen
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 79);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(514, 188);
-            this.dataGridView1.TabIndex = 5;
+            this.btnEditarMantPresen.Location = new System.Drawing.Point(338, 114);
+            this.btnEditarMantPresen.Name = "btnEditarMantPresen";
+            this.btnEditarMantPresen.Size = new System.Drawing.Size(75, 23);
+            this.btnEditarMantPresen.TabIndex = 14;
+            this.btnEditarMantPresen.Text = "Editar";
+            this.btnEditarMantPresen.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCancelarMantPresen
             // 
-            this.button3.Location = new System.Drawing.Point(456, 31);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Imprimir";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCancelarMantPresen.Location = new System.Drawing.Point(338, 156);
+            this.btnCancelarMantPresen.Name = "btnCancelarMantPresen";
+            this.btnCancelarMantPresen.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarMantPresen.TabIndex = 13;
+            this.btnCancelarMantPresen.Text = "Cancelar";
+            this.btnCancelarMantPresen.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnNuevoMantPresen
             // 
-            this.button2.Location = new System.Drawing.Point(375, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnNuevoMantPresen.Location = new System.Drawing.Point(338, 29);
+            this.btnNuevoMantPresen.Name = "btnNuevoMantPresen";
+            this.btnNuevoMantPresen.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevoMantPresen.TabIndex = 12;
+            this.btnNuevoMantPresen.Text = "Nuevo";
+            this.btnNuevoMantPresen.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // txtNombreMantPresen
             // 
-            this.button1.Location = new System.Drawing.Point(294, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtNombreMantPresen.Location = new System.Drawing.Point(119, 77);
+            this.txtNombreMantPresen.Name = "txtNombreMantPresen";
+            this.txtNombreMantPresen.Size = new System.Drawing.Size(150, 20);
+            this.txtNombreMantPresen.TabIndex = 9;
             // 
-            // textBox1
+            // lblNombreMantPresen
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 1;
+            this.lblNombreMantPresen.AutoSize = true;
+            this.lblNombreMantPresen.Location = new System.Drawing.Point(28, 80);
+            this.lblNombreMantPresen.Name = "lblNombreMantPresen";
+            this.lblNombreMantPresen.Size = new System.Drawing.Size(44, 13);
+            this.lblNombreMantPresen.TabIndex = 8;
+            this.lblNombreMantPresen.Text = "Nombre";
             // 
-            // Name
+            // txtDescripcionMantPresen
             // 
-            this.Name.AutoSize = true;
-            this.Name.Location = new System.Drawing.Point(29, 34);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(44, 13);
-            this.Name.TabIndex = 0;
-            this.Name.Text = "Nombre";
+            this.txtDescripcionMantPresen.Location = new System.Drawing.Point(119, 117);
+            this.txtDescripcionMantPresen.Name = "txtDescripcionMantPresen";
+            this.txtDescripcionMantPresen.Size = new System.Drawing.Size(150, 20);
+            this.txtDescripcionMantPresen.TabIndex = 5;
             // 
-            // tabPage2
+            // lblDescripcionMantPresen
             // 
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(544, 290);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mantenimiento";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.lblDescripcionMantPresen.AutoSize = true;
+            this.lblDescripcionMantPresen.Location = new System.Drawing.Point(28, 124);
+            this.lblDescripcionMantPresen.Name = "lblDescripcionMantPresen";
+            this.lblDescripcionMantPresen.Size = new System.Drawing.Size(63, 13);
+            this.lblDescripcionMantPresen.TabIndex = 4;
+            this.lblDescripcionMantPresen.Text = "Descripcion";
             // 
-            // groupBox1
+            // txtCodigoMantPresen
             // 
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(20, 23);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(499, 241);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Articulos";
+            this.txtCodigoMantPresen.Location = new System.Drawing.Point(119, 32);
+            this.txtCodigoMantPresen.Name = "txtCodigoMantPresen";
+            this.txtCodigoMantPresen.Size = new System.Drawing.Size(150, 20);
+            this.txtCodigoMantPresen.TabIndex = 3;
             // 
-            // button7
+            // lblCodigoMantPresen
             // 
-            this.button7.Location = new System.Drawing.Point(338, 70);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Guardar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.lblCodigoMantPresen.AutoSize = true;
+            this.lblCodigoMantPresen.Location = new System.Drawing.Point(28, 39);
+            this.lblCodigoMantPresen.Name = "lblCodigoMantPresen";
+            this.lblCodigoMantPresen.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigoMantPresen.TabIndex = 2;
+            this.lblCodigoMantPresen.Text = "Codigo";
             // 
-            // button6
+            // tapListadoPresen
             // 
-            this.button6.Location = new System.Drawing.Point(338, 114);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "Editar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.tapListadoPresen.Controls.Add(this.dgvPresentacionesList);
+            this.tapListadoPresen.Controls.Add(this.btnImprimirPresenList);
+            this.tapListadoPresen.Controls.Add(this.btnEliminarPresenList);
+            this.tapListadoPresen.Controls.Add(this.btnBuscarPresenList);
+            this.tapListadoPresen.Controls.Add(this.txtNombrePresenList);
+            this.tapListadoPresen.Controls.Add(this.lblNombrePresenList);
+            this.tapListadoPresen.Location = new System.Drawing.Point(4, 22);
+            this.tapListadoPresen.Name = "tapListadoPresen";
+            this.tapListadoPresen.Padding = new System.Windows.Forms.Padding(3);
+            this.tapListadoPresen.Size = new System.Drawing.Size(544, 290);
+            this.tapListadoPresen.TabIndex = 0;
+            this.tapListadoPresen.Text = "Listado";
+            this.tapListadoPresen.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // dgvPresentacionesList
             // 
-            this.button5.Location = new System.Drawing.Point(338, 156);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.dgvPresentacionesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPresentacionesList.Location = new System.Drawing.Point(17, 79);
+            this.dgvPresentacionesList.Name = "dgvPresentacionesList";
+            this.dgvPresentacionesList.Size = new System.Drawing.Size(514, 188);
+            this.dgvPresentacionesList.TabIndex = 5;
             // 
-            // button4
+            // btnImprimirPresenList
             // 
-            this.button4.Location = new System.Drawing.Point(338, 29);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Nuevo";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnImprimirPresenList.Location = new System.Drawing.Point(456, 31);
+            this.btnImprimirPresenList.Name = "btnImprimirPresenList";
+            this.btnImprimirPresenList.Size = new System.Drawing.Size(75, 23);
+            this.btnImprimirPresenList.TabIndex = 4;
+            this.btnImprimirPresenList.Text = "Imprimir";
+            this.btnImprimirPresenList.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // btnEliminarPresenList
             // 
-            this.textBox5.Location = new System.Drawing.Point(119, 77);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 20);
-            this.textBox5.TabIndex = 9;
+            this.btnEliminarPresenList.Location = new System.Drawing.Point(375, 30);
+            this.btnEliminarPresenList.Name = "btnEliminarPresenList";
+            this.btnEliminarPresenList.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarPresenList.TabIndex = 3;
+            this.btnEliminarPresenList.Text = "Eliminar";
+            this.btnEliminarPresenList.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // btnBuscarPresenList
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Nombre";
+            this.btnBuscarPresenList.Location = new System.Drawing.Point(294, 30);
+            this.btnBuscarPresenList.Name = "btnBuscarPresenList";
+            this.btnBuscarPresenList.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarPresenList.TabIndex = 2;
+            this.btnBuscarPresenList.Text = "Buscar";
+            this.btnBuscarPresenList.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtNombrePresenList
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtNombrePresenList.Location = new System.Drawing.Point(96, 30);
+            this.txtNombrePresenList.Name = "txtNombrePresenList";
+            this.txtNombrePresenList.Size = new System.Drawing.Size(150, 20);
+            this.txtNombrePresenList.TabIndex = 1;
             // 
-            // label3
+            // lblNombrePresenList
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Descripcion";
+            this.lblNombrePresenList.AutoSize = true;
+            this.lblNombrePresenList.Location = new System.Drawing.Point(29, 34);
+            this.lblNombrePresenList.Name = "lblNombrePresenList";
+            this.lblNombrePresenList.Size = new System.Drawing.Size(44, 13);
+            this.lblNombrePresenList.TabIndex = 0;
+            this.lblNombrePresenList.Text = "Nombre";
             // 
-            // textBox2
+            // tbcPresentaciones
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
-            this.textBox2.TabIndex = 3;
+            this.tbcPresentaciones.Controls.Add(this.tapListadoPresen);
+            this.tbcPresentaciones.Controls.Add(this.tapMantenimientoPresen);
+            this.tbcPresentaciones.Location = new System.Drawing.Point(12, 67);
+            this.tbcPresentaciones.Name = "tbcPresentaciones";
+            this.tbcPresentaciones.SelectedIndex = 0;
+            this.tbcPresentaciones.Size = new System.Drawing.Size(552, 316);
+            this.tbcPresentaciones.TabIndex = 8;
             // 
-            // label2
+            // lblPresentaciones
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Codigo";
+            this.lblPresentaciones.AutoSize = true;
+            this.lblPresentaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPresentaciones.Location = new System.Drawing.Point(12, 9);
+            this.lblPresentaciones.Name = "lblPresentaciones";
+            this.lblPresentaciones.Size = new System.Drawing.Size(356, 55);
+            this.lblPresentaciones.TabIndex = 9;
+            this.lblPresentaciones.Text = "Presentaciones";
             // 
             // frmPresentaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 403);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tabControldd1);
+            this.Controls.Add(this.lblPresentaciones);
+            this.Controls.Add(this.tbcPresentaciones);
             this.Name = "frmPresentaciones";
             this.Text = "frmPresentaciones";
-            this.tabControldd1.ResumeLayout(false);
-            this.Listado.ResumeLayout(false);
-            this.Listado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.tapMantenimientoPresen.ResumeLayout(false);
+            this.grbMantenimientoPresen.ResumeLayout(false);
+            this.grbMantenimientoPresen.PerformLayout();
+            this.tapListadoPresen.ResumeLayout(false);
+            this.tapListadoPresen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPresentacionesList)).EndInit();
+            this.tbcPresentaciones.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,26 +280,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControldd1;
-        private System.Windows.Forms.TabPage Listado;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label Name;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tapMantenimientoPresen;
+        private System.Windows.Forms.GroupBox grbMantenimientoPresen;
+        private System.Windows.Forms.Button btnGuardarMantPresen;
+        private System.Windows.Forms.Button btnEditarMantPresen;
+        private System.Windows.Forms.Button btnCancelarMantPresen;
+        private System.Windows.Forms.Button btnNuevoMantPresen;
+        private System.Windows.Forms.TextBox txtNombreMantPresen;
+        private System.Windows.Forms.Label lblNombreMantPresen;
+        private System.Windows.Forms.TextBox txtDescripcionMantPresen;
+        private System.Windows.Forms.Label lblDescripcionMantPresen;
+        private System.Windows.Forms.TextBox txtCodigoMantPresen;
+        private System.Windows.Forms.Label lblCodigoMantPresen;
+        private System.Windows.Forms.TabPage tapListadoPresen;
+        private System.Windows.Forms.DataGridView dgvPresentacionesList;
+        private System.Windows.Forms.Button btnImprimirPresenList;
+        private System.Windows.Forms.Button btnEliminarPresenList;
+        private System.Windows.Forms.Button btnBuscarPresenList;
+        private System.Windows.Forms.TextBox txtNombrePresenList;
+        private System.Windows.Forms.Label lblNombrePresenList;
+        private System.Windows.Forms.TabControl tbcPresentaciones;
+        private System.Windows.Forms.Label lblPresentaciones;
     }
 }

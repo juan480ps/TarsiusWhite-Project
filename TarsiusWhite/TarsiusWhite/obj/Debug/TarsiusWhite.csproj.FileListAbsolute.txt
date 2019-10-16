@@ -18,3 +18,17 @@ C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\
 C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CoreCompileInputs.cache
 C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.pdb
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csprojAssemblyReference.cache
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmArticulo.resources
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmCategoria.resources
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmEmpleados.resources
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPresentaciones.resources
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPrincipal.resources
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.Properties.Resources.resources
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.cache
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CoreCompileInputs.cache
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb

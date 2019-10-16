@@ -264,7 +264,7 @@
             this.ClientSize = new System.Drawing.Size(595, 396);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControldd1);
-            this.Name = "frmCategoria";
+            this.Text = "frmCategoria";
             this.Text = "frmCategoria";
             this.tabControldd1.ResumeLayout(false);
             this.Listado.ResumeLayout(false);
