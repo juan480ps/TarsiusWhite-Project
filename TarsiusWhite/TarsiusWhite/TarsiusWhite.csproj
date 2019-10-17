@@ -123,6 +123,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClasesTarsius\ClasesTarsius.csproj">
+      <Project>{8aeb2898-d0db-4b85-b2db-3d1cca378426}</Project>
+      <Name>ClasesTarsius</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -11,13 +11,18 @@ using System.Windows.Forms;
 namespace TarsiusWhite
 {
     public partial class frmArticulo : Form
-    {
+    {        
         public frmArticulo()
         {
             InitializeComponent();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }

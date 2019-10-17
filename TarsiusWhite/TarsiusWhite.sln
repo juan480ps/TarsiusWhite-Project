@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TarsiusWhite", "TarsiusWhite\TarsiusWhite.csproj", "{69DF0202-1B70-4A9E-819D-5F4BF1415072}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8AEB2898-D0DB-4B85-B2DB-3D1CCA378426} = {8AEB2898-D0DB-4B85-B2DB-3D1CCA378426}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesTarsius", "ClasesTarsius\ClasesTarsius.csproj", "{8AEB2898-D0DB-4B85-B2DB-3D1CCA378426}"
 EndProject
@@ -24,5 +27,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {150B219C-DE61-4E2D-BA9D-FAD985080831}
 	EndGlobalSection
 EndGlobal

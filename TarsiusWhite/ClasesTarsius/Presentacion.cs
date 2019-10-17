@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TarsiusWhite
+namespace ClasesTarsius
 {
-    class Presentacion
+    public class Presentacion
     {
-        int IdPresentacion;
-        string NombrePresentacion;
-        string DescripcionPresentacion;
+        public int IdPresentacion;
+        public string NombrePresentacion;
+        public string DescripcionPresentacion;
     }
 }

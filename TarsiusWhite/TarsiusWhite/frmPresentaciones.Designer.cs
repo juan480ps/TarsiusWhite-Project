@@ -121,6 +121,7 @@
             this.btnNuevoMantPresen.TabIndex = 12;
             this.btnNuevoMantPresen.Text = "Nuevo";
             this.btnNuevoMantPresen.UseVisualStyleBackColor = true;
+            this.btnNuevoMantPresen.Click += new System.EventHandler(this.btnNuevoMantPresen_Click);
             // 
             // txtNombreMantPresen
             // 
@@ -266,6 +267,7 @@
             this.Controls.Add(this.tbcPresentaciones);
             this.Name = "frmPresentaciones";
             this.Text = "frmPresentaciones";
+            this.Load += new System.EventHandler(this.frmPresentaciones_Load);
             this.tapMantenimientoPresen.ResumeLayout(false);
             this.grbMantenimientoPresen.ResumeLayout(false);
             this.grbMantenimientoPresen.PerformLayout();
