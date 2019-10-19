@@ -60,24 +60,6 @@
     <Compile Include="frmArticulo.Designer.cs">
       <DependentUpon>frmArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCategoria.Designer.cs">
-      <DependentUpon>frmCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmEmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEmpleados.Designer.cs">
-      <DependentUpon>frmEmpleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPresentaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPresentaciones.Designer.cs">
-      <DependentUpon>frmPresentaciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,15 +70,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmArticulo.resx">
       <DependentUpon>frmArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCategoria.resx">
-      <DependentUpon>frmCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEmpleados.resx">
-      <DependentUpon>frmEmpleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPresentaciones.resx">
-      <DependentUpon>frmPresentaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
