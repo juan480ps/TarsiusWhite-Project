@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasesTarsius
 {
-    public class Articulo : Categoria
+    public class Articulo
     {
         public enum _categoria
         {
@@ -25,9 +25,8 @@ namespace ClasesTarsius
         private string codigo;
         private string nombre;
         private string descripcion;
-        private byte[] imagen;
-        private int categoria;
-        private int presentacion;
+        public _categoria categoria { get; set; }
+        public _presentacion presentacion { get; set; }
         private string textoBuscar;
 
         public int Idarticulo
@@ -50,45 +49,16 @@ namespace ClasesTarsius
             get { return descripcion; }
             set { descripcion = value; }
         }
-        public byte[] Imagen
-        {
-            get { return imagen; }
-            set { imagen = value; }
-        }
-        public int Categoria
-        {
-            get { return categoria; }
-            set { categoria = value; }
-        }
-        public int Presentacion
-        {
-            get { return presentacion; }
-            set { presentacion = value; }
-        }
         public string TextoBuscar
         {
             get { return textoBuscar; }
             set { textoBuscar = value; }
         }
 
-        //Constructores
         public Articulo()
         {
 
         }
-
-        public Articulo(int idarticulo, string codigo, string nombre, string descripcion, byte[] imagen, int idcategoria, int idpresentacion, string textobuscar)
-        {
-            this.Idarticulo = idarticulo;
-            this.Codigo = codigo;
-            this.Nombre = nombre;
-            this.Descripcion = descripcion;
-            this.Imagen = imagen;
-            this.Categoria = idcategoria;
-            this.Presentacion = idpresentacion;
-            this.TextoBuscar = textobuscar;
-        }
-
 
         public static List<Articulo> listaArticulos = new List<Articulo>();
 

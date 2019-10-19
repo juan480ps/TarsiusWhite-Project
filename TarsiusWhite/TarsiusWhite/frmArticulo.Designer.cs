@@ -36,10 +36,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.lblImagen = new System.Windows.Forms.Label();
             this.lblPresentacion = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.ptbImagen = new System.Windows.Forms.PictureBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -48,7 +46,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.cboPresentacion = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -118,15 +115,6 @@
             this.txtDescripcion.Size = new System.Drawing.Size(163, 20);
             this.txtDescripcion.TabIndex = 30;
             // 
-            // lblImagen
-            // 
-            this.lblImagen.AutoSize = true;
-            this.lblImagen.Location = new System.Drawing.Point(35, 206);
-            this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(42, 13);
-            this.lblImagen.TabIndex = 33;
-            this.lblImagen.Text = "Imagen";
-            // 
             // lblPresentacion
             // 
             this.lblPresentacion.AutoSize = true;
@@ -145,17 +133,9 @@
             this.lblCategoria.TabIndex = 39;
             this.lblCategoria.Text = "Categoria";
             // 
-            // ptbImagen
-            // 
-            this.ptbImagen.Location = new System.Drawing.Point(83, 192);
-            this.ptbImagen.Name = "ptbImagen";
-            this.ptbImagen.Size = new System.Drawing.Size(163, 50);
-            this.ptbImagen.TabIndex = 40;
-            this.ptbImagen.TabStop = false;
-            // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(245, 485);
+            this.btnLimpiar.Location = new System.Drawing.Point(340, 485);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 46;
@@ -165,7 +145,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(164, 485);
+            this.btnCancelar.Location = new System.Drawing.Point(259, 485);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 45;
@@ -175,7 +155,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(83, 485);
+            this.btnGuardar.Location = new System.Drawing.Point(178, 485);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 44;
@@ -185,7 +165,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(429, 219);
+            this.btnEliminar.Location = new System.Drawing.Point(340, 219);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 49;
@@ -195,7 +175,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(348, 219);
+            this.btnEditar.Location = new System.Drawing.Point(259, 219);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 48;
@@ -205,7 +185,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(267, 219);
+            this.btnAgregar.Location = new System.Drawing.Point(178, 219);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 47;
@@ -243,10 +223,8 @@
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.ptbImagen);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblPresentacion);
-            this.Controls.Add(this.lblImagen);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblNombre);
@@ -258,7 +236,6 @@
             this.Name = "frmArticulo";
             this.Text = "frmArticulo";
             this.Load += new System.EventHandler(this.frmArticulo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,10 +250,8 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.Label lblPresentacion;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.PictureBox ptbImagen;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;

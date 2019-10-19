@@ -32,13 +32,31 @@ namespace TarsiusWhite
             txtCodigo.Enabled = true;
             txtNombre.Enabled = true;
             txtDescripcion.Enabled = true;
-            ptbImagen.Enabled = true;
             cboCategoria.Enabled = true;
             cboPresentacion.Enabled = true;
+            btnGuardar.Enabled = true;
+            btnCancelar.Enabled = true;
+            btnLimpiar.Enabled = true;
 
             btnAgregar.Enabled = false;
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
+        }
+
+        private void bloquearFormulario()
+        {
+            txtCodigo.Enabled = false;
+            txtNombre.Enabled = false;
+            txtDescripcion.Enabled = false;
+            cboCategoria.Enabled = false;
+            cboPresentacion.Enabled = false;
+            btnGuardar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnLimpiar.Enabled = false;
+
+            btnAgregar.Enabled = true;
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
 
         private void limpiarFormulario()
@@ -46,7 +64,6 @@ namespace TarsiusWhite
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
-            ptbImagen.Image.Dispose();
             cboCategoria.SelectedItem = null;
             cboPresentacion.SelectedItem = null;
 
@@ -105,72 +122,44 @@ namespace TarsiusWhite
             art.Codigo = txtCodigo.Text;
             art.Nombre = txtNombre.Text;
             art.Descripcion = txtDescripcion.Text;
-            //art.Imagen = byte[](ptbImagen);
-            art.Categoria = (_categoria)
-            carne.fecha_vencimiento = dtpFechaVencimiento.Value.Date;
-            carne.precio = (double)nudPrecio.Value;
+            art.categoria = (Articulo._categoria)cboCategoria.SelectedItem;
+            art.presentacion = (Articulo._presentacion)cboPresentacion.SelectedItem;
 
-            carne.categoria = (Categoria)cboCategoria.SelectedItem;
-            carne.proveedor = (Proveedor)cboProveedor.SelectedItem;
-
-            if (rbuVacuna.Checked)
-            {
-                carne.tipo_carne = TipoCarne.Vacuna;
-            }
-            else if (rbuPorcina.Checked)
-            {
-                carne.tipo_carne = TipoCarne.Porcina;
-            }
-
-            return carne;
+            return art;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
+        {            
+            Application.Exit();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            limpiarFormulario();
         }
 
         private void frmArticulo_Load(object sender, EventArgs e)
         {
-            ActualizarListaCarnes();
-            cboCategoria.DataSource = Enum.GetValues(typeof(Categoria));
-            cboProveedor.DataSource = Proveedor.ObtenerProveedores();
+            actualizarListadoArticullo();
+            cboCategoria.DataSource = Enum.GetValues(typeof(Articulo._categoria));
+            cboPresentacion.DataSource = Enum.GetValues(typeof(Articulo._presentacion));
             cboCategoria.SelectedItem = null;
-            cboProveedor.SelectedItem = null;
-            BloquearFormulario();
+            cboPresentacion.SelectedItem = null;
+            bloquearFormulario();
         }
 
         private void lstArticulos_Click(object sender, EventArgs e)
         {
-            Carne carne = (Carne)lstCarnes.SelectedItem;
+            Articulo art = (Articulo)lstArticulos.SelectedItem;
 
-            if (carne != null)
+            if (art != null)
             {
-                txtNombre.Text = carne.nombre;
-
-                nudPeso.Value = (decimal)carne.peso;
-                dtpFechaVencimiento.Value = carne.fecha_vencimiento;
-                nudPrecio.Value = (decimal)carne.precio;
-
-                cboCategoria.SelectedItem = carne.categoria;
-                cboProveedor.SelectedItem = carne.proveedor;
-
-                if (carne.tipo_carne == TipoCarne.Porcina)
-                {
-                    rbuPorcina.Checked = true;
-                }
-                else if (carne.tipo_carne == TipoCarne.Vacuna)
-                {
-                    rbuVacuna.Checked = true;
-                }
-
+                txtCodigo.Text = art.Codigo;
+                txtNombre.Text = art.Nombre;
+                txtDescripcion.Text = art.Descripcion;
+                cboCategoria.SelectedItem = art.categoria;
+                cboPresentacion.SelectedItem = art.presentacion;
             }
-
         }
     }
 }
