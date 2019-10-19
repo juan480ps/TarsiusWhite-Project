@@ -6,15 +6,28 @@ using System.Threading.Tasks;
 
 namespace ClasesTarsius
 {
-    class Articulo
+    public class Articulo : Categoria
     {
+        public enum _categoria
+        {
+            ventaLibre,
+            bajoReceta
+        }
+
+        public enum _presentacion
+        {
+            comprimido,
+            pastillaBlanda,
+            jarabe
+        }
+        
         private int idArticulo;
         private string codigo;
         private string nombre;
         private string descripcion;
         private byte[] imagen;
-        private int idCategoria;
-        private int idPresentacion;
+        private int categoria;
+        private int presentacion;
         private string textoBuscar;
 
         public int Idarticulo
@@ -42,15 +55,15 @@ namespace ClasesTarsius
             get { return imagen; }
             set { imagen = value; }
         }
-        public int Idcategoria
+        public int Categoria
         {
-            get { return idCategoria; }
-            set { idCategoria = value; }
+            get { return categoria; }
+            set { categoria = value; }
         }
-        public int Idpresentacion
+        public int Presentacion
         {
-            get { return idPresentacion; }
-            set { idPresentacion = value; }
+            get { return presentacion; }
+            set { presentacion = value; }
         }
         public string TextoBuscar
         {
@@ -71,8 +84,8 @@ namespace ClasesTarsius
             this.Nombre = nombre;
             this.Descripcion = descripcion;
             this.Imagen = imagen;
-            this.Idcategoria = idcategoria;
-            this.Idpresentacion = idpresentacion;
+            this.Categoria = idcategoria;
+            this.Presentacion = idpresentacion;
             this.TextoBuscar = textobuscar;
         }
 

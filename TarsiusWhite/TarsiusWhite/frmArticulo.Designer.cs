@@ -31,24 +31,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lstArticulos = new System.Windows.Forms.ListBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblImagen = new System.Windows.Forms.Label();
             this.lblPresentacion = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.ptbImagen = new System.Windows.Forms.PictureBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.cboPresentacion = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,6 +68,7 @@
             this.lstArticulos.Name = "lstArticulos";
             this.lstArticulos.Size = new System.Drawing.Size(419, 199);
             this.lstArticulos.TabIndex = 18;
+            this.lstArticulos.Click += new System.EventHandler(this.lstArticulos_Click);
             // 
             // lblCodigo
             // 
@@ -78,12 +79,12 @@
             this.lblCodigo.TabIndex = 27;
             this.lblCodigo.Text = "Codigo";
             // 
-            // txtNombre
+            // txtCodigo
             // 
-            this.txtNombre.Location = new System.Drawing.Point(83, 97);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(163, 20);
-            this.txtNombre.TabIndex = 26;
+            this.txtCodigo.Location = new System.Drawing.Point(83, 97);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(163, 20);
+            this.txtCodigo.TabIndex = 26;
             // 
             // lblNombre
             // 
@@ -94,12 +95,12 @@
             this.lblNombre.TabIndex = 29;
             this.lblNombre.Text = "Nombre";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 28;
+            this.txtNombre.Location = new System.Drawing.Point(83, 130);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(163, 20);
+            this.txtNombre.TabIndex = 28;
             // 
             // lblDescripcion
             // 
@@ -110,12 +111,12 @@
             this.lblDescripcion.TabIndex = 31;
             this.lblDescripcion.Text = "Descripcion";
             // 
-            // textBox2
+            // txtDescripcion
             // 
-            this.textBox2.Location = new System.Drawing.Point(83, 159);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 30;
+            this.txtDescripcion.Location = new System.Drawing.Point(83, 159);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(163, 20);
+            this.txtDescripcion.TabIndex = 30;
             // 
             // lblImagen
             // 
@@ -144,27 +145,13 @@
             this.lblCategoria.TabIndex = 39;
             this.lblCategoria.Text = "Categoria";
             // 
-            // pictureBox1
+            // ptbImagen
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(83, 192);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 50);
-            this.pictureBox1.TabIndex = 40;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(339, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 20);
-            this.textBox3.TabIndex = 41;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(339, 130);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 20);
-            this.textBox5.TabIndex = 43;
+            this.ptbImagen.Location = new System.Drawing.Point(83, 192);
+            this.ptbImagen.Name = "ptbImagen";
+            this.ptbImagen.Size = new System.Drawing.Size(163, 50);
+            this.ptbImagen.TabIndex = 40;
+            this.ptbImagen.TabStop = false;
             // 
             // btnLimpiar
             // 
@@ -174,6 +161,7 @@
             this.btnLimpiar.TabIndex = 46;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnCancelar
             // 
@@ -183,6 +171,7 @@
             this.btnCancelar.TabIndex = 45;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -192,6 +181,7 @@
             this.btnGuardar.TabIndex = 44;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
@@ -201,6 +191,7 @@
             this.btnEliminar.TabIndex = 49;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -210,6 +201,7 @@
             this.btnEditar.TabIndex = 48;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -219,6 +211,23 @@
             this.btnAgregar.TabIndex = 47;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // cboCategoria
+            // 
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(340, 100);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(162, 21);
+            this.cboCategoria.TabIndex = 50;
+            // 
+            // cboPresentacion
+            // 
+            this.cboPresentacion.FormattingEnabled = true;
+            this.cboPresentacion.Location = new System.Drawing.Point(340, 130);
+            this.cboPresentacion.Name = "cboPresentacion";
+            this.cboPresentacion.Size = new System.Drawing.Size(162, 21);
+            this.cboPresentacion.TabIndex = 51;
             // 
             // frmArticulo
             // 
@@ -226,29 +235,30 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(546, 531);
+            this.Controls.Add(this.cboPresentacion);
+            this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptbImagen);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblPresentacion);
             this.Controls.Add(this.lblImagen);
             this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lstArticulos);
             this.Controls.Add(this.label1);
             this.Name = "frmArticulo";
             this.Text = "frmArticulo";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,22 +268,22 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lstArticulos;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.Label lblPresentacion;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.PictureBox ptbImagen;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.ComboBox cboPresentacion;
     }
 }

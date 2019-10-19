@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasesTarsius
 {
-    class Categoria
+    public class Categoria
     {
         int IDCategoria;
         string NombreCategoria;

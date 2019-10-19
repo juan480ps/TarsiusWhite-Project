@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace ClasesTarsius
 {
-    public class Presentacion
+    public class Presentacion : Articulo, iPresentacion
     {
-        public int IdPresentacion;
-        public string NombrePresentacion;
-        public string DescripcionPresentacion;
+        public int IdPresentacion { get; set; }
+        public string NombrePresentacion { get; set; }
+        public string DescripcionPresentacion { get; set; }
+        string iPresentacion.tipoPresentacion { get; set; }
+
+        public void obtenerPresentacion()
+        {
+           
+        }
     }
 }
