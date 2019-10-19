@@ -8,10 +8,10 @@ namespace ClasesTarsius
 {
     class Empleado
     {
-        int IdEmpleado;
-        string Nombre;
-        string Apellido;
-        string Sexo;
+        private int IdEmpleado;
+        string nombre;
+        string apellido;
+        char sexo;
         string FechaNacimiento;
         string NroDocumento;
         string Direccion;
