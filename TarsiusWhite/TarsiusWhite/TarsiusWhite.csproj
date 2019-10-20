@@ -69,6 +69,9 @@
     <Compile Include="frmEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEmpleado.Designer.cs">
+      <DependentUpon>frmEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPresentacion.cs">
       <SubType>Form</SubType>
     </Compile>
