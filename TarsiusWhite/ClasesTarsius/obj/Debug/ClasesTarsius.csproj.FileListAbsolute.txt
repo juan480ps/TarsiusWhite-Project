@@ -25,3 +25,4 @@ C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\D
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojAssemblyReference.cache

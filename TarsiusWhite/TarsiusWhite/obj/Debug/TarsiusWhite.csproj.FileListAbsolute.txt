@@ -64,3 +64,4 @@ C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\De
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.Properties.Resources.resources
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.cache
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CoreCompileInputs.cache
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmEmpleado.resources
