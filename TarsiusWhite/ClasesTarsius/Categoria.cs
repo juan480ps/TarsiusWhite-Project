@@ -8,8 +8,8 @@ namespace ClasesTarsius
 {
     public class Categoria
     {
-       public int IDCategoria;
-      public  string NombreCategoria;
+       public string IDCategoria;
+       public  string NombreCategoria;
        public string DescripcionCategoria;
 
 
@@ -52,4 +52,4 @@ namespace ClasesTarsius
 
 
 }  
-}
+

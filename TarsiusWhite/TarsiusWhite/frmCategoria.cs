@@ -109,17 +109,44 @@ namespace TarsiusWhite
         private Categoria obtenerCategoria()
         {
             Categoria cat = new Categoria();
-            //cat.IDCategoria = txtCodigoCategoria.Text;
+            cat.IDCategoria = txtCodigoCategoria.Text;
             cat.NombreCategoria = txtNombreCategoria.Text;
             cat.DescripcionCategoria = txtDescripcionCategoria.Text;
-            
-
             return cat;
         }
 
         private void actualizarlstCategoria()
         {
-            
+            lstCategoria.DataSource = null;
+            lstCategoria.DataSource = Categoria.ObtenerCategoria(); 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiarFormulario();
+        }
+
+        private void frmCategoria_Load(object sender, EventArgs e)
+        {
+            actualizarlstCategoria();
+            bloquearFormulario();
+        }
+
+        private void lstCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           Categoria cat = (Categoria)lstCategoria.SelectedItem;
+
+            if (cat != null)
+            {
+                txtCodigoCategoria.Text = cat.IDCategoria;
+                txtDescripcionCategoria.Text = cat.DescripcionCategoria;
+                txtNombreCategoria.Text = cat.NombreCategoria; 
+            }
         }
     }
 }
