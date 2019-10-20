@@ -21,13 +21,11 @@ namespace ClasesTarsius
         public DateTime fechaNacimiento { get; set; }
         public string nroDocumento { get; set; }
         public string direccion { get; set; }
-        public  string telefono { get; set; }
+        public string telefono { get; set; }
         public string email { get; set; }
         public string acceso { get; set; }
         public string usuario { get; set; }
         public string password { get; set; }
-
-
 
         public Empleado()
         {
@@ -59,14 +57,5 @@ namespace ClasesTarsius
         {
             return this.nombre;
         }
-    }
-}
-
-
-       
-
-
-
-
     }
 }
