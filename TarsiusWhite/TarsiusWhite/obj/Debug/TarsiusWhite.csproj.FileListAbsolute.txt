@@ -53,3 +53,5 @@ C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\D
 C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.Properties.Resources.resources
 C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.cache
 C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CoreCompileInputs.cache
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmCategoria.resources
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPresentacion.resources

@@ -84,8 +84,8 @@ namespace TarsiusWhite
             if (lstPresentaciones.SelectedItems.Count > 0)
             {
                 Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
-                Presentacions.listaPresentacion.Remove(pre);
-                actualizarListadoPresentacion();
+                Presentacion.listaPresentacion.Remove(pre); //decia presentacions y tiene que que hacer referencia a la clase presentacion
+                actualizarListadoPresentacion(); // faltaba generar el metodo correspondiente
                 limpiarFormulario();
             }
             else
@@ -101,6 +101,7 @@ namespace TarsiusWhite
         private Presentacion obtenerPresentacionFormulario()
         {
             Presentacion pre = new Presentacion();
+            //se debe llamar a los atributos declarados en la clase correspondiente
             pre.Codigo = txtCodigoPresentacion.Text;
             pre.Nombre = txtNombrePresentacion.Text;
             pre.Descripcion = txtDescripcionPresentacion.Text;
@@ -125,6 +126,7 @@ namespace TarsiusWhite
 
             if (pre != null)
             {
+                //se debe llamar a los atributos declarados en la clase correspondiente
                 txtCodigoPresentacion.Text = pre.Codigo;
                 txtNombrePresentacion.Text = pre.Nombre;
                 txtDescripcionPresentacion.Text = pre.Descripcion;
@@ -137,7 +139,7 @@ namespace TarsiusWhite
             if (lstPresentaciones.SelectedItems.Count > 0)
             {
                 Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
-                Presentacions.listaPresentacion.Remove(pre);
+                Presentacion.listaPresentacion.Remove(pre);//decia presentacions y tiene que que hacer referencia a la clase presentacion
                 actualizarListadoPresentacion();
                 limpiarFormulario();
             }
@@ -145,10 +147,12 @@ namespace TarsiusWhite
             {
                 MessageBox.Show("Favor seleccionar de la lista para eliminar");
             }
+
+            //el metodo debe estar dentro de la clase y no dentro de otro metodo
             private void actualizarListadoPresentacion()
             {
                 lstPresentaciones.DataSource = null;
-                lstPresentaciones.DataSource = Presentacions.ObtenerPresentacion();
+                lstPresentaciones.DataSource = Presentacion.ObtenerPresentacion(); //decia presentacions y tiene que que hacer referencia a la clase presentacion
             }
         }
 

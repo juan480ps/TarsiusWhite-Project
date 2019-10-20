@@ -8,6 +8,7 @@ namespace ClasesTarsius
 {
     public class Presentacion //: Articulo, iPresentacion
     {
+        //las primeras letras de la variables deben ir en minusculas
         public int IdPresentacion { get; set; }
         public string NombrePresentacion { get; set; }
         public string DescripcionPresentacion { get; set; }
@@ -17,7 +18,7 @@ namespace ClasesTarsius
         //{
            
         //}
-                public Presentacion()
+        public Presentacion()
         {
 
         }
