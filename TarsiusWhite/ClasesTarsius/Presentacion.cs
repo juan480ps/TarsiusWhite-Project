@@ -17,5 +17,31 @@ namespace ClasesTarsius
         //{
            
         //}
+                public Presentacion()
+        {
+
+        }
+
+        public static List<Presentacion> listaPresentacion = new List<Presentacion>();
+
+        public static void agregarPresentacion(Presentacion pre)
+        {
+            listaPresentacion.Add(pre);
+        }
+
+        public static void editarPresentacion(Presentacion pre, int indice)
+        {
+            Presentacion.listaPresentacion[indice] = pre;
+        }
+        public static void eliminarPresentacion(Presentacion pre)
+        {
+            listaPresentacion.Remove(pre);
+        }
+
+        public static List<Presentacion> ObtenerPresentacion()
+        {
+            return listaPresentacion;
+        }
+//checkar esto
     }
 }
