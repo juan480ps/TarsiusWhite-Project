@@ -30,12 +30,14 @@ namespace TarsiusWhite
 
         private void categoriasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            frmCategoria frmcartegoria = new frmCategoria();
+            frmcartegoria.Show();
         }
 
         private void presentacionesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            frmPresentacion frmpresentacion = new frmPresentacion();
+            frmpresentacion.Show();
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)

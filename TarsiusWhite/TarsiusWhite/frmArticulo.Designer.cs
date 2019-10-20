@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblArticulo = new System.Windows.Forms.Label();
             this.lstArticulos = new System.Windows.Forms.ListBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -48,15 +48,15 @@
             this.cboPresentacion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lblArticulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 55);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Articulos";
+            this.lblArticulo.AutoSize = true;
+            this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArticulo.Location = new System.Drawing.Point(12, 9);
+            this.lblArticulo.Name = "lblArticulo";
+            this.lblArticulo.Size = new System.Drawing.Size(207, 55);
+            this.lblArticulo.TabIndex = 6;
+            this.lblArticulo.Text = "Articulos";
             // 
             // lstArticulos
             // 
@@ -232,7 +232,7 @@
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lstArticulos);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblArticulo);
             this.Name = "frmArticulo";
             this.Text = "frmArticulo";
             this.Load += new System.EventHandler(this.frmArticulo_Load);
@@ -242,7 +242,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblArticulo;
         private System.Windows.Forms.ListBox lstArticulos;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
