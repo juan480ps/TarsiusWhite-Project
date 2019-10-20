@@ -45,3 +45,11 @@ C:\Users\Matias\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\
 C:\Users\Matias\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\ClasesTarsius.pdb
 C:\Users\Matias\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 C:\Users\Matias\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csprojAssemblyReference.cache
+C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmArticulo.resources
+C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmCategoria.resources
+C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPresentacion.resources
+C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPrincipal.resources
+C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.Properties.Resources.resources
+C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.cache
+C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CoreCompileInputs.cache
