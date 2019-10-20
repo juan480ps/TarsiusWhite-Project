@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesTarsius;
+using ClasesTarsius; 
 
 namespace TarsiusWhite
 {
@@ -134,7 +134,7 @@ namespace TarsiusWhite
         private void frmCategoria_Load(object sender, EventArgs e)
         {
             actualizarlstCategoria();
-            bloquearFormulario();
+            bloquearFormulario(); 
         }
 
         private void lstCategoria_SelectedIndexChanged(object sender, EventArgs e)
