@@ -57,6 +57,9 @@ namespace TarsiusWhite
             btnAgregar.Enabled = true;
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
+
+
+
         }
 
         private void limpiarFormulario()

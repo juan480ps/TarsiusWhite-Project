@@ -24,7 +24,7 @@ namespace TarsiusWhite
             _auxiliar = "AGREGAR";
             limpiarFormulario();
             desbloquearFormulario();
-            txtApellido.Focus();
+            txtNombre.Focus();
         }
 
         private void desbloquearFormulario()
@@ -33,11 +33,19 @@ namespace TarsiusWhite
             txtApellido.Enabled = true;
             cboSexo.Enabled = true;
             cboTipoDocumento.Enabled = true;
+            txtNroDocumento.Enabled = true;
             dtpFechaNacimiento.Enabled = true;
             txtAcceso.Enabled = true;
             txtUsuario.Enabled = true;
             txtPassword.Enabled = true;
             txtEmail.Enabled = true;
+            txtDireccion.Enabled = true;
+            txtTelefono.Enabled = true;
+
+            btnGuardar.Enabled = true;
+            btnCancelar.Enabled = true;
+            btnLimpiar.Enabled = true;
+
 
             btnAgregar.Enabled = false;
             btnEditar.Enabled = false;
@@ -67,7 +75,7 @@ namespace TarsiusWhite
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (lstEmpleado.SelectedItems.Count < 0)
+            if (lstEmpleado.SelectedItems.Count > 0)
             {
                 Empleado emp = (Empleado)lstEmpleado.SelectedItem;
                 Empleado.listaEmpleados.Remove(emp);
@@ -110,11 +118,19 @@ namespace TarsiusWhite
             txtApellido.Enabled = false;
             cboSexo.Enabled = false;
             cboTipoDocumento.Enabled = false;
+            txtNroDocumento.Enabled = false;
             dtpFechaNacimiento.Enabled = false;
             txtAcceso.Enabled = false;
             txtUsuario.Enabled = false;
             txtPassword.Enabled = false;
             txtEmail.Enabled = false;
+            txtDireccion.Enabled = false;
+            txtTelefono.Enabled = false;
+
+            btnGuardar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnLimpiar.Enabled = false;
+
 
             btnAgregar.Enabled = true;
             btnEditar.Enabled = true;
@@ -155,7 +171,10 @@ namespace TarsiusWhite
         {
             actualizarListaddoEmpleado();
             cboSexo.DataSource = Enum.GetValues(typeof(Empleado._sexo));
+            cboTipoDocumento.DataSource = Enum.GetValues(typeof(Empleado._tipoDocumento));
             bloquearFomulario();
+            cboSexo.SelectedItem = null;
+            cboTipoDocumento.SelectedItem = null;
         }
 
         private Empleado obtenerEmpleadoFormulario()
