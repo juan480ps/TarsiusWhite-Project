@@ -20,7 +20,6 @@ namespace TarsiusWhite
         }
         private void desbloquearFormulario()
         {
-            txtCodigoPresentacion.Enabled = true;
             txtNombrePresentacion.Enabled = true;
             txtDescripcionPresentacion.Enabled = true;
             btnGuardar.Enabled = true;
@@ -34,9 +33,8 @@ namespace TarsiusWhite
 
         private void bloquearFormulario()
         {
-            txtCodigoPresentacion.Enabled = true;
-            txtNombrePresentacion.Enabled = true;
-            txtDescripcionPresentacion.Enabled = true;
+            txtNombrePresentacion.Enabled = false;
+            txtDescripcionPresentacion.Enabled = false;
             btnGuardar.Enabled = false;
             btnCancelar.Enabled = false;
             btnLimpiar.Enabled = false;
@@ -48,11 +46,8 @@ namespace TarsiusWhite
 
         private void limpiarFormulario()
         {
-            txtCodigoPresentacion.Text = "";
             txtNombrePresentacion.Text = "";
             txtDescripcionPresentacion.Text = "";
-
-
         }
         private void Label1_Click(object sender, EventArgs e)
         {
@@ -69,14 +64,14 @@ namespace TarsiusWhite
             _auxiliar = "AGREGAR";
             limpiarFormulario();
             desbloquearFormulario();
-            txtCodigoPresentacion.Focus();
+            txtNombrePresentacion.Focus();
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             _auxiliar = "EDITAR";
             desbloquearFormulario();
-            txtCodigoPresentacion.Focus();
+            txtNombrePresentacion.Focus();
         }
 
         private void LstPresentaciones_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,8 +79,7 @@ namespace TarsiusWhite
             if (lstPresentaciones.SelectedItems.Count > 0)
             {
                 Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
-                Presentacion.listaPresentacion.Remove(pre); //decia presentacions y tiene que que hacer referencia a la clase presentacion
-                actualizarListadoPresentacion(); // faltaba generar el metodo correspondiente
+                Presentacion.listaPresentacion.Remove(pre);
                 limpiarFormulario();
             }
             else
@@ -94,17 +88,36 @@ namespace TarsiusWhite
             }
         }
 
+        private void actualizarListadoPresentacion()
+        {
+            lstPresentaciones.DataSource = null;
+            lstPresentaciones.DataSource = Presentacion.obtenerPresentacion();
+        }
+
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            if (_auxiliar == "AGREGAR")
+            {
+                Presentacion pre = obtenerPresentacionFormulario();
+                Presentacion.agregarPresentacion(pre);
+            }
+            else if (_auxiliar == "EDITAR")
+            {
+                int index = lstPresentaciones.SelectedIndex;
 
+                Presentacion.listaPresentacion[index] = obtenerPresentacionFormulario();
+            }
+
+            actualizarListadoPresentacion();
+            limpiarFormulario();
+            bloquearFormulario();
         }
+
         private Presentacion obtenerPresentacionFormulario()
         {
             Presentacion pre = new Presentacion();
-            //se debe llamar a los atributos declarados en la clase correspondiente
-            pre.Codigo = txtCodigoPresentacion.Text;
-            pre.Nombre = txtNombrePresentacion.Text;
-            pre.Descripcion = txtDescripcionPresentacion.Text;
+            pre.nombrePresentacion = txtNombrePresentacion.Text;
+            pre.descripcionPresentacion = txtDescripcionPresentacion.Text;
 
 
             return pre;
@@ -126,11 +139,8 @@ namespace TarsiusWhite
 
             if (pre != null)
             {
-                //se debe llamar a los atributos declarados en la clase correspondiente
-                txtCodigoPresentacion.Text = pre.Codigo;
-                txtNombrePresentacion.Text = pre.Nombre;
-                txtDescripcionPresentacion.Text = pre.Descripcion;
-
+                txtNombrePresentacion.Text = pre.nombrePresentacion;
+                txtDescripcionPresentacion.Text = pre.descripcionPresentacion;
             }
         }
 
@@ -139,7 +149,7 @@ namespace TarsiusWhite
             if (lstPresentaciones.SelectedItems.Count > 0)
             {
                 Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
-                Presentacion.listaPresentacion.Remove(pre);//decia presentacions y tiene que que hacer referencia a la clase presentacion
+                Presentacion.listaPresentacion.Remove(pre);
                 actualizarListadoPresentacion();
                 limpiarFormulario();
             }
@@ -147,18 +157,12 @@ namespace TarsiusWhite
             {
                 MessageBox.Show("Favor seleccionar de la lista para eliminar");
             }
-
-            //el metodo debe estar dentro de la clase y no dentro de otro metodo
-            private void actualizarListadoPresentacion()
-            {
-                lstPresentaciones.DataSource = null;
-                lstPresentaciones.DataSource = Presentacion.ObtenerPresentacion(); //decia presentacions y tiene que que hacer referencia a la clase presentacion
-            }
-        }
+        }   
 
         private void FrmPresentacion_Load(object sender, EventArgs e)
         {
-
+            actualizarListadoPresentacion();
+            bloquearFormulario();
         }
     }
 }

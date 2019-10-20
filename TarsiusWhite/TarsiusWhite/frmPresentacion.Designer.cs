@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.Presentacions = new System.Windows.Forms.Label();
-            this.codigoPresentacion = new System.Windows.Forms.Label();
             this.nombrePresentacion = new System.Windows.Forms.Label();
             this.descripcionPresentacion = new System.Windows.Forms.Label();
-            this.txtCodigoPresentacion = new System.Windows.Forms.TextBox();
             this.txtNombrePresentacion = new System.Windows.Forms.TextBox();
             this.txtDescripcionPresentacion = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -56,20 +54,10 @@
             this.Presentacions.Text = "PRESENTACION";
             this.Presentacions.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // codigoPresentacion
-            // 
-            this.codigoPresentacion.AutoSize = true;
-            this.codigoPresentacion.Location = new System.Drawing.Point(12, 55);
-            this.codigoPresentacion.Name = "codigoPresentacion";
-            this.codigoPresentacion.Size = new System.Drawing.Size(40, 13);
-            this.codigoPresentacion.TabIndex = 1;
-            this.codigoPresentacion.Text = "Codigo";
-            this.codigoPresentacion.Click += new System.EventHandler(this.Label2_Click);
-            // 
             // nombrePresentacion
             // 
             this.nombrePresentacion.AutoSize = true;
-            this.nombrePresentacion.Location = new System.Drawing.Point(12, 100);
+            this.nombrePresentacion.Location = new System.Drawing.Point(12, 54);
             this.nombrePresentacion.Name = "nombrePresentacion";
             this.nombrePresentacion.Size = new System.Drawing.Size(44, 13);
             this.nombrePresentacion.TabIndex = 2;
@@ -84,16 +72,9 @@
             this.descripcionPresentacion.TabIndex = 3;
             this.descripcionPresentacion.Text = "Descripcion";
             // 
-            // txtCodigoPresentacion
-            // 
-            this.txtCodigoPresentacion.Location = new System.Drawing.Point(58, 52);
-            this.txtCodigoPresentacion.Name = "txtCodigoPresentacion";
-            this.txtCodigoPresentacion.Size = new System.Drawing.Size(151, 20);
-            this.txtCodigoPresentacion.TabIndex = 4;
-            // 
             // txtNombrePresentacion
             // 
-            this.txtNombrePresentacion.Location = new System.Drawing.Point(58, 97);
+            this.txtNombrePresentacion.Location = new System.Drawing.Point(58, 51);
             this.txtNombrePresentacion.Name = "txtNombrePresentacion";
             this.txtNombrePresentacion.Size = new System.Drawing.Size(151, 20);
             this.txtNombrePresentacion.TabIndex = 5;
@@ -107,7 +88,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(401, 160);
+            this.btnEliminar.Location = new System.Drawing.Point(405, 94);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(103, 30);
             this.btnEliminar.TabIndex = 8;
@@ -117,7 +98,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(235, 160);
+            this.btnEditar.Location = new System.Drawing.Point(239, 94);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(103, 30);
             this.btnEditar.TabIndex = 9;
@@ -127,7 +108,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(58, 160);
+            this.btnAgregar.Location = new System.Drawing.Point(62, 94);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(103, 30);
             this.btnAgregar.TabIndex = 10;
@@ -138,7 +119,7 @@
             // lstPresentaciones
             // 
             this.lstPresentaciones.FormattingEnabled = true;
-            this.lstPresentaciones.Location = new System.Drawing.Point(58, 196);
+            this.lstPresentaciones.Location = new System.Drawing.Point(62, 130);
             this.lstPresentaciones.Name = "lstPresentaciones";
             this.lstPresentaciones.Size = new System.Drawing.Size(419, 199);
             this.lstPresentaciones.TabIndex = 19;
@@ -146,7 +127,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(401, 402);
+            this.btnLimpiar.Location = new System.Drawing.Point(405, 336);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(88, 36);
             this.btnLimpiar.TabIndex = 49;
@@ -156,7 +137,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(235, 401);
+            this.btnCancelar.Location = new System.Drawing.Point(239, 335);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 37);
             this.btnCancelar.TabIndex = 48;
@@ -166,7 +147,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(58, 401);
+            this.btnGuardar.Location = new System.Drawing.Point(62, 335);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 36);
             this.btnGuardar.TabIndex = 47;
@@ -179,7 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 394);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -189,10 +170,8 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtDescripcionPresentacion);
             this.Controls.Add(this.txtNombrePresentacion);
-            this.Controls.Add(this.txtCodigoPresentacion);
             this.Controls.Add(this.descripcionPresentacion);
             this.Controls.Add(this.nombrePresentacion);
-            this.Controls.Add(this.codigoPresentacion);
             this.Controls.Add(this.Presentacions);
             this.Name = "frmPresentacion";
             this.Text = "frmPresentacion";
@@ -205,10 +184,8 @@
         #endregion
 
         private System.Windows.Forms.Label Presentacions;
-        private System.Windows.Forms.Label codigoPresentacion;
         private System.Windows.Forms.Label nombrePresentacion;
         private System.Windows.Forms.Label descripcionPresentacion;
-        private System.Windows.Forms.TextBox txtCodigoPresentacion;
         private System.Windows.Forms.TextBox txtNombrePresentacion;
         private System.Windows.Forms.TextBox txtDescripcionPresentacion;
         private System.Windows.Forms.Button btnEliminar;

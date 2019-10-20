@@ -6,18 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClasesTarsius
 {
-    public class Presentacion //: Articulo, iPresentacion
+    public class Presentacion
     {
-        //las primeras letras de la variables deben ir en minusculas
-        public int IdPresentacion { get; set; }
-        public string NombrePresentacion { get; set; }
-        public string DescripcionPresentacion { get; set; }
-        //string iPresentacion.tipoPresentacion { get; set; }
+        private int idPresentacion { get; set; }
+        public string nombrePresentacion { get; set; }
+        public string descripcionPresentacion { get; set; }
 
-        //public void obtenerPresentacion()
-        //{
-           
-        //}
         public Presentacion()
         {
 
@@ -39,10 +33,14 @@ namespace ClasesTarsius
             listaPresentacion.Remove(pre);
         }
 
-        public static List<Presentacion> ObtenerPresentacion()
+        public static List<Presentacion> obtenerPresentacion()
         {
             return listaPresentacion;
         }
-//checkar esto
+
+        public override string ToString()
+        {
+            return this.nombrePresentacion;
+        }
     }
 }

@@ -3,11 +3,6 @@ C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\ClasesTarsius
 C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csproj.CoreCompileInputs.cache
 C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\juan480ps\Desktop\Nueva carpeta\TarsiusWhite\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
-C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.dll
-C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
-C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csproj.CoreCompileInputs.cache
-C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
-C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
 C:\Users\Matias\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojResolveAssemblyReference.cache
 C:\Users\Matias\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\Matias\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
@@ -19,3 +14,8 @@ C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\
 C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csproj.CoreCompileInputs.cache
 C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.dll
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csproj.CoreCompileInputs.cache
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
+C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
