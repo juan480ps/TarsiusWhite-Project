@@ -42,7 +42,8 @@ namespace TarsiusWhite
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmEmpleado frmempleado = new frmEmpleado();
+            frmempleado.Show();
         }
     }
 }

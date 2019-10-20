@@ -53,7 +53,7 @@
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblTipoDocumento = new System.Windows.Forms.Label();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.txtTipoDocumento = new System.Windows.Forms.TextBox();
+            this.txtNroDocumento = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -278,12 +278,12 @@
             this.lblFechaNacimiento.TabIndex = 89;
             this.lblFechaNacimiento.Text = "Fecha Nacimiento";
             // 
-            // txtTipoDocumento
+            // txtNroDocumento
             // 
-            this.txtTipoDocumento.Location = new System.Drawing.Point(170, 115);
-            this.txtTipoDocumento.Name = "txtTipoDocumento";
-            this.txtTipoDocumento.Size = new System.Drawing.Size(163, 20);
-            this.txtTipoDocumento.TabIndex = 88;
+            this.txtNroDocumento.Location = new System.Drawing.Point(170, 115);
+            this.txtNroDocumento.Name = "txtNroDocumento";
+            this.txtNroDocumento.Size = new System.Drawing.Size(163, 20);
+            this.txtNroDocumento.TabIndex = 88;
             // 
             // lblApellido
             // 
@@ -327,7 +327,7 @@
             this.gpbEmpleado.Controls.Add(this.lblUsuario);
             this.gpbEmpleado.Controls.Add(this.lblApellido);
             this.gpbEmpleado.Controls.Add(this.txtUsuario);
-            this.gpbEmpleado.Controls.Add(this.txtTipoDocumento);
+            this.gpbEmpleado.Controls.Add(this.txtNroDocumento);
             this.gpbEmpleado.Controls.Add(this.lblAcceso);
             this.gpbEmpleado.Controls.Add(this.lblFechaNacimiento);
             this.gpbEmpleado.Controls.Add(this.txtAcceso);
@@ -399,7 +399,7 @@
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblTipoDocumento;
         private System.Windows.Forms.Label lblFechaNacimiento;
-        private System.Windows.Forms.TextBox txtTipoDocumento;
+        private System.Windows.Forms.TextBox txtNroDocumento;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label lblNombre;

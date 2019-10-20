@@ -55,6 +55,11 @@ C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\D
 C:\Users\willa\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CoreCompileInputs.cache
 C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmCategoria.resources
 C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPresentacion.resources
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.pdb
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\ClasesTarsius.dll
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\ClasesTarsius.pdb
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csprojAssemblyReference.cache
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmArticulo.resources
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmCategoria.resources
@@ -64,3 +69,6 @@ C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\De
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.Properties.Resources.resources
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.cache
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CopyComplete
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
