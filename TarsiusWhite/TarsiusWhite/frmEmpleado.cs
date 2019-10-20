@@ -1,5 +1,4 @@
-﻿using ClasesTarsius;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace TarsiusWhite
 {
     public partial class frmEmpleado : Form
     {
-        public string _auxiliar;
         public frmEmpleado()
         {
             InitializeComponent();
