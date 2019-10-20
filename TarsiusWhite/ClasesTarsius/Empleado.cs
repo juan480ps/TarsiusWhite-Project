@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace ClasesTarsius
 {
-    class Empleado
+        public class Empleado
     {
         public enum _sexo
         {
             Femenino,
-            Masculino,
+            Masculino
+        }
+
+        public enum _tipoDocumento
+        {
+            CI,
+            DNI
+             
         }
 
         private int idEmpleado { get; set; }
@@ -19,6 +26,7 @@ namespace ClasesTarsius
         public string apellido { get; set; }
         public _sexo sexo { get; set; }
         public DateTime fechaNacimiento { get; set; }
+        public  _tipoDocumento tipoDocumento { get; set; }
         public string nroDocumento { get; set; }
         public string direccion { get; set; }
         public string telefono { get; set; }
