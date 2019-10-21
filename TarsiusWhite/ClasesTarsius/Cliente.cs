@@ -6,17 +6,61 @@ using System.Threading.Tasks;
 
 namespace ClasesTarsius
 {
-    class Cliente
+    public class Cliente
     {
-        int IdCliente;
-        string NombreCLiente;
-        string ApellidoCliente;
-        string Sexo;
-        string FechaNacimiento;
-        string TipoDocumento;
-        string NroDocumento;
-        string Direccion;
-        string Telefono;
-        string Email;
+        public enum _sexo
+        {
+            Femenino,
+            Masculino
+        }
+
+        public enum _tipoDocumento
+        {
+            CI,
+            DNI
+
+        }
+
+        private int idEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public _sexo sexo { get; set; }
+        public DateTime fechaNacimiento { get; set; }
+        public _tipoDocumento tipoDocumento { get; set; }
+        public string nroDocumento { get; set; }
+        public string direccion { get; set; }
+        public string telefono { get; set; }
+        
+
+        public Cliente()
+        {
+
+        }
+
+        public static List<Cliente> listaClientes= new List<Cliente>();
+
+        public static void agregarCliente(Cliente cli)
+        {
+            listaClientes.Add(cli);
+        }
+
+        public static void editarCliente(Cliente cli, int indice)
+        {
+            Cliente.listaClientes[indice] = cli;
+        }
+        public static void eliminarCliente(Cliente cli)
+        {
+            listaClientes.Remove(cli);
+        }
+
+        public static List<Cliente> ObtenerClientes()
+        {
+            return listaClientes;
+        }
+
+        public override string ToString()
+        {
+            return this.nombre;
+        }
     }
 }
