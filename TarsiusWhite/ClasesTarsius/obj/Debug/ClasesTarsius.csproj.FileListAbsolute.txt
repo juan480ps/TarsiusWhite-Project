@@ -25,3 +25,8 @@ C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\D
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
 C:\Users\juan480ps\Desktop\juan480ps\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojAssemblyReference.cache
+C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.dll
+C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
+C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojAssemblyReference.cache
+C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
+C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb

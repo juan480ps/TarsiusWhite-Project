@@ -45,5 +45,11 @@ namespace TarsiusWhite
             frmEmpleado frmempleado = new frmEmpleado();
             frmempleado.Show();
         }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmCliente frmCliente = new frmCliente();
+            frmCliente.Show();
+        }
     }
 }

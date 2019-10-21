@@ -48,6 +48,7 @@
             this.stockDeArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stuPrincipal = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrincipal.SuspendLayout();
             this.stuPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -140,7 +141,7 @@
             this.egresosToolStripMenuItem,
             this.cLientesToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // egresosToolStripMenuItem
@@ -158,7 +159,8 @@
             // mantenimientoToolStripMenuItem1
             // 
             this.mantenimientoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.empleadosToolStripMenuItem});
+            this.empleadosToolStripMenuItem,
+            this.clientesToolStripMenuItem1});
             this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
             this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(101, 20);
             this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
@@ -166,7 +168,7 @@
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -197,8 +199,15 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(76, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(78, 17);
             this.toolStripStatusLabel1.Text = "Tarsius White";
+            // 
+            // clientesToolStripMenuItem1
+            // 
+            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem1.Text = "Clientes";
+            this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // frmPrincipal
             // 
@@ -246,5 +255,6 @@
         private System.Windows.Forms.ToolStripMenuItem stockDeArticulosToolStripMenuItem;
         private System.Windows.Forms.StatusStrip stuPrincipal;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
     }
 }
