@@ -316,6 +316,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(163, 20);
             this.txtNombre.TabIndex = 84;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // gpbEmpleado
             // 
@@ -355,6 +356,7 @@
             this.gpbEmpleado.TabIndex = 114;
             this.gpbEmpleado.TabStop = false;
             this.gpbEmpleado.Text = "Empleado";
+            this.gpbEmpleado.Enter += new System.EventHandler(this.gpbEmpleado_Enter);
             // 
             // frmEmpleado
             // 

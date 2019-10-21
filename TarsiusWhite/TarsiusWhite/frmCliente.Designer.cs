@@ -42,7 +42,7 @@
             this.cboSexo = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
-            this.lstEmpleado = new System.Windows.Forms.ListBox();
+            this.lstCliente = new System.Windows.Forms.ListBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -71,7 +71,7 @@
             this.gpbCliente.Controls.Add(this.cboSexo);
             this.gpbCliente.Controls.Add(this.btnAgregar);
             this.gpbCliente.Controls.Add(this.cboTipoDocumento);
-            this.gpbCliente.Controls.Add(this.lstEmpleado);
+            this.gpbCliente.Controls.Add(this.lstCliente);
             this.gpbCliente.Controls.Add(this.dtpFechaNacimiento);
             this.gpbCliente.Controls.Add(this.btnLimpiar);
             this.gpbCliente.Controls.Add(this.txtDireccion);
@@ -88,6 +88,7 @@
             this.gpbCliente.TabIndex = 115;
             this.gpbCliente.TabStop = false;
             this.gpbCliente.Text = "Cliente";
+            this.gpbCliente.Enter += new System.EventHandler(this.gpbCliente_Enter);
             // 
             // txtNombre
             // 
@@ -154,6 +155,7 @@
             this.btnEliminar.TabIndex = 107;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblSexo
             // 
@@ -172,6 +174,7 @@
             this.btnEditar.TabIndex = 106;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // cboSexo
             // 
@@ -189,6 +192,7 @@
             this.btnAgregar.TabIndex = 105;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cboTipoDocumento
             // 
@@ -198,13 +202,13 @@
             this.cboTipoDocumento.Size = new System.Drawing.Size(61, 21);
             this.cboTipoDocumento.TabIndex = 93;
             // 
-            // lstEmpleado
+            // lstCliente
             // 
-            this.lstEmpleado.FormattingEnabled = true;
-            this.lstEmpleado.Location = new System.Drawing.Point(274, 230);
-            this.lstEmpleado.Name = "lstEmpleado";
-            this.lstEmpleado.Size = new System.Drawing.Size(288, 199);
-            this.lstEmpleado.TabIndex = 104;
+            this.lstCliente.FormattingEnabled = true;
+            this.lstCliente.Location = new System.Drawing.Point(274, 230);
+            this.lstCliente.Name = "lstCliente";
+            this.lstCliente.Size = new System.Drawing.Size(288, 199);
+            this.lstCliente.TabIndex = 104;
             // 
             // dtpFechaNacimiento
             // 
@@ -222,6 +226,7 @@
             this.btnLimpiar.TabIndex = 103;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // txtDireccion
             // 
@@ -238,6 +243,7 @@
             this.btnCancelar.TabIndex = 102;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblDireccion
             // 
@@ -256,6 +262,7 @@
             this.btnGuardar.TabIndex = 101;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblTelefono
             // 
@@ -297,6 +304,7 @@
             this.Controls.Add(this.gpbCliente);
             this.Name = "frmCliente";
             this.Text = "frmCliente";
+            this.Load += new System.EventHandler(this.frmCliente_Load);
             this.gpbCliente.ResumeLayout(false);
             this.gpbCliente.PerformLayout();
             this.ResumeLayout(false);
@@ -319,7 +327,7 @@
         private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ComboBox cboTipoDocumento;
-        private System.Windows.Forms.ListBox lstEmpleado;
+        private System.Windows.Forms.ListBox lstCliente;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.TextBox txtDireccion;

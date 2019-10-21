@@ -194,6 +194,16 @@ namespace TarsiusWhite
 
             return emp;
         }
+
+        private void gpbEmpleado_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
