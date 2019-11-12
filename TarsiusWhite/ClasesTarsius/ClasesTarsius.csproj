@@ -47,7 +47,6 @@
     <Compile Include="DetalleVenta.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="Ingreso.cs" />
-    <Compile Include="iPresentacion.cs" />
     <Compile Include="Presentacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor.cs" />
