@@ -21,7 +21,7 @@ namespace ClasesTarsius
 
         }
 
-        private int idEmpleado { get; set; }
+        private int idCliente { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public _sexo sexo { get; set; }

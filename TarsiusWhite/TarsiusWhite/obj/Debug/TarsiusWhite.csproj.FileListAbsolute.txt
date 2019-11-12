@@ -82,3 +82,4 @@ C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\Tars
 C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CopyComplete
 C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+D:\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
