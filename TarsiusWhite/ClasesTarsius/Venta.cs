@@ -14,7 +14,5 @@ namespace ClasesTarsius
         string Serie;
         string Correlativo;
         string Igv;
-
-        //hola
     }
 }
