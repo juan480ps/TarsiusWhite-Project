@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClasesTarsius
 {
@@ -21,39 +21,12 @@ namespace ClasesTarsius
             jarabe
         }
         
-        private int idArticulo;
-        private string codigo;
-        private string nombre;
-        private string descripcion;
+        private int idArticulo { get; set; }
+        public string codigo { get; set; }
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
         public _categoria categoria { get; set; }
         public _presentacion presentacion { get; set; }
-        private string textoBuscar;
-
-        public int Idarticulo
-        {
-            get { return idArticulo; }
-            set { idArticulo = value; }
-        }
-        public string Codigo
-        {
-            get { return codigo; }
-            set { codigo = value; }
-        }
-        public string Nombre
-        {
-            get { return nombre; }
-            set { nombre = value; }
-        }
-        public string Descripcion
-        {
-            get { return descripcion; }
-            set { descripcion = value; }
-        }
-        public string TextoBuscar
-        {
-            get { return textoBuscar; }
-            set { textoBuscar = value; }
-        }
 
         public Articulo()
         {
@@ -64,20 +37,85 @@ namespace ClasesTarsius
 
         public static void agregarArticulo(Articulo art)
         {
-            listaArticulos.Add(art);
+            //listaArticulos.Add(art);
+
+            using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
+
+            {
+                con.Open();
+                string textoCmd = "INSERT INTO Articulo VALUES (@codigo, @nombre, @descripcion , @categoria, @presentacion)";
+                SqlCommand cmd = new SqlCommand(textoCmd, con);
+                cmd = art.ObtenerParametros(cmd);
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public static void editarArticulo(Articulo art, int indice)
         {
-            Articulo.listaArticulos[indice] = art;
+            //Articulo.listaArticulos[indice] = art;
+
+            using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
+            {
+                con.Open();
+                string textoCMD = "UPDATE Articulo SET codigo = @codigo, nombre = @nombre, descripcion = @descripcion, categoria = @categoria, categoria = @categoria, presentacion = @presentacion";
+
+                SqlCommand cmd = new SqlCommand(textoCMD, con);
+                cmd = art.ObtenerParametros(cmd, true);
+
+                cmd.ExecuteNonQuery();
+            }
         }
         public static void eliminarArticulo(Articulo art)
         {
-            listaArticulos.Remove(art);
+            // listaArticulos.Remove(art);
+
+            using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
+
+            {
+                con.Open();
+                string SENTENCIA_SQL = "delete from Articulo where Id = @Id";
+
+                SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
+                SqlParameter p1 = new SqlParameter("@Id", art.idArticulo);
+                p1.SqlDbType = SqlDbType.Int;
+                cmd.Parameters.Add(p1);
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
         }
 
         public static List<Articulo> ObtenerArticulos()
         {
+            // return listaArticulos;
+
+            Articulo art;
+
+            listaArticulos.Clear();
+
+            using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
+            {
+                con.Open();
+                string tectoCMD = "select * from Articulo";
+                SqlCommand cmd = new SqlCommand(tectoCMD, con);
+
+                SqlDataReader elLectorDeDatos = cmd.ExecuteReader();
+
+                while (elLectorDeDatos.Read())
+                {
+                    art = new Articulo();
+                    art.idArticulo = elLectorDeDatos.GetInt32(0);
+                    art.codigo = elLectorDeDatos.GetString(1);
+                    art.nombre = elLectorDeDatos.GetString(2);
+                    art.descripcion = elLectorDeDatos.GetString(3);
+                    art.categoria = (_categoria)elLectorDeDatos.GetInt32(5);
+                    art.presentacion = (_presentacion)elLectorDeDatos.GetInt32(5);
+
+                    listaArticulos.Add(art);
+
+                }
+            }
+
             return listaArticulos;
         }
 
@@ -85,5 +123,44 @@ namespace ClasesTarsius
         {
             return this.nombre;
         }
+
+        private SqlCommand ObtenerParametros(SqlCommand cmd, Boolean id = false)
+
+        {
+            SqlParameter p1 = new SqlParameter("@codigo", this.codigo);
+            SqlParameter p2 = new SqlParameter("@nombre", this.nombre);
+            SqlParameter p3 = new SqlParameter("@descripcion", this.descripcion);
+            SqlParameter p4 = new SqlParameter("@presentacion", this.presentacion);
+            SqlParameter p5 = new SqlParameter("@categoria", this.categoria);
+
+            p1.SqlDbType = SqlDbType.VarChar;
+            p2.SqlDbType = SqlDbType.Float;
+            p3.SqlDbType = SqlDbType.DateTime;
+            p4.SqlDbType = SqlDbType.Float;
+            p5.SqlDbType = SqlDbType.Int;
+
+            cmd.Parameters.Add(p1);
+            cmd.Parameters.Add(p2);
+            cmd.Parameters.Add(p3);
+            cmd.Parameters.Add(p4);
+            cmd.Parameters.Add(p5);
+
+            if (id == true)
+            {
+                cmd = ObtenerParametrosId(cmd);
+            }
+            return cmd;
+
+        }
+
+        private SqlCommand ObtenerParametrosId(SqlCommand cmd)
+        {
+
+            SqlParameter p9 = new SqlParameter("@id", this.idArticulo);
+            p9.SqlDbType = SqlDbType.Int;
+            cmd.Parameters.Add(p9);
+            return cmd;
+        }
     }
 }
+

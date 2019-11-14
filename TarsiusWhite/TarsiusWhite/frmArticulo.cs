@@ -122,9 +122,9 @@ namespace TarsiusWhite
         private Articulo obtenerArticuloFormulario()
         {
             Articulo art = new Articulo();
-            art.Codigo = txtCodigo.Text;
-            art.Nombre = txtNombre.Text;
-            art.Descripcion = txtDescripcion.Text;
+            art.codigo = txtCodigo.Text;
+            art.nombre = txtNombre.Text;
+            art.descripcion = txtDescripcion.Text;
             art.categoria = (Articulo._categoria)cboCategoria.SelectedItem;
             art.presentacion = (Articulo._presentacion)cboPresentacion.SelectedItem;
 
@@ -157,9 +157,9 @@ namespace TarsiusWhite
 
             if (art != null)
             {
-                txtCodigo.Text = art.Codigo;
-                txtNombre.Text = art.Nombre;
-                txtDescripcion.Text = art.Descripcion;
+                txtCodigo.Text = art.codigo;
+                txtNombre.Text = art.nombre;
+                txtDescripcion.Text = art.descripcion;
                 cboCategoria.SelectedItem = art.categoria;
                 cboPresentacion.SelectedItem = art.presentacion;
             }
