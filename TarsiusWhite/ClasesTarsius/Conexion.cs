@@ -9,6 +9,6 @@ namespace ClasesTarsius
 {
     public class Conexion
     {
-        public const string CADENA_CONEXION = "Data Source = .\\sqlexpress; Initial Catalog = TarsiusWhite; User Id= sa; Password = 123";
+        public const string CADENA_CONEXION = "Data Source = .\\sqlexpress01; Initial Catalog = TarsiusWhite; User Id= sa; Password = 123";
     }
 }

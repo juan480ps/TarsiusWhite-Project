@@ -20,8 +20,8 @@ namespace ClasesTarsius
             pastillaBlanda,
             jarabe
         }
-        
-        private int idArticulo { get; set; }
+
+        public int idArticulo { get; set; }
         public string codigo { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
@@ -108,7 +108,7 @@ namespace ClasesTarsius
                     art.codigo = elLectorDeDatos.GetString(1);
                     art.nombre = elLectorDeDatos.GetString(2);
                     art.descripcion = elLectorDeDatos.GetString(3);
-                    art.categoria = (_categoria)elLectorDeDatos.GetInt32(5);
+                    art.categoria = (_categoria)elLectorDeDatos.GetInt32(4);
                     art.presentacion = (_presentacion)elLectorDeDatos.GetInt32(5);
 
                     listaArticulos.Add(art);
@@ -134,9 +134,9 @@ namespace ClasesTarsius
             SqlParameter p5 = new SqlParameter("@categoria", this.categoria);
 
             p1.SqlDbType = SqlDbType.VarChar;
-            p2.SqlDbType = SqlDbType.Float;
-            p3.SqlDbType = SqlDbType.DateTime;
-            p4.SqlDbType = SqlDbType.Float;
+            p2.SqlDbType = SqlDbType.VarChar;
+            p3.SqlDbType = SqlDbType.VarChar;
+            p4.SqlDbType = SqlDbType.Int;
             p5.SqlDbType = SqlDbType.Int;
 
             cmd.Parameters.Add(p1);

@@ -122,6 +122,7 @@ namespace TarsiusWhite
         private Articulo obtenerArticuloFormulario()
         {
             Articulo art = new Articulo();
+
             art.codigo = txtCodigo.Text;
             art.nombre = txtNombre.Text;
             art.descripcion = txtDescripcion.Text;
