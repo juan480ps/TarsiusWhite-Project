@@ -31,10 +31,7 @@ namespace TarsiusWhite
             desbloquearFormulario();
 
 
-            /*_auxiliar = "AGREGAR";
-            limpiarFormulario();
-            desbloquearFormulario();
-            txtNombre.Focus();*/
+            
         }
 
         private void desbloquearFormulario()
@@ -82,9 +79,7 @@ namespace TarsiusWhite
                 MessageBox.Show("Ojo, Selecciona un Item");
             }
 
-            /*_auxiliar = "EDITAR";
-            desbloquearFormulario();
-            txtApellido.Focus();*/
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -102,18 +97,6 @@ namespace TarsiusWhite
                 MessageBox.Show("Favor seleccionar una fila de la lista");
             }
 
-
-            /*if (lstCliente.SelectedItems.Count > 0)
-            {
-                Cliente cli = (Cliente)lstCliente.SelectedItem;
-                Cliente.listaClientes.Remove(cli);
-                actualizarListadoCliente();
-                limpiarFormulario();
-            }
-            else
-            {
-                MessageBox.Show("Favor seleccionar para eliminar");
-            }*/
         }
 
         private void actualizarListadoCliente()
@@ -142,21 +125,7 @@ namespace TarsiusWhite
 
 
 
-            /* if (_auxiliar == "AGREGAR")
-            {
-                Cliente cli = obtenerClienteFormulario();
-                Cliente.agregarCliente(cli);
-            }
-            else if (_auxiliar == "EDITAR")
-            {
-                int index = lstCliente.SelectedIndex;
-
-                Cliente.listaClientes[index] = obtenerClienteFormulario();
-            }
-
-            actualizarListadoCliente();
-            limpiarFormulario();
-            bloquearFomulario();*/
+            
         }
 
         private void bloquearFomulario()

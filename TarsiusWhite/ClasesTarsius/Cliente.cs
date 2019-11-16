@@ -176,24 +176,7 @@ namespace ClasesTarsius
         }
         
 
-        /*public static void agregarCliente(Cliente cli)
-        {
-            listaClientes.Add(cli);
-        }
-
-        public static void editarCliente(Cliente cli, int indice)
-        {
-            Cliente.listaClientes[indice] = cli;
-        }
-        public static void eliminarCliente(Cliente cli)
-        {
-            listaClientes.Remove(cli);
-        }
-
-        public static List<Cliente> ObtenerClientes()
-        {
-            return listaClientes;
-        }*/
+        
 
         
     }
