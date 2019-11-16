@@ -9,6 +9,6 @@ namespace ClasesTarsius
 {
     public class Conexion
     {
-        public const string CADENA_CONEXION = "Data Source = .\\sqlexpress01; Initial Catalog = TarsiusWhite; User Id= sa; Password = 123";
+        public static string CADENA_CONEXION = ConfigurationManager.ConnectionStrings["SqlServer"].ConnectionString;
     }
 }
