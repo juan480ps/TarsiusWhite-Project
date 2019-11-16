@@ -210,6 +210,7 @@
             this.lstCliente.Name = "lstCliente";
             this.lstCliente.Size = new System.Drawing.Size(288, 199);
             this.lstCliente.TabIndex = 104;
+            this.lstCliente.SelectedIndexChanged += new System.EventHandler(this.lstCliente_SelectedIndexChanged);
             // 
             // dtpFechaNacimiento
             // 
