@@ -26,10 +26,12 @@ namespace TarsiusWhite
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            _auxiliar = "AGREGAR";
+            _auxiliar = "I";
             limpiarFormulario();
             desbloquearFormulario();
-            txtNombre.Focus();
+
+
+            
         }
 
         private void desbloquearFormulario()
@@ -66,48 +68,64 @@ namespace TarsiusWhite
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            _auxiliar = "EDITAR";
-            desbloquearFormulario();
-            txtApellido.Focus();
+            Cliente cliente = (Cliente)lstCliente.SelectedItem;
+            if (cliente != null)
+            {
+                _auxiliar = "E";
+                desbloquearFormulario();
+            }
+            else
+            {
+                MessageBox.Show("Ojo, Selecciona un Item");
+            }
+
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (lstCliente.SelectedItems.Count > 0)
+
+            Cliente cliente = (Cliente)lstCliente.SelectedItem;
+            if (cliente != null)
             {
-                Cliente cli = (Cliente)lstCliente.SelectedItem;
-                Cliente.listaClientes.Remove(cli);
+                Cliente.EliminarCliente(cliente);
                 actualizarListadoCliente();
                 limpiarFormulario();
             }
             else
             {
-                MessageBox.Show("Favor seleccionar para eliminar");
+                MessageBox.Show("Favor seleccionar una fila de la lista");
             }
+
         }
 
         private void actualizarListadoCliente()
         {
             lstCliente.DataSource = null;
-            lstCliente.DataSource = Cliente.ObtenerClientes();
+            lstCliente.DataSource = Cliente.ObtenerCliente();
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (_auxiliar == "AGREGAR")
+
+            if (_auxiliar == "I")
             {
                 Cliente cli = obtenerClienteFormulario();
-                Cliente.agregarCliente(cli);
+                Cliente.AgregarCliente(cli);
             }
-            else if (_auxiliar == "EDITAR")
+            else if (_auxiliar == "E")
             {
                 int index = lstCliente.SelectedIndex;
-
-                Cliente.listaClientes[index] = obtenerClienteFormulario();
+                Cliente cliente = obtenerClienteFormulario();
+                Cliente.EditarCliente(index, cliente);
             }
 
             actualizarListadoCliente();
             limpiarFormulario();
             bloquearFomulario();
+
+
+
+            
         }
 
         private void bloquearFomulario()
@@ -136,7 +154,7 @@ namespace TarsiusWhite
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -162,7 +180,7 @@ namespace TarsiusWhite
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            actualizarListadoCliente ();
+            actualizarListadoCliente();
             cboSexo.DataSource = Enum.GetValues(typeof(Cliente._sexo));
             cboTipoDocumento.DataSource = Enum.GetValues(typeof(Cliente._tipoDocumento));
             bloquearFomulario();
@@ -172,6 +190,8 @@ namespace TarsiusWhite
 
         private Cliente obtenerClienteFormulario()
         {
+
+
             Cliente cli = new Cliente();
             cli.nombre = txtApellido.Text;
             cli.apellido = txtApellido.Text;
@@ -183,6 +203,23 @@ namespace TarsiusWhite
 
 
             return cli;
+        }
+
+        private void lstCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cliente c = (Cliente)lstCliente.SelectedItem;
+
+            if (c != null)
+            {
+                txtNombre.Text = c.nombre;
+                txtApellido.Text = c.apellido;
+                cboSexo.SelectedItem = c.sexo;
+                cboTipoDocumento.SelectedItem = c.tipoDocumento;
+                txtNroDocumento.Text = c.nroDocumento;
+                txtDireccion.Text = c.direccion;
+                txtEmail.Text = c.email;
+
+            }
         }
     }
 }
