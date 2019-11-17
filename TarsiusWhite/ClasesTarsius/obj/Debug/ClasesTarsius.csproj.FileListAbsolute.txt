@@ -40,3 +40,4 @@ C:\Users\alumno-202\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius
 C:\Users\alumno-202\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojResolveAssemblyReference.cache
 C:\Users\alumno-202\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\alumno-202\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojAssemblyReference.cache

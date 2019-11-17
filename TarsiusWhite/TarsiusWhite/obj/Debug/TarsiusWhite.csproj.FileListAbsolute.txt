@@ -118,3 +118,12 @@ C:\Users\alumno-202\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\
 C:\Users\alumno-202\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.Cache
 C:\Users\alumno-202\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 C:\Users\alumno-202\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.pdb
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\ClasesTarsius.dll
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\ClasesTarsius.pdb
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmCliente.resources
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CopyComplete
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
+C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
