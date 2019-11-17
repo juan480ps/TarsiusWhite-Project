@@ -109,7 +109,7 @@ namespace TarsiusWhite
         private Categoria obtenerCategoria()
         {
             Categoria cat = new Categoria();
-            cat.IDCategoria = txtCodigoCategoria.Text;
+            //cat.IDCategoria = txtCodigoCategoria.Text;
             cat.NombreCategoria = txtNombreCategoria.Text;
             cat.DescripcionCategoria = txtDescripcionCategoria.Text;
             return cat;
@@ -143,7 +143,7 @@ namespace TarsiusWhite
 
             if (cat != null)
             {
-                txtCodigoCategoria.Text = cat.IDCategoria;
+                txtCodigoCategoria.Text =  Convert.ToString(cat.IDCategoria);
                 txtDescripcionCategoria.Text = cat.DescripcionCategoria;
                 txtNombreCategoria.Text = cat.NombreCategoria; 
             }

@@ -129,3 +129,14 @@ C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\De
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CopyComplete
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csprojResolveAssemblyReference.cache
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmArticulo.resources
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmCategoria.resources
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmCliente.resources
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmEmpleado.resources
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPresentacion.resources
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmPrincipal.resources
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmVenta.resources
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.Properties.Resources.resources
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.Cache
