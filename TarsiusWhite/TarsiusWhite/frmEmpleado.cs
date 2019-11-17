@@ -22,23 +22,6 @@ namespace TarsiusWhite
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //Empleado empleado = new Empleado();
-            //empleado.nombre = txtNombre.Text;
-            //empleado.apellido = txtApellido.Text;
-            ////empleado.sexo = (Empleado._sexo)cboSexo.SelectedItem;
-            //empleado.fechaNacimiento = dtpFechaNacimiento.Value.Date;
-            ////empleado.tipoDocumento = (Empleado._tipoDocumento)cboTipoDocumento.SelectedItem;
-            //empleado.nroDocumento = txtNroDocumento.Text;
-            //empleado.direccion = txtDireccion.Text;
-            //empleado.telefono = txtTelefono.Text;
-            //empleado.email = txtEmail.Text;
-            //empleado.acceso = txtAcceso.Text;
-            //empleado.usuario = txtUsuario.Text;
-            //empleado.password = txtPassword.Text;
-
-            //Empleado.agregarEmpleado(empleado);
-            //limpiarFormulario();
-            //actualizarListaddoEmpleado();
 
             _auxiliar = "AGREGAR";
             limpiarFormulario();
@@ -195,6 +178,7 @@ namespace TarsiusWhite
             emp.apellido = txtApellido.Text;
             emp.sexo = txtSexo.Text;
             emp.fechaNacimiento = dtpFechaNacimiento.Value.Date;
+            emp.direccion = txtDireccion.Text;
             emp.nroDocumento = txtNroDocumento.Text;
             emp.telefono = txtTelefono.Text;
             emp.acceso = txtAcceso.Text;

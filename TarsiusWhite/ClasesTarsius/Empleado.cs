@@ -183,13 +183,13 @@ namespace ClasesTarsius
                     empleado.sexo = elLectorDeDatos.GetString(3);
                     empleado.fechaNacimiento = elLectorDeDatos.GetDateTime(4);
                     //empleado.tipoDocumento = elLectorDeDatos.GetString(5);
-                    empleado.nroDocumento = elLectorDeDatos.GetString(6);
-                    empleado.direccion = elLectorDeDatos.GetString(7);
-                    empleado.telefono = elLectorDeDatos.GetString(8);
-                    empleado.email = elLectorDeDatos.GetString(9);
-                    empleado.acceso = elLectorDeDatos.GetString(10);
-                    empleado.usuario = elLectorDeDatos.GetString(11);
-                    empleado.password = elLectorDeDatos.GetString(12);
+                    empleado.nroDocumento = elLectorDeDatos.GetString(5);
+                    empleado.direccion = elLectorDeDatos.GetString(6);
+                    empleado.telefono = elLectorDeDatos.GetString(7);
+                    empleado.email = elLectorDeDatos.GetString(8);
+                    empleado.acceso = elLectorDeDatos.GetString(9);
+                    empleado.usuario = elLectorDeDatos.GetString(10);
+                    empleado.password = elLectorDeDatos.GetString(11);
 
                     listaEmpleados.Add(empleado);
                 }
