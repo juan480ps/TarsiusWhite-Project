@@ -49,7 +49,7 @@ namespace ClasesTarsius
 
             {
                 con.Open();
-                string textoCmd = "INSERT INTO Cliente (nombre, apellido, sexo, FechaNacimiento, tipodocumento, NroDocumento, direccion, telefono, email)VALUES (@nombre, @apellido, @sexo, @FechaNacimiento, @tipodocumento, @NroDocumento, @direccion, @telefono, @email)";
+                string textoCmd = "INSERT INTO Cliente (Nombre, Apellido, Sexo, FechaNacimiento, TipoDocumento, NroDocumento, Direccion, Telefono, Email) VALUES (@Nombre, @Apellido, @Sexo, @FechaNacimiento, @TipoDocumento, @NroDocumento, @Direccion, @Telefono, @Email)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 cmd = c.ObtenerParametros(cmd);
                 cmd.ExecuteNonQuery();
@@ -174,9 +174,9 @@ namespace ClasesTarsius
 
         private SqlCommand ObtenerParametrosId(SqlCommand cmd)
         {
-            SqlParameter p9 = new SqlParameter("@Id", this.idCliente);
-            p9.SqlDbType = SqlDbType.Int;
-            cmd.Parameters.Add(p9);
+            SqlParameter p10 = new SqlParameter("@Id", this.idCliente);
+            p10.SqlDbType = SqlDbType.Int;
+            cmd.Parameters.Add(p10);
             return cmd;
         }                  
     }
