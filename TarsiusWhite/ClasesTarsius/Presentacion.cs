@@ -27,19 +27,16 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
 
-                con.Open(); //Abrimos la conex con la BD
+                con.Open(); 
                 string textoCmd = "insert into Presentacion (nombrePresentacion, descripcionPresentacion) VALUES (@nombrePresentacion, @descripcionPresentacion)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
 
-                //PARAMETROS
                 SqlParameter p1 = new SqlParameter("@nombrePresentacion", pre.nombrePresentacion);
                 SqlParameter p2 = new SqlParameter("@descripcionPresentacion", pre.descripcionPresentacion);
 
-                //Le decimos a los parametros de que tipo de datos son
                 p1.SqlDbType = SqlDbType.VarChar;
                 p2.SqlDbType = SqlDbType.VarChar;
 
-                //Agragamos los parametros al command
                 cmd.Parameters.Add(p1);
                 cmd.Parameters.Add(p2);
 
@@ -57,11 +54,9 @@ namespace ClasesTarsius
                 string textoCMD = "UPDATE Presentacion SET nombrePresentacion = @nombrePresentacion, descripcionPresentacion = @descripcionPresentacion where Id = @Id";
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
 
-                //DEFINICION DE PARAMETROS
                 SqlParameter p1 = new SqlParameter("@nombrePresentacion", pre.nombrePresentacion);
                 SqlParameter p2 = new SqlParameter("@descripcionPresentacion", pre.descripcionPresentacion);
 
-                //Le decimos a los parametros de que tipo de datos son
                 p1.SqlDbType = SqlDbType.VarChar;
                 p2.SqlDbType = SqlDbType.VarChar;
 
@@ -134,10 +129,8 @@ namespace ClasesTarsius
                     listaPresentacion.Add(presentacion);
                 }
 
-
                 return listaPresentacion;
             }
-
         }
 
         public override string ToString()

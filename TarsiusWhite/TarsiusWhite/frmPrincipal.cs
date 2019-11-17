@@ -57,5 +57,11 @@ namespace TarsiusWhite
             frmVenta frmventa = new frmVenta();
             frmventa.Show();
         }
+
+        private void cLientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCliente frmcliente = new frmCliente();
+            frmcliente.Show();
+        }
     }
 }
