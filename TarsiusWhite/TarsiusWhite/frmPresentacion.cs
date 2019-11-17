@@ -76,15 +76,14 @@ namespace TarsiusWhite
 
         private void LstPresentaciones_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstPresentaciones.SelectedItems.Count > 0)
             {
                 Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
-                Presentacion.listaPresentacion.Remove(pre);
-                limpiarFormulario();
-            }
-            else
-            {
-                MessageBox.Show("Favor seleccionar de la lista para eliminar");
+
+                if (pre != null)
+                {
+                    txtDescripcionPresentacion.Text = pre.descripcionPresentacion;
+                    txtNombrePresentacion.Text = pre.nombrePresentacion;
+                }
             }
         }
 
@@ -157,7 +156,7 @@ namespace TarsiusWhite
             {
                 MessageBox.Show("Favor seleccionar de la lista para eliminar");
             }
-        }   
+        }
 
         private void FrmPresentacion_Load(object sender, EventArgs e)
         {
