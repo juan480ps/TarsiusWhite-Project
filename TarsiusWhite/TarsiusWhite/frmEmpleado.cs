@@ -70,11 +70,7 @@ namespace TarsiusWhite
         private void frmEmpleado_Load(object sender, EventArgs e)
         {
             actualizarListaddoEmpleado();
-            cboSexo.DataSource = Enum.GetValues(typeof(Empleado._sexo));
-            cboTipoDocumento.DataSource = Enum.GetValues(typeof(Empleado._tipoDocumento));
             bloquearFomulario();
-            cboSexo.SelectedItem = null;
-            cboTipoDocumento.SelectedItem = null;
         }
 
         //_auxiliar = "AGREGAR";
@@ -87,8 +83,7 @@ namespace TarsiusWhite
         {
             txtNombre.Enabled = true;
             txtApellido.Enabled = true;
-            cboSexo.Enabled = true;
-            cboTipoDocumento.Enabled = true;
+            txtSexo.Enabled = true;
             txtNroDocumento.Enabled = true;
             dtpFechaNacimiento.Enabled = true;
             txtAcceso.Enabled = true;
@@ -112,9 +107,9 @@ namespace TarsiusWhite
         {
             txtApellido.Text = "";
             txtApellido.Text = "";
-            cboSexo.SelectedItem = null;
+            txtSexo.Text = "";
             dtpFechaNacimiento.Value = DateTime.Now;
-            cboTipoDocumento.SelectedItem = null;
+            txtNroDocumento.Text = "";
             txtTelefono.Text = "";
             txtAcceso.Text = "";
             txtUsuario.Text = "";
@@ -160,8 +155,8 @@ namespace TarsiusWhite
         {
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
-            cboSexo.Enabled = false;
-            cboTipoDocumento.Enabled = false;
+            txtSexo.Enabled = false;
+            txtNroDocumento.Enabled = false;
             txtNroDocumento.Enabled = false;
             dtpFechaNacimiento.Enabled = false;
             txtAcceso.Enabled = false;
@@ -198,9 +193,8 @@ namespace TarsiusWhite
             Empleado emp = new Empleado();
             emp.nombre = txtApellido.Text;
             emp.apellido = txtApellido.Text;
-            emp.sexo = (Empleado._sexo)cboSexo.SelectedIndex;
+            emp.sexo = txtSexo.Text;
             emp.fechaNacimiento = dtpFechaNacimiento.Value.Date;
-            emp.tipoDocumento = (Empleado._tipoDocumento)cboTipoDocumento.SelectedIndex;
             emp.nroDocumento = txtNroDocumento.Text;
             emp.telefono = txtTelefono.Text;
             emp.acceso = txtAcceso.Text;
@@ -224,8 +218,8 @@ namespace TarsiusWhite
                 txtUsuario.Text = emp.usuario;
                 txtPassword.Text = emp.password;
                 txtEmail.Text = emp.email;
-                cboSexo.SelectedItem = emp.sexo;
-                cboTipoDocumento.SelectedItem = emp.tipoDocumento;
+                txtSexo.Text = emp.sexo;
+                txtNroDocumento.Text = emp.nroDocumento;
                 dtpFechaNacimiento.Value = emp.fechaNacimiento;
             }
         }

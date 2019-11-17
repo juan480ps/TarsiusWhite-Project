@@ -48,10 +48,7 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
-            this.cboSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.lblTipoDocumento = new System.Windows.Forms.Label();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.txtNroDocumento = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -59,6 +56,8 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.gpbEmpleado = new System.Windows.Forms.GroupBox();
+            this.txtSexo = new System.Windows.Forms.TextBox();
+            this.lblNroDoc = new System.Windows.Forms.Label();
             this.gpbEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,7 +146,6 @@
             this.lstEmpleado.Name = "lstEmpleado";
             this.lstEmpleado.Size = new System.Drawing.Size(288, 147);
             this.lstEmpleado.TabIndex = 104;
-            //this.lstEmpleado.Click += new System.EventHandler(this.lstEmpleado_Click);
             // 
             // btnLimpiar
             // 
@@ -235,22 +233,6 @@
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(123, 20);
             this.dtpFechaNacimiento.TabIndex = 94;
             // 
-            // cboTipoDocumento
-            // 
-            this.cboTipoDocumento.FormattingEnabled = true;
-            this.cboTipoDocumento.Location = new System.Drawing.Point(99, 114);
-            this.cboTipoDocumento.Name = "cboTipoDocumento";
-            this.cboTipoDocumento.Size = new System.Drawing.Size(61, 21);
-            this.cboTipoDocumento.TabIndex = 93;
-            // 
-            // cboSexo
-            // 
-            this.cboSexo.FormattingEnabled = true;
-            this.cboSexo.Location = new System.Drawing.Point(62, 72);
-            this.cboSexo.Name = "cboSexo";
-            this.cboSexo.Size = new System.Drawing.Size(102, 21);
-            this.cboSexo.TabIndex = 92;
-            // 
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
@@ -259,15 +241,6 @@
             this.lblSexo.Size = new System.Drawing.Size(31, 13);
             this.lblSexo.TabIndex = 91;
             this.lblSexo.Text = "Sexo";
-            // 
-            // lblTipoDocumento
-            // 
-            this.lblTipoDocumento.AutoSize = true;
-            this.lblTipoDocumento.Location = new System.Drawing.Point(11, 117);
-            this.lblTipoDocumento.Name = "lblTipoDocumento";
-            this.lblTipoDocumento.Size = new System.Drawing.Size(86, 13);
-            this.lblTipoDocumento.TabIndex = 90;
-            this.lblTipoDocumento.Text = "Tipo Documento";
             // 
             // lblFechaNacimiento
             // 
@@ -280,7 +253,7 @@
             // 
             // txtNroDocumento
             // 
-            this.txtNroDocumento.Location = new System.Drawing.Point(170, 115);
+            this.txtNroDocumento.Location = new System.Drawing.Point(102, 118);
             this.txtNroDocumento.Name = "txtNroDocumento";
             this.txtNroDocumento.Size = new System.Drawing.Size(163, 20);
             this.txtNroDocumento.TabIndex = 88;
@@ -316,10 +289,11 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(163, 20);
             this.txtNombre.TabIndex = 84;
-            //this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // gpbEmpleado
             // 
+            this.gpbEmpleado.Controls.Add(this.lblNroDoc);
+            this.gpbEmpleado.Controls.Add(this.txtSexo);
             this.gpbEmpleado.Controls.Add(this.txtNombre);
             this.gpbEmpleado.Controls.Add(this.lblPassword);
             this.gpbEmpleado.Controls.Add(this.lblNombre);
@@ -332,13 +306,10 @@
             this.gpbEmpleado.Controls.Add(this.lblAcceso);
             this.gpbEmpleado.Controls.Add(this.lblFechaNacimiento);
             this.gpbEmpleado.Controls.Add(this.txtAcceso);
-            this.gpbEmpleado.Controls.Add(this.lblTipoDocumento);
             this.gpbEmpleado.Controls.Add(this.btnEliminar);
             this.gpbEmpleado.Controls.Add(this.lblSexo);
             this.gpbEmpleado.Controls.Add(this.btnEditar);
-            this.gpbEmpleado.Controls.Add(this.cboSexo);
             this.gpbEmpleado.Controls.Add(this.btnAgregar);
-            this.gpbEmpleado.Controls.Add(this.cboTipoDocumento);
             this.gpbEmpleado.Controls.Add(this.lstEmpleado);
             this.gpbEmpleado.Controls.Add(this.dtpFechaNacimiento);
             this.gpbEmpleado.Controls.Add(this.btnLimpiar);
@@ -356,7 +327,22 @@
             this.gpbEmpleado.TabIndex = 114;
             this.gpbEmpleado.TabStop = false;
             this.gpbEmpleado.Text = "Empleado";
-            //this.gpbEmpleado.Enter += new System.EventHandler(this.gpbEmpleado_Enter);
+            // 
+            // txtSexo
+            // 
+            this.txtSexo.Location = new System.Drawing.Point(62, 77);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(96, 20);
+            this.txtSexo.TabIndex = 114;
+            // 
+            // lblNroDoc
+            // 
+            this.lblNroDoc.AutoSize = true;
+            this.lblNroDoc.Location = new System.Drawing.Point(11, 118);
+            this.lblNroDoc.Name = "lblNroDoc";
+            this.lblNroDoc.Size = new System.Drawing.Size(85, 13);
+            this.lblNroDoc.TabIndex = 115;
+            this.lblNroDoc.Text = "Nro. Documento";
             // 
             // frmEmpleado
             // 
@@ -396,10 +382,7 @@
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
-        private System.Windows.Forms.ComboBox cboTipoDocumento;
-        private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.Label lblTipoDocumento;
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.TextBox txtNroDocumento;
         private System.Windows.Forms.Label lblApellido;
@@ -407,5 +390,7 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.GroupBox gpbEmpleado;
+        private System.Windows.Forms.Label lblNroDoc;
+        private System.Windows.Forms.TextBox txtSexo;
     }
 }

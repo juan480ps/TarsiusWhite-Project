@@ -125,7 +125,6 @@ namespace ClasesTarsius
         }
 
         private SqlCommand ObtenerParametros(SqlCommand cmd, Boolean id = false)
-
         {
             SqlParameter p1 = new SqlParameter("@codigo", this.codigo);
             SqlParameter p2 = new SqlParameter("@nombre", this.nombre);
