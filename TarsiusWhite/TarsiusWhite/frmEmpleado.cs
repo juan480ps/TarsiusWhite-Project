@@ -15,17 +15,73 @@ namespace TarsiusWhite
     {
         public string _auxiliar;
         public frmEmpleado()
+
         {
             InitializeComponent();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            //Empleado empleado = new Empleado();
+            //empleado.nombre = txtNombre.Text;
+            //empleado.apellido = txtApellido.Text;
+            ////empleado.sexo = (Empleado._sexo)cboSexo.SelectedItem;
+            //empleado.fechaNacimiento = dtpFechaNacimiento.Value.Date;
+            ////empleado.tipoDocumento = (Empleado._tipoDocumento)cboTipoDocumento.SelectedItem;
+            //empleado.nroDocumento = txtNroDocumento.Text;
+            //empleado.direccion = txtDireccion.Text;
+            //empleado.telefono = txtTelefono.Text;
+            //empleado.email = txtEmail.Text;
+            //empleado.acceso = txtAcceso.Text;
+            //empleado.usuario = txtUsuario.Text;
+            //empleado.password = txtPassword.Text;
+
+            //Empleado.agregarEmpleado(empleado);
+            //limpiarFormulario();
+            //actualizarListaddoEmpleado();
+
             _auxiliar = "AGREGAR";
             limpiarFormulario();
             desbloquearFormulario();
             txtNombre.Focus();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (lstEmpleado.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Favor seleccionar para eliminar");
+            }
+            else
+            {
+                Empleado emp = (Empleado)lstEmpleado.SelectedItem;
+                Empleado.listaEmpleados.Remove(emp);
+                actualizarListaddoEmpleado();
+                limpiarFormulario();
+            }
+        }
+
+        private void actualizarListaddoEmpleado()
+        {
+            lstEmpleado.DataSource = null;
+            lstEmpleado.DataSource = Empleado.ObtenerEmpleados();
+        }
+
+        private void frmEmpleado_Load(object sender, EventArgs e)
+        {
+            actualizarListaddoEmpleado();
+            cboSexo.DataSource = Enum.GetValues(typeof(Empleado._sexo));
+            cboTipoDocumento.DataSource = Enum.GetValues(typeof(Empleado._tipoDocumento));
+            bloquearFomulario();
+            cboSexo.SelectedItem = null;
+            cboTipoDocumento.SelectedItem = null;
+        }
+
+        //_auxiliar = "AGREGAR";
+        //limpiarFormulario();
+        //desbloquearFormulario();
+        //txtNombre.Focus();
+
 
         private void desbloquearFormulario()
         {
@@ -57,7 +113,7 @@ namespace TarsiusWhite
             txtApellido.Text = "";
             txtApellido.Text = "";
             cboSexo.SelectedItem = null;
-            dtpFechaNacimiento.Value = DateTime.Now;   
+            dtpFechaNacimiento.Value = DateTime.Now;
             cboTipoDocumento.SelectedItem = null;
             txtTelefono.Text = "";
             txtAcceso.Text = "";
@@ -68,29 +124,17 @@ namespace TarsiusWhite
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            _auxiliar = "EDITAR";
-            desbloquearFormulario();
-            txtApellido.Focus();
-        }
+            //_auxiliar = "EDITAR";
+            //desbloquearFormulario();
+            //txtApellido.Focus();
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (lstEmpleado.SelectedItems.Count > 0)
-            {
-                Empleado emp = (Empleado)lstEmpleado.SelectedItem;
-                Empleado.listaEmpleados.Remove(emp);
-                actualizarListaddoEmpleado();
-                limpiarFormulario();
-            }
-            else
-            {
-                MessageBox.Show("Favor seleccionar para eliminar");
-            }
-        }
-        private void actualizarListaddoEmpleado()
-        {
-            lstEmpleado.DataSource = null;
-            lstEmpleado.DataSource = Empleado.ObtenerEmpleados();
+            int index = lstEmpleado.SelectedIndex;
+            Empleado emp = obtenerEmpleadoFormulario();
+            Empleado.editarEmpleado(index, emp);
+
+
+            limpiarFormulario();
+            actualizarListaddoEmpleado();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -99,7 +143,7 @@ namespace TarsiusWhite
             {
                 Empleado emp = obtenerEmpleadoFormulario();
                 Empleado.agregarEmpleado(emp);
-                }
+            }
             else if (_auxiliar == "EDITAR")
             {
                 int index = lstEmpleado.SelectedIndex;
@@ -135,7 +179,7 @@ namespace TarsiusWhite
             btnAgregar.Enabled = true;
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
-        
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -148,7 +192,26 @@ namespace TarsiusWhite
             limpiarFormulario();
         }
 
-        private void lstEmpleado_Click(object sender, EventArgs e)
+
+        private Empleado obtenerEmpleadoFormulario()
+        {
+            Empleado emp = new Empleado();
+            emp.nombre = txtApellido.Text;
+            emp.apellido = txtApellido.Text;
+            emp.sexo = (Empleado._sexo)cboSexo.SelectedIndex;
+            emp.fechaNacimiento = dtpFechaNacimiento.Value.Date;
+            emp.tipoDocumento = (Empleado._tipoDocumento)cboTipoDocumento.SelectedIndex;
+            emp.nroDocumento = txtNroDocumento.Text;
+            emp.telefono = txtTelefono.Text;
+            emp.acceso = txtAcceso.Text;
+            emp.usuario = txtUsuario.Text;
+            emp.password = txtPassword.Text;
+            emp.email = txtEmail.Text;
+
+            return emp;
+        }
+
+        private void lstEmpleado_SelectedIndexChanged(object sender, EventArgs e)
         {
             Empleado emp = (Empleado)lstEmpleado.SelectedItem;
 
@@ -166,45 +229,7 @@ namespace TarsiusWhite
                 dtpFechaNacimiento.Value = emp.fechaNacimiento;
             }
         }
-
-        private void frmEmpleado_Load(object sender, EventArgs e)
-        {
-            actualizarListaddoEmpleado();
-            cboSexo.DataSource = Enum.GetValues(typeof(Empleado._sexo));
-            cboTipoDocumento.DataSource = Enum.GetValues(typeof(Empleado._tipoDocumento));
-            bloquearFomulario();
-            cboSexo.SelectedItem = null;
-            cboTipoDocumento.SelectedItem = null;
-        }
-
-        private Empleado obtenerEmpleadoFormulario()
-        {
-            Empleado emp = new Empleado();
-            emp.nombre = txtApellido.Text;
-            emp.apellido = txtApellido.Text;
-            emp.sexo = (Empleado._sexo) cboSexo.SelectedItem;
-            emp.fechaNacimiento = dtpFechaNacimiento.Value.Date;
-            emp.tipoDocumento = (Empleado._tipoDocumento)cboTipoDocumento.SelectedItem;
-            emp.telefono = txtTelefono.Text;
-            emp.acceso = txtAcceso.Text;
-            emp.usuario = txtUsuario.Text;
-            emp.password = txtPassword.Text;
-            emp.email = txtEmail.Text;
-
-
-            return emp;
-        }
-
-        private void gpbEmpleado_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
-      
+

@@ -147,7 +147,7 @@
             this.lstEmpleado.Name = "lstEmpleado";
             this.lstEmpleado.Size = new System.Drawing.Size(288, 147);
             this.lstEmpleado.TabIndex = 104;
-            this.lstEmpleado.Click += new System.EventHandler(this.lstEmpleado_Click);
+            //this.lstEmpleado.Click += new System.EventHandler(this.lstEmpleado_Click);
             // 
             // btnLimpiar
             // 
@@ -316,7 +316,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(163, 20);
             this.txtNombre.TabIndex = 84;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            //this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // gpbEmpleado
             // 
@@ -356,7 +356,7 @@
             this.gpbEmpleado.TabIndex = 114;
             this.gpbEmpleado.TabStop = false;
             this.gpbEmpleado.Text = "Empleado";
-            this.gpbEmpleado.Enter += new System.EventHandler(this.gpbEmpleado_Enter);
+            //this.gpbEmpleado.Enter += new System.EventHandler(this.gpbEmpleado_Enter);
             // 
             // frmEmpleado
             // 
