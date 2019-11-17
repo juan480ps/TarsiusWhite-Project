@@ -127,3 +127,4 @@ C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\De
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CopyComplete
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 C:\Users\DELL\Source\Repos\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project2\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
