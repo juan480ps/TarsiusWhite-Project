@@ -65,7 +65,8 @@
             this.lstArticulos.Name = "lstArticulos";
             this.lstArticulos.Size = new System.Drawing.Size(419, 199);
             this.lstArticulos.TabIndex = 18;
-            this.lstArticulos.Click += new System.EventHandler(this.lstArticulos_Click);
+//            this.lstArticulos.Click += new System.EventHandler(this.lstArticulos_Click);
+            this.lstArticulos.SelectedIndexChanged += new System.EventHandler(this.lstArticulos_SelectedIndexChanged);
             // 
             // lblCodigo
             // 

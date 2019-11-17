@@ -55,7 +55,7 @@ namespace TarsiusWhite
         private void egresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVenta frmventa = new frmVenta();
-            frmVenta.Show();
+            frmventa.Show();
         }
     }
 }

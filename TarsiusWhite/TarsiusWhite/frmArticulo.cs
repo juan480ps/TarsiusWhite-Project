@@ -152,7 +152,7 @@ namespace TarsiusWhite
             bloquearFormulario();
         }
 
-        private void lstArticulos_Click(object sender, EventArgs e)
+        private void lstArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
             Articulo art = (Articulo)lstArticulos.SelectedItem;
 
