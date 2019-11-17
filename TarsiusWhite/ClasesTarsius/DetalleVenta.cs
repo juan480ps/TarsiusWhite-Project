@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClasesTarsius
 {
-    class DetalleVenta
+    public class DetalleVenta
     {
-        int IdDetalleVenta;
-        int Cantidad;
-        int PrecioVenta;
-        float Descuento;
+        private int IdDetalleVenta { get; set; }
+        public int cantidad { get; set; }
+        public Categoria categoria { get; set; }
+        public int PrecioVenta { get; set; }
 
     }
 }

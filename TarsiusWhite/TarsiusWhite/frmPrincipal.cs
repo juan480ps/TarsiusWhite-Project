@@ -51,5 +51,11 @@ namespace TarsiusWhite
             frmCliente frmCliente = new frmCliente();
             frmCliente.Show();
         }
+
+        private void egresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVenta frmventa = new frmVenta();
+            frmVenta.Show();
+        }
     }
 }
