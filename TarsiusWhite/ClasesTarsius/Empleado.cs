@@ -12,24 +12,11 @@ namespace ClasesTarsius
 {
     public class Empleado
     {
-        //public enum _sexo
-        //{
-        //    Femenino,
-        //    Masculino
-        //}
-
-        //public enum _tipoDocumento
-        //{
-        //    CI,
-        //    DNI
-        //}
-
         private int idEmpleado { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string sexo { get; set; }
         public DateTime fechaNacimiento { get; set; }
-       // public string tipoDocumento { get; set; }
         public string nroDocumento { get; set; }
         public string direccion { get; set; }
         public string telefono { get; set; }
@@ -46,7 +33,7 @@ namespace ClasesTarsius
             //listaEmpleados.Add(emp);
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
-                con.Open(); //Abrimos la conex con la BD
+                con.Open();
                 string textoCmd = "insert into empleado VALUES (@Nombre,@Apellido,@Sexo,@FechaNacimiento,@NroDocumento,@Direccion,@Telefono,@Email,@Acceso,@Usuario,@Password)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 cmd = emp.ObtenerParametros(cmd);
@@ -56,12 +43,10 @@ namespace ClasesTarsius
 
         private SqlCommand ObtenerParametros(SqlCommand cmd, bool id = false)
         {
-            //PARAMETROS
             SqlParameter p1 = new SqlParameter("@nombre", this.nombre);
             SqlParameter p2 = new SqlParameter("@Apellido", this.apellido);
             SqlParameter p3 = new SqlParameter("@Sexo", this.sexo);
             SqlParameter p4 = new SqlParameter("@FechaNacimiento", this.fechaNacimiento);
-           // SqlParameter p5 = new SqlParameter("@TipoDocumento", this.tipoDocumento);
             SqlParameter p6 = new SqlParameter("@NroDocumento", this.nroDocumento);
             SqlParameter p7 = new SqlParameter("@Direccion", this.direccion);
             SqlParameter p8 = new SqlParameter("@Telefono", this.telefono);
@@ -70,12 +55,10 @@ namespace ClasesTarsius
             SqlParameter p11 = new SqlParameter("@Usuario", this.usuario);
             SqlParameter p12 = new SqlParameter("@Password", this.password);
 
-            //Le decimos a los parametros de que tipo de datos son
             p1.SqlDbType = SqlDbType.VarChar;
             p2.SqlDbType = SqlDbType.VarChar;
             p3.SqlDbType = SqlDbType.VarChar;
             p4.SqlDbType = SqlDbType.Date;
-            //p5.SqlDbType = SqlDbType.VarChar;
             p6.SqlDbType = SqlDbType.VarChar;
             p7.SqlDbType = SqlDbType.VarChar;
             p8.SqlDbType = SqlDbType.VarChar;
@@ -84,12 +67,10 @@ namespace ClasesTarsius
             p11.SqlDbType = SqlDbType.VarChar;
             p12.SqlDbType = SqlDbType.VarChar;
 
-            //Agragamos los parametros al command
             cmd.Parameters.Add(p1);
             cmd.Parameters.Add(p2);
             cmd.Parameters.Add(p3);
             cmd.Parameters.Add(p4);
-            //cmd.Parameters.Add(p5);
             cmd.Parameters.Add(p6);
             cmd.Parameters.Add(p7);
             cmd.Parameters.Add(p8);
@@ -108,10 +89,9 @@ namespace ClasesTarsius
 
         public static void editarEmpleado(int indice, Empleado emp)
         {
-            // LISTA EMPLEADO
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
-                con.Open(); //Abrimos la conex con la BD
+                con.Open();
                 string textoCmd = "insert into Proveedor (nombre, apellido, sexo, fechaNacimiento, tipoDocumento, nroDocumento, direccion, telefono, email, acceso, usuario, password) VALUES (@nombre, @apellido, @sexo, @fechaNacimiento, @tipoDocumento, @nroDocumento, @direccion, @telefono, @email, @acceso, @usuario, @password)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
 
@@ -123,7 +103,6 @@ namespace ClasesTarsius
         public static void eliminarEmpleado(Empleado emp)
         {
             //listaEmpleados.Remove(emp);
-
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
@@ -182,7 +161,6 @@ namespace ClasesTarsius
                     empleado.apellido = elLectorDeDatos.GetString(2);
                     empleado.sexo = elLectorDeDatos.GetString(3);
                     empleado.fechaNacimiento = elLectorDeDatos.GetDateTime(4);
-                    //empleado.tipoDocumento = elLectorDeDatos.GetString(5);
                     empleado.nroDocumento = elLectorDeDatos.GetString(5);
                     empleado.direccion = elLectorDeDatos.GetString(6);
                     empleado.telefono = elLectorDeDatos.GetString(7);

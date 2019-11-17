@@ -14,10 +14,6 @@ namespace ClasesTarsius
        public  string NombreCategoria;
        public string DescripcionCategoria;
 
-
-
-
-
         public Categoria()
         {
 
@@ -29,7 +25,6 @@ namespace ClasesTarsius
         {
             // lstCategoria.Add(cat);
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
-
             {
                 con.Open();
                 string textoCmd = "INSERT INTO Categiria VALUES (@IdCategoria, @NombreCategoria, @DescripcionCategoria )";
@@ -43,18 +38,15 @@ namespace ClasesTarsius
         {
             SqlParameter p1 = new SqlParameter("@IdCategoria", this.IDCategoria);
             SqlParameter p2 = new SqlParameter("@NombreCategoria", this.NombreCategoria);
-            SqlParameter p3 = new SqlParameter("@DescripcionCategoria", this.DescripcionCategoria);
-            
+            SqlParameter p3 = new SqlParameter("@DescripcionCategoria", this.DescripcionCategoria);            
 
             p1.SqlDbType = SqlDbType.Int;
             p2.SqlDbType = SqlDbType.VarChar;
-            p3.SqlDbType = SqlDbType.VarChar;
-           
+            p3.SqlDbType = SqlDbType.VarChar;           
 
             cmd.Parameters.Add(p1);
             cmd.Parameters.Add(p2);
-            cmd.Parameters.Add(p3);
-         ;
+            cmd.Parameters.Add(p3);         
 
             if (id == true)
             {
@@ -88,7 +80,6 @@ namespace ClasesTarsius
         public static void eliminarCategoria(Categoria cat)
         {
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
-
             {
                 con.Open();
                 string SENTENCIA_SQL = "delete from Categoria where Id = @IdCategoria";
@@ -124,19 +115,13 @@ namespace ClasesTarsius
                     cat = new Categoria();
                     cat.IDCategoria = elLectorDeDatos.GetInt32(0);
                     cat.NombreCategoria = elLectorDeDatos.GetString(1);
-                   cat.DescripcionCategoria = elLectorDeDatos.GetString(2);
-                    
+                    cat.DescripcionCategoria = elLectorDeDatos.GetString(2);                    
 
                     lstCategoria.Add(cat);
-
                 }
             }
 
             return lstCategoria;
-
-
-
-
         }
 
         public override string ToString()

@@ -42,13 +42,14 @@ namespace ClasesTarsius
         }
 
         public static List<Cliente> listaClientes= new List<Cliente>();
+
         public static void AgregarCliente(Cliente c)
         {
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
 
             {
                 con.Open();
-                string textoCmd = "INSERT INTO Cliente (nombre, apellido, sexo, fecha_nacimiento, tipo_documento, direccion, email, num_documento)VALUES (@nombre, @apellido, @sexo, @fecha_nacimiento, @tipo_documento, @direccion, @email, @num_documento)";
+                string textoCmd = "INSERT INTO Cliente (nombre, apellido, sexo, FechaNacimiento, tipodocumento, NroDocumento, direccion, telefono, email)VALUES (@nombre, @apellido, @sexo, @FechaNacimiento, @tipodocumento, @NroDocumento, @direccion, @telefono, @email)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 cmd = c.ObtenerParametros(cmd);
                 cmd.ExecuteNonQuery();
@@ -79,7 +80,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Cliente SET nombre = @nombre, apellido = @apellido, sexo = @sexo, fecha_nacimiento = @fecha_nacimiento,  tipo_documento = @tipo_documento, direccion = @direccion, email = @email, num_documento = @num_documento where Id = @Id";
+                string textoCMD = "UPDATE Cliente SET nombre = @nombre, apellido = @apellido, sexo = @sexo, FechaNacimiento = @FechaNacimiento,  tipodocumento = @tipodocumento, direccion = @direccion, email = @email, NroDocumento = @NroDocumento where Id = @Id";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = c.ObtenerParametros(cmd, true);
@@ -114,6 +115,7 @@ namespace ClasesTarsius
                     cliente.direccion = elLectorDeDatos.GetString(6);
                     cliente.email = elLectorDeDatos.GetString(7);
                     cliente.nroDocumento = elLectorDeDatos.GetString(8);
+                    cliente.telefono = elLectorDeDatos.GetString(9);
 
                     listaClientes.Add(cliente);
 
@@ -133,11 +135,13 @@ namespace ClasesTarsius
             SqlParameter p1 = new SqlParameter("@nombre", this.nombre);
             SqlParameter p2 = new SqlParameter("@apellido", this.apellido);
             SqlParameter p3 = new SqlParameter("@sexo", this.sexo);
-            SqlParameter p4 = new SqlParameter("@fecha_nacimiento", this.fechaNacimiento);
-            SqlParameter p5 = new SqlParameter("@tipo_documento	", this.tipoDocumento);
+            SqlParameter p4 = new SqlParameter("@fechanacimiento", this.fechaNacimiento);
+            SqlParameter p5 = new SqlParameter("@tipodocumento	", this.tipoDocumento);
             SqlParameter p6 = new SqlParameter("@direccion", this.direccion); 
             SqlParameter p7 = new SqlParameter("@email	", this.email);
-            SqlParameter p8 = new SqlParameter("@num_documento", this.nroDocumento);
+            SqlParameter p8 = new SqlParameter("@nrodocumento", this.nroDocumento);
+            SqlParameter p9 = new SqlParameter("@telefono", this.telefono);
+
 
             p1.SqlDbType = SqlDbType.VarChar;
             p2.SqlDbType = SqlDbType.VarChar;
@@ -147,6 +151,7 @@ namespace ClasesTarsius
             p6.SqlDbType = SqlDbType.VarChar;
             p7.SqlDbType = SqlDbType.VarChar;
             p8.SqlDbType = SqlDbType.VarChar;
+            p9.SqlDbType = SqlDbType.VarChar;
 
             cmd.Parameters.Add(p1);
             cmd.Parameters.Add(p2);
@@ -156,6 +161,7 @@ namespace ClasesTarsius
             cmd.Parameters.Add(p6);
             cmd.Parameters.Add(p7);
             cmd.Parameters.Add(p8);
+            cmd.Parameters.Add(p9);
 
             if (id == true)
             {
@@ -168,16 +174,10 @@ namespace ClasesTarsius
 
         private SqlCommand ObtenerParametrosId(SqlCommand cmd)
         {
-
             SqlParameter p9 = new SqlParameter("@Id", this.idCliente);
             p9.SqlDbType = SqlDbType.Int;
             cmd.Parameters.Add(p9);
             return cmd;
-        }
-        
-
-        
-
-        
+        }                  
     }
 }

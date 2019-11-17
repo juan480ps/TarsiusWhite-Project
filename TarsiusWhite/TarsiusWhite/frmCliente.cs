@@ -193,13 +193,15 @@ namespace TarsiusWhite
 
 
             Cliente cli = new Cliente();
-            cli.nombre = txtApellido.Text;
+            cli.nombre = txtNombre.Text;
             cli.apellido = txtApellido.Text;
             cli.sexo = (Cliente._sexo)cboSexo.SelectedItem;
             cli.fechaNacimiento = dtpFechaNacimiento.Value.Date;
             cli.tipoDocumento = (Cliente._tipoDocumento)cboTipoDocumento.SelectedItem;
             cli.telefono = txtTelefono.Text;
             cli.email = txtEmail.Text;
+            cli.nroDocumento = txtNroDocumento.Text;
+            cli.direccion = txtDireccion.Text;
 
 
             return cli;
@@ -217,6 +219,7 @@ namespace TarsiusWhite
                 cboTipoDocumento.SelectedItem = c.tipoDocumento;
                 txtNroDocumento.Text = c.nroDocumento;
                 txtDireccion.Text = c.direccion;
+                txtTelefono.Text = c.telefono;
                 txtEmail.Text = c.email;
 
             }

@@ -40,7 +40,6 @@ namespace ClasesTarsius
             //listaArticulos.Add(art);
 
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
-
             {
                 con.Open();
                 string textoCmd = "INSERT INTO Articulo VALUES (@codigo, @nombre, @descripcion , @categoria, @presentacion)";
@@ -112,7 +111,6 @@ namespace ClasesTarsius
                     art.presentacion = (_presentacion)elLectorDeDatos.GetInt32(5);
 
                     listaArticulos.Add(art);
-
                 }
             }
 

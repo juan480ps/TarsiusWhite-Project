@@ -9,12 +9,6 @@ namespace ClasesTarsius
 {
     public class Venta
     {
-        //int IdVenta;
-        //string FechaVenta;
-        //string TipoComprobante;
-        //public List<DetalleVenta> detalleVenta = new List<DetalleVenta>();
-        ////hola
-        ///
         public Cliente cliente { get; set; }
         public DateTime fechaVenta { get; set; }
         public List<DetalleVenta> detalleVenta = new List<DetalleVenta>();
@@ -27,11 +21,9 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                //cabecera
                 string textoCMD = "INSERT INTO Venta (fechaventa, cliente) output INSERTED.id VALUES (@fechaventa, @cliente)";
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
 
-                //parametros
                 SqlParameter p1 = new SqlParameter("@fechaventa", v.fechaVenta);
                 SqlParameter p2 = new SqlParameter("@cliente", v.cliente.idCliente);
 
@@ -42,15 +34,10 @@ namespace ClasesTarsius
 
                 int idVenta = (int)cmd.ExecuteScalar();
 
-
-                //DETALLE
                 foreach (DetalleVenta dv in v.detalleVenta)
                 {
-                    //insert para el detalle
                     string textoCMD2 = "INSERT INTO DetalleVenta(IdVenta, cantidad, categoria, precioventa) VALUES (@IdVenta, @cantidad, @categoria, @precioventa)";
                     SqlCommand cmd2 = new SqlCommand(textoCMD2, con);
-
-                    //Pasamos los parametros
 
                     SqlParameter p3 = new SqlParameter("@IdVenta", idVenta);
                     SqlParameter p4 = new SqlParameter("@cantidad", dv.cantidad);
