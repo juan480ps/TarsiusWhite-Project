@@ -178,3 +178,4 @@ C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\Tars
 C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CopyComplete
 C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+C:\Users\Matias\Source\Repos\TarsiusWhite-Project4\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config

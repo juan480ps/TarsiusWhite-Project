@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClasesTarsius; 
 
 namespace ClasesTarsius
 {
-    class DetalleIngreso
+   public class DetalleIngreso
     {
-        int IdDetalleIngreso;
-        int PrecioCompra;
-        int PrecioVenta;
-        int StockInicial;
-        int StockActual;
-        string FechaProduccion;
-        string FechaVencimiento;
+        public int IdIngreso { get; set; }
+        public string TipoComprobante { get; set; }
+        public string Igv { get; set; }
+        public string Estado { get; set; }
 
     }
 }

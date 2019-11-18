@@ -75,5 +75,10 @@ namespace TarsiusWhite
             cmbCliente.SelectedItem = null;
             venta = new Venta();
         }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
