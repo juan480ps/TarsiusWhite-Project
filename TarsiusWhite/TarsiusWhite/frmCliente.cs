@@ -29,9 +29,9 @@ namespace TarsiusWhite
             _auxiliar = "I";
             limpiarFormulario();
             desbloquearFormulario();
+            txtNombre.Focus();
 
 
-            
         }
 
         private void desbloquearFormulario()
