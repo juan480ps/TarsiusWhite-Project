@@ -80,7 +80,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Cliente SET nombre = @nombre, apellido = @apellido, sexo = @sexo, FechaNacimiento = @FechaNacimiento,  tipodocumento = @tipodocumento, direccion = @direccion, email = @email, NroDocumento = @NroDocumento where Id = @Id";
+                string textoCMD = "UPDATE Cliente SET Nombre = @Nombre, Apellido = @Apellido, Sexo = @Sexo, FechaNacimiento = @FechaNacimiento,  TipoDocumento = @TipoDocumento, Direccion = @Direccion, Email = @Email, NroDocumento = @NroDocumento where Id = @Id";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = c.ObtenerParametros(cmd, true);
@@ -132,15 +132,15 @@ namespace ClasesTarsius
         private SqlCommand ObtenerParametros(SqlCommand cmd, Boolean id = false)
 
         {
-            SqlParameter p1 = new SqlParameter("@nombre", this.nombre);
-            SqlParameter p2 = new SqlParameter("@apellido", this.apellido);
-            SqlParameter p3 = new SqlParameter("@sexo", this.sexo);
-            SqlParameter p4 = new SqlParameter("@fechanacimiento", this.fechaNacimiento);
-            SqlParameter p5 = new SqlParameter("@tipodocumento	", this.tipoDocumento);
-            SqlParameter p6 = new SqlParameter("@direccion", this.direccion); 
-            SqlParameter p7 = new SqlParameter("@email	", this.email);
-            SqlParameter p8 = new SqlParameter("@nrodocumento", this.nroDocumento);
-            SqlParameter p9 = new SqlParameter("@telefono", this.telefono);
+            SqlParameter p1 = new SqlParameter("@Nombre", this.nombre);
+            SqlParameter p2 = new SqlParameter("@Apellido", this.apellido);
+            SqlParameter p3 = new SqlParameter("@Sexo", this.sexo);
+            SqlParameter p4 = new SqlParameter("@FechaNacimiento", this.fechaNacimiento);
+            SqlParameter p5 = new SqlParameter("@TipoDocumento", this.tipoDocumento);
+            SqlParameter p6 = new SqlParameter("@Direccion", this.direccion); 
+            SqlParameter p7 = new SqlParameter("@Email", this.email);
+            SqlParameter p8 = new SqlParameter("@NroDocumento", this.nroDocumento);
+            SqlParameter p9 = new SqlParameter("@Telefono", this.telefono);
 
 
             p1.SqlDbType = SqlDbType.VarChar;
