@@ -9,10 +9,11 @@ namespace ClasesTarsius
 {
    public class DetalleIngreso
     {
-        public int IdIngreso { get; set; }
+        public  string Correlativo { get; set; }
         public string TipoComprobante { get; set; }
         public string Igv { get; set; }
         public string Estado { get; set; }
+
 
     }
 }

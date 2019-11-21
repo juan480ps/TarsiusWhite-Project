@@ -96,11 +96,11 @@
     <Compile Include="frmVenta.Designer.cs">
       <DependentUpon>frmVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ingreso.cs">
+    <Compile Include="frmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ingreso.Designer.cs">
-      <DependentUpon>Ingreso.cs</DependentUpon>
+    <Compile Include="frmIngreso.Designer.cs">
+      <DependentUpon>frmIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,8 +125,8 @@
     <EmbeddedResource Include="frmVenta.resx">
       <DependentUpon>frmVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ingreso.resx">
-      <DependentUpon>Ingreso.cs</DependentUpon>
+    <EmbeddedResource Include="frmIngreso.resx">
+      <DependentUpon>frmIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

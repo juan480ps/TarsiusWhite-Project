@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
-using System.Data.SqlClient;
 using System.Threading.Tasks;
-
+using System.Data.SqlClient;
 namespace ClasesTarsius
 {
    public class Ingreso
     {
         public int IdIngreso;
-       public string FechaIngreso;
+       public DateTime FechaIngreso;
        public string TipoComprobante;
        public string Serie;
        public string Correlativo;
@@ -19,7 +17,7 @@ namespace ClasesTarsius
        public string Estado;
 
 
-        public List<DetalleIngreso> detalle_ingresos = new List<DetalleIngreso>();
+        public List<DetalleIngreso> detalleIngreso = new List<DetalleIngreso>();
 
         public static List<Ingreso> listaIngreso = new List<Ingreso>();
 
@@ -46,7 +44,7 @@ namespace ClasesTarsius
 
 
                 //DETALLE
-                foreach (DetalleIngreso dp in p.detalle_ingresos)
+                foreach (DetalleIngreso dp in p.detalleIngreso)
                 {
                     //insert para el detalle
                     string textoCMD2 = "INSERT INTO IngresoDetalle (IdIngreso, TipoComprobante, Igv, Estado) VALUES (@IdIngreso, @TipoComprobante, @Igv, @Estado)";

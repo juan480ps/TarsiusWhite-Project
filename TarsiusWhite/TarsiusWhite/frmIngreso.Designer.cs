@@ -1,6 +1,6 @@
 ﻿namespace TarsiusWhite
 {
-    partial class Ingreso
+    partial class frmIngreso
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 150);
+            this.label6.Location = new System.Drawing.Point(12, 150);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(22, 13);
             this.label6.TabIndex = 49;
@@ -67,7 +67,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 180);
+            this.label5.Location = new System.Drawing.Point(12, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 46;
@@ -123,7 +123,7 @@
             // lblCarne
             // 
             this.lblCarne.AutoSize = true;
-            this.lblCarne.Location = new System.Drawing.Point(19, 110);
+            this.lblCarne.Location = new System.Drawing.Point(12, 110);
             this.lblCarne.Name = "lblCarne";
             this.lblCarne.Size = new System.Drawing.Size(57, 13);
             this.lblCarne.TabIndex = 40;
@@ -132,7 +132,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 76);
+            this.label3.Location = new System.Drawing.Point(12, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 39;
@@ -156,7 +156,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 9);
+            this.label2.Location = new System.Drawing.Point(12, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 37;
@@ -194,7 +194,7 @@
             this.txtEstado.Size = new System.Drawing.Size(203, 20);
             this.txtEstado.TabIndex = 51;
             // 
-            // Ingreso
+            // frmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,7 +217,7 @@
             this.Controls.Add(this.dtpFechaIngreso);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbTipoComprobante);
-            this.Name = "Ingreso";
+            this.Name = "frmIngreso";
             this.Text = "Ingreso";
             this.Load += new System.EventHandler(this.Ingreso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgtbDetalleIngreso)).EndInit();
