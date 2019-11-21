@@ -69,9 +69,16 @@ namespace TarsiusWhite
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            _auxiliar = "EDITAR";
-            desbloquearFormulario();
-            txtNombrePresentacion.Focus();
+            Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
+            if (pre != null)
+            {
+                _auxiliar = "EDITAR";
+                desbloquearFormulario();
+            }
+            else
+            {
+                MessageBox.Show("Ojo, Selecciona un Item");
+            }
         }
 
         private void LstPresentaciones_SelectedIndexChanged(object sender, EventArgs e)
@@ -103,8 +110,9 @@ namespace TarsiusWhite
             else if (_auxiliar == "EDITAR")
             {
                 int index = lstPresentaciones.SelectedIndex;
-
-                Presentacion.listaPresentacion[index] = obtenerPresentacionFormulario();
+                //Articulo.listaArticulos[index] = obtenerArticuloFormulario();
+                Presentacion pre = obtenerPresentacionFormulario();
+                Presentacion.editarPresentacion(pre, index);
             }
 
             actualizarListadoPresentacion();

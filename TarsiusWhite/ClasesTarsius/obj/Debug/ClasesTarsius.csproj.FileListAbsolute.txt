@@ -60,3 +60,4 @@ C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTar
 C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
 C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
+C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojResolveAssemblyReference.cache
