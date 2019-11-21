@@ -25,7 +25,7 @@ namespace ClasesTarsius
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
 
                 SqlParameter p1 = new SqlParameter("@fechaventa", v.fechaVenta);
-                SqlParameter p2 = new SqlParameter("@cliente", v.cliente.idCliente);
+                SqlParameter p2 = new SqlParameter("@cliente", v.cliente.IdCliente);
 
                 p1.SqlDbType = System.Data.SqlDbType.DateTime;
                 p2.SqlDbType = System.Data.SqlDbType.Int;

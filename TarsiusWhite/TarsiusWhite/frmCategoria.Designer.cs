@@ -38,15 +38,13 @@
             this.txtDescripcionCategoria = new System.Windows.Forms.TextBox();
             this.lblNombreCategoria = new System.Windows.Forms.Label();
             this.txtNombreCategoria = new System.Windows.Forms.TextBox();
-            this.lblCodigoCategoria = new System.Windows.Forms.Label();
-            this.txtCodigoCategoria = new System.Windows.Forms.TextBox();
             this.lstCategoria = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(450, 225);
+            this.btnEliminar.Location = new System.Drawing.Point(277, 241);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 67;
@@ -56,7 +54,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(352, 225);
+            this.btnEditar.Location = new System.Drawing.Point(277, 212);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 66;
@@ -66,7 +64,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(259, 225);
+            this.btnAgregar.Location = new System.Drawing.Point(277, 183);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 65;
@@ -76,7 +74,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(297, 459);
+            this.btnLimpiar.Location = new System.Drawing.Point(197, 377);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 64;
@@ -86,7 +84,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(162, 459);
+            this.btnCancelar.Location = new System.Drawing.Point(114, 377);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 63;
@@ -96,7 +94,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(34, 459);
+            this.btnGuardar.Location = new System.Drawing.Point(33, 377);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 62;
@@ -107,7 +105,7 @@
             // lblDescripcionCategoria
             // 
             this.lblDescripcionCategoria.AutoSize = true;
-            this.lblDescripcionCategoria.Location = new System.Drawing.Point(122, 185);
+            this.lblDescripcionCategoria.Location = new System.Drawing.Point(50, 113);
             this.lblDescripcionCategoria.Name = "lblDescripcionCategoria";
             this.lblDescripcionCategoria.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcionCategoria.TabIndex = 59;
@@ -115,7 +113,7 @@
             // 
             // txtDescripcionCategoria
             // 
-            this.txtDescripcionCategoria.Location = new System.Drawing.Point(281, 178);
+            this.txtDescripcionCategoria.Location = new System.Drawing.Point(209, 106);
             this.txtDescripcionCategoria.Name = "txtDescripcionCategoria";
             this.txtDescripcionCategoria.Size = new System.Drawing.Size(163, 20);
             this.txtDescripcionCategoria.TabIndex = 58;
@@ -123,7 +121,7 @@
             // lblNombreCategoria
             // 
             this.lblNombreCategoria.AutoSize = true;
-            this.lblNombreCategoria.Location = new System.Drawing.Point(122, 134);
+            this.lblNombreCategoria.Location = new System.Drawing.Point(50, 84);
             this.lblNombreCategoria.Name = "lblNombreCategoria";
             this.lblNombreCategoria.Size = new System.Drawing.Size(44, 13);
             this.lblNombreCategoria.TabIndex = 57;
@@ -131,31 +129,15 @@
             // 
             // txtNombreCategoria
             // 
-            this.txtNombreCategoria.Location = new System.Drawing.Point(281, 127);
+            this.txtNombreCategoria.Location = new System.Drawing.Point(209, 77);
             this.txtNombreCategoria.Name = "txtNombreCategoria";
             this.txtNombreCategoria.Size = new System.Drawing.Size(163, 20);
             this.txtNombreCategoria.TabIndex = 56;
             // 
-            // lblCodigoCategoria
-            // 
-            this.lblCodigoCategoria.AutoSize = true;
-            this.lblCodigoCategoria.Location = new System.Drawing.Point(122, 93);
-            this.lblCodigoCategoria.Name = "lblCodigoCategoria";
-            this.lblCodigoCategoria.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigoCategoria.TabIndex = 55;
-            this.lblCodigoCategoria.Text = "Código ";
-            // 
-            // txtCodigoCategoria
-            // 
-            this.txtCodigoCategoria.Location = new System.Drawing.Point(281, 86);
-            this.txtCodigoCategoria.Name = "txtCodigoCategoria";
-            this.txtCodigoCategoria.Size = new System.Drawing.Size(163, 20);
-            this.txtCodigoCategoria.TabIndex = 54;
-            // 
             // lstCategoria
             // 
             this.lstCategoria.FormattingEnabled = true;
-            this.lstCategoria.Location = new System.Drawing.Point(34, 225);
+            this.lstCategoria.Location = new System.Drawing.Point(50, 159);
             this.lstCategoria.Name = "lstCategoria";
             this.lstCategoria.Size = new System.Drawing.Size(203, 212);
             this.lstCategoria.TabIndex = 53;
@@ -177,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(568, 528);
+            this.ClientSize = new System.Drawing.Size(379, 408);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
@@ -188,8 +170,6 @@
             this.Controls.Add(this.txtDescripcionCategoria);
             this.Controls.Add(this.lblNombreCategoria);
             this.Controls.Add(this.txtNombreCategoria);
-            this.Controls.Add(this.lblCodigoCategoria);
-            this.Controls.Add(this.txtCodigoCategoria);
             this.Controls.Add(this.lstCategoria);
             this.Controls.Add(this.label1);
             this.Name = "frmCategoria";
@@ -211,8 +191,6 @@
         private System.Windows.Forms.TextBox txtDescripcionCategoria;
         private System.Windows.Forms.Label lblNombreCategoria;
         private System.Windows.Forms.TextBox txtNombreCategoria;
-        private System.Windows.Forms.Label lblCodigoCategoria;
-        private System.Windows.Forms.TextBox txtCodigoCategoria;
         private System.Windows.Forms.ListBox lstCategoria;
         private System.Windows.Forms.Label label1;
     }

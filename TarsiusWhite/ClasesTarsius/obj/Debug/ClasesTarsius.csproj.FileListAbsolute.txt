@@ -58,6 +58,5 @@ C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\Clas
 C:\Users\Gonzalez_Guerreño\Source\Repos\TarsiusWhite-Project3\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
 C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.dll
 C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
-C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojResolveAssemblyReference.cache
 C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\alumno-201\Documents\master\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb

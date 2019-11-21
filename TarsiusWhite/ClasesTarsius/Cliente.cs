@@ -23,7 +23,7 @@ namespace ClasesTarsius
 
         }
 
-        public int idCliente { get; set; }
+        public int IdCliente { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public _sexo sexo { get; set; }
@@ -65,7 +65,7 @@ namespace ClasesTarsius
                 string SENTENCIA_SQL = "delete from Cliente where Id = @Id";
 
                 SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
-                SqlParameter p1 = new SqlParameter("@Id", cliente.idCliente);
+                SqlParameter p1 = new SqlParameter("@Id", cliente.IdCliente);
                 p1.SqlDbType = SqlDbType.Int;
                 cmd.Parameters.Add(p1);
 
@@ -80,7 +80,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Cliente SET Nombre = @Nombre, Apellido = @Apellido, Sexo = @Sexo, FechaNacimiento = @FechaNacimiento,  TipoDocumento = @TipoDocumento, Direccion = @Direccion, Email = @Email, NroDocumento = @NroDocumento where Id = @Id";
+                string textoCMD = "UPDATE Cliente SET Nombre = @Nombre, Apellido = @Apellido, Sexo = @Sexo, FechaNacimiento = @FechaNacimiento,  TipoDocumento = @TipoDocumento, Direccion = @Direccion, Email = @Email, NroDocumento = @NroDocumento where IdCliente = @IdCliente";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = c.ObtenerParametros(cmd, true);
@@ -106,7 +106,7 @@ namespace ClasesTarsius
                 while (elLectorDeDatos.Read())
                 {
                     cliente = new Cliente();
-                    cliente.idCliente = elLectorDeDatos.GetInt32(0);
+                    cliente.IdCliente = elLectorDeDatos.GetInt32(0);
                     cliente.nombre = elLectorDeDatos.GetString(1);
                     cliente.apellido = elLectorDeDatos.GetString(2);
                     cliente.sexo = (_sexo)elLectorDeDatos.GetInt32(3);
@@ -174,7 +174,7 @@ namespace ClasesTarsius
 
         private SqlCommand ObtenerParametrosId(SqlCommand cmd)
         {
-            SqlParameter p10 = new SqlParameter("@Id", this.idCliente);
+            SqlParameter p10 = new SqlParameter("@IdCliente", this.IdCliente);
             p10.SqlDbType = SqlDbType.Int;
             cmd.Parameters.Add(p10);
             return cmd;

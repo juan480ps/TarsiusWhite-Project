@@ -26,7 +26,7 @@ namespace TarsiusWhite
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            _auxiliar = "I";
+            _auxiliar = "AGREGAR";
             limpiarFormulario();
             desbloquearFormulario();
             txtNombre.Focus();
@@ -71,7 +71,7 @@ namespace TarsiusWhite
             Cliente cliente = (Cliente)lstCliente.SelectedItem;
             if (cliente != null)
             {
-                _auxiliar = "E";
+                _auxiliar = "EDITAR";
                 desbloquearFormulario();
             }
             else
@@ -107,12 +107,12 @@ namespace TarsiusWhite
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            if (_auxiliar == "I")
+            if (_auxiliar == "AGREGAR")
             {
                 Cliente cli = obtenerClienteFormulario();
                 Cliente.AgregarCliente(cli);
             }
-            else if (_auxiliar == "E")
+            else if (_auxiliar == "EDITAR")
             {
                 int index = lstCliente.SelectedIndex;
                 Cliente cliente = obtenerClienteFormulario();

@@ -11,7 +11,7 @@ namespace ClasesTarsius
     public class Categoria
     {
        public int IDCategoria;
-       public  string NombreCategoria;
+       public string NombreCategoria;
        public string DescripcionCategoria;
 
         public Categoria()
@@ -27,7 +27,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCmd = "INSERT INTO Categiria VALUES (@IdCategoria, @NombreCategoria, @DescripcionCategoria )";
+                string textoCmd = "INSERT INTO Categoria VALUES ( @NombreCategoria, @DescripcionCategoria )";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 cmd = cat.ObtenerParametros(cmd);
                 cmd.ExecuteNonQuery();
@@ -36,17 +36,17 @@ namespace ClasesTarsius
 
         private SqlCommand ObtenerParametros(SqlCommand cmd, Boolean id = false)
         {
-            SqlParameter p1 = new SqlParameter("@IdCategoria", this.IDCategoria);
-            SqlParameter p2 = new SqlParameter("@NombreCategoria", this.NombreCategoria);
-            SqlParameter p3 = new SqlParameter("@DescripcionCategoria", this.DescripcionCategoria);            
+            
+            SqlParameter p1 = new SqlParameter("@NombreCategoria", this.NombreCategoria);
+            SqlParameter p2 = new SqlParameter("@DescripcionCategoria", this.DescripcionCategoria);            
 
-            p1.SqlDbType = SqlDbType.Int;
-            p2.SqlDbType = SqlDbType.VarChar;
-            p3.SqlDbType = SqlDbType.VarChar;           
+           
+            p1.SqlDbType = SqlDbType.VarChar;
+            p2.SqlDbType = SqlDbType.VarChar;           
 
+          
             cmd.Parameters.Add(p1);
-            cmd.Parameters.Add(p2);
-            cmd.Parameters.Add(p3);         
+            cmd.Parameters.Add(p2);         
 
             if (id == true)
             {
@@ -68,7 +68,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Articulo SET IDCategoria = @IdCategoria, NombreCategoria = @NombreCategoria, DescripcionCategoria = @DescripcionCategoria";
+                string textoCMD = "UPDATE Categoria SET NombreCategoria = @NombreCategoria, DescripcionCategoria = @DescripcionCategoria";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = cat.ObtenerParametros(cmd, true);
@@ -82,10 +82,10 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string SENTENCIA_SQL = "delete from Categoria where Id = @IdCategoria";
+                string SENTENCIA_SQL = "delete from Categoria where IdCategoria = @IdCategoria";
 
                 SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
-                SqlParameter p1 = new SqlParameter("@Id", cat.IDCategoria);
+                SqlParameter p1 = new SqlParameter("@IdCategoria", cat.IDCategoria);
                 p1.SqlDbType = SqlDbType.Int;
                 cmd.Parameters.Add(p1);
 

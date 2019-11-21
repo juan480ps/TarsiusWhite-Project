@@ -34,7 +34,6 @@ namespace TarsiusWhite
 
         private void desbloquearFormulario()
         {
-            txtCodigoCategoria.Enabled = true;
             txtDescripcionCategoria.Enabled = true;
             txtNombreCategoria.Enabled = true;
             btnGuardar.Enabled = true;
@@ -46,7 +45,6 @@ namespace TarsiusWhite
         }
         private void bloquearFormulario()
         {
-            txtCodigoCategoria.Enabled = false;
             txtDescripcionCategoria.Enabled = false;
             txtNombreCategoria.Enabled = false;
             btnGuardar.Enabled = false;
@@ -59,7 +57,6 @@ namespace TarsiusWhite
         }
         private void limpiarFormulario()
         {
-            txtCodigoCategoria.Text = "";
             txtDescripcionCategoria.Text = "";
             txtNombreCategoria.Text = "";
             
@@ -69,22 +66,23 @@ namespace TarsiusWhite
         {
             _auxiliar = "EDITAR";
             desbloquearFormulario();
-            txtCodigoCategoria.Focus();
+            txtNombreCategoria.Focus();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (lstCategoria.SelectedItems.Count > 0)
+            Categoria categoria = (Categoria)lstCategoria.SelectedItem;
+            if (categoria != null)
             {
-                 Categoria cat = (Categoria)lstCategoria.SelectedItem;
-                Categoria.lstCategoria.Remove(cat);
+                Categoria.eliminarCategoria(categoria);
                 actualizarlstCategoria();
                 limpiarFormulario();
             }
             else
             {
-                MessageBox.Show("Favor seleccionar de la lista para eliminar");
+                MessageBox.Show("Favor seleccionar una fila de la lista");
             }
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -97,8 +95,9 @@ namespace TarsiusWhite
             else if (_auxiliar == "EDITAR")
             {
                 int index = lstCategoria.SelectedIndex;
-
-                Categoria.lstCategoria[index] = obtenerCategoria();
+                //Categoria.lstCategoria[index] = obtenerCategoria();
+                Categoria cat = obtenerCategoriaFormulario();
+                Categoria.editarCategoria(cat, index);
             }
 
             actualizarlstCategoria();
@@ -109,7 +108,7 @@ namespace TarsiusWhite
         private Categoria obtenerCategoria()
         {
             Categoria cat = new Categoria();
-            cat.IDCategoria = Convert.ToInt32(txtCodigoCategoria.Text); 
+           // cat.IDCategoria = Convert.ToInt32(txtCodigoCategoria.Text); 
             cat.NombreCategoria = txtNombreCategoria.Text;
             cat.DescripcionCategoria = txtDescripcionCategoria.Text;
             return cat;
@@ -143,10 +142,19 @@ namespace TarsiusWhite
 
             if (cat != null)
             {
-                txtCodigoCategoria.Text =  Convert.ToString(cat.IDCategoria);
                 txtDescripcionCategoria.Text = cat.DescripcionCategoria;
                 txtNombreCategoria.Text = cat.NombreCategoria; 
             }
+        }
+
+        private Categoria obtenerCategoriaFormulario()
+        {
+            Categoria cat = new Categoria();
+
+            cat.NombreCategoria = txtNombreCategoria.Text;
+            cat.DescripcionCategoria = txtDescripcionCategoria.Text;
+
+            return cat;
         }
     }
 }
