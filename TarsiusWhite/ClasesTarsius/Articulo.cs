@@ -56,7 +56,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Articulo SET codigo = @codigo, nombre = @nombre, descripcion = @descripcion, categoria = @categoria, categoria = @categoria, presentacion = @presentacion";
+                string textoCMD = "UPDATE Articulo SET codigo = @codigo, nombre = @nombre, descripcion = @descripcion, categoria = @categoria, presentacion = @presentacion";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = art.ObtenerParametros(cmd, true);
@@ -72,10 +72,10 @@ namespace ClasesTarsius
 
             {
                 con.Open();
-                string SENTENCIA_SQL = "delete from Articulo where Id = @Id";
+                string SENTENCIA_SQL = "delete from Articulo where Idarticulo = @Idarticulo";
 
                 SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
-                SqlParameter p1 = new SqlParameter("@Id", art.idArticulo);
+                SqlParameter p1 = new SqlParameter("@Idarticulo", art.idArticulo);
                 p1.SqlDbType = SqlDbType.Int;
                 cmd.Parameters.Add(p1);
 

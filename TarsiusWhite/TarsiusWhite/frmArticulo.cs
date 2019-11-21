@@ -74,23 +74,34 @@ namespace TarsiusWhite
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            _auxiliar = "EDITAR";
-            desbloquearFormulario();
-            txtCodigo.Focus();
+            //_auxiliar = "EDITAR";
+            //desbloquearFormulario();
+            //txtCodigo.Focus();
+
+            Articulo art = (Articulo)lstArticulos.SelectedItem;
+            if (art != null)
+            {
+                _auxiliar = "EDITAR";
+                desbloquearFormulario();
+            }
+            else
+            {
+                MessageBox.Show("Ojo, Selecciona un Item");
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (lstArticulos.SelectedItems.Count > 0)
+            Articulo art = (Articulo)lstArticulos.SelectedItem;
+            if (art != null)
             {
-                Articulo art = (Articulo)lstArticulos.SelectedItem;
-                Articulo.listaArticulos.Remove(art);
+                Articulo.eliminarArticulo(art);
                 actualizarListadoArticullo();
                 limpiarFormulario();
             }
             else
             {
-                MessageBox.Show("Favor seleccionar de la lista para eliminar");
+                MessageBox.Show("Favor seleccionar una fila de la lista");
             }
         }
 
@@ -110,8 +121,9 @@ namespace TarsiusWhite
             else if (_auxiliar == "EDITAR")
             {
                 int index = lstArticulos.SelectedIndex;
-
-                Articulo.listaArticulos[index] = obtenerArticuloFormulario();
+                //Articulo.listaArticulos[index] = obtenerArticuloFormulario();
+                Articulo art = obtenerArticuloFormulario();
+                Articulo.editarArticulo(art, index);
             }
 
             actualizarListadoArticullo();
@@ -121,13 +133,23 @@ namespace TarsiusWhite
 
         private Articulo obtenerArticuloFormulario()
         {
+            //Articulo art = new Articulo();
+
+            //art.codigo = txtCodigo.Text;
+            //art.nombre = txtNombre.Text;
+            //art.descripcion = txtDescripcion.Text;
+            //art.categoria = (Articulo._categoria)cboCategoria.SelectedItem;
+            //art.presentacion = (Articulo._presentacion)cboPresentacion.SelectedItem;
+
+            //return art;
+
             Articulo art = new Articulo();
 
             art.codigo = txtCodigo.Text;
             art.nombre = txtNombre.Text;
             art.descripcion = txtDescripcion.Text;
             art.categoria = (Articulo._categoria)cboCategoria.SelectedItem;
-            art.presentacion = (Articulo._presentacion)cboPresentacion.SelectedItem;
+            art.presentacion = (Articulo._presentacion)cboCategoria.SelectedItem;
 
             return art;
         }
