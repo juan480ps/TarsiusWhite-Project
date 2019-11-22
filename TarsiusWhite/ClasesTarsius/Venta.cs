@@ -21,11 +21,11 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "INSERT INTO Venta (fechaventa, cliente) output INSERTED.id VALUES (@fechaventa, @cliente)";
+                string textoCMD = "INSERT INTO Venta (FechaPedido, Cliente) output INSERTED.id VALUES (@fechaventa, @cliente)";
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
 
                 SqlParameter p1 = new SqlParameter("@fechaventa", v.fechaVenta);
-                SqlParameter p2 = new SqlParameter("@cliente", v.cliente.IdCliente);
+                SqlParameter p2 = new SqlParameter("@Cliente", v.cliente.IdCliente);
 
                 p1.SqlDbType = System.Data.SqlDbType.DateTime;
                 p2.SqlDbType = System.Data.SqlDbType.Int;

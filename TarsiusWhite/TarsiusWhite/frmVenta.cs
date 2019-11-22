@@ -39,7 +39,8 @@ namespace TarsiusWhite
             venta.detalleVenta.Add(dv);
             ActualizarDataGrid();
 
-            Limpiar();
+            txtCantidad.Text = "0";
+            cmbCategoria.SelectedItem = null;
         }
 
         private void ActualizarDataGrid()
@@ -53,6 +54,7 @@ namespace TarsiusWhite
             txtCantidad.Text = "0";
             cmbCategoria.SelectedItem = null;
             cmbCliente.SelectedItem = null;
+            txtPrecio.Text = "0";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
