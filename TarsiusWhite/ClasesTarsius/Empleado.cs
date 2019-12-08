@@ -135,10 +135,6 @@ namespace ClasesTarsius
             return listaEmpleados;
         }
 
-        public override string ToString()
-        {
-            return this.nombre;
-        }
         private SqlCommand ObtenerParametros(SqlCommand cmd, Boolean id = false)
 
         {
@@ -197,6 +193,11 @@ namespace ClasesTarsius
             p10.SqlDbType = SqlDbType.Int;
             cmd.Parameters.Add(p10);
             return cmd;
+        }
+
+        public override string ToString()
+        {
+            return nombre + " " + apellido + " " + sexo + " " + fechaNacimiento + " " + tipoDocumento + " " + nroDocumento + " " + direccion + " " + telefono + " " + email + " " + acceso + " " + usuario;
         }
     }
 }

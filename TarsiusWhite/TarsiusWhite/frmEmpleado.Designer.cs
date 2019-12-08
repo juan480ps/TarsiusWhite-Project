@@ -56,9 +56,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.gpbEmpleado = new System.Windows.Forms.GroupBox();
-            this.lblNroDoc = new System.Windows.Forms.Label();
-            this.cboSexo = new System.Windows.Forms.ComboBox();
             this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
+            this.lblNroDoc = new System.Windows.Forms.Label();
             this.gpbEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,7 +112,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(164, 422);
+            this.btnEliminar.Location = new System.Drawing.Point(449, 264);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 107;
@@ -122,7 +122,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(83, 422);
+            this.btnEditar.Location = new System.Drawing.Point(368, 264);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 106;
@@ -132,7 +132,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(2, 422);
+            this.btnAgregar.Location = new System.Drawing.Point(287, 264);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 105;
@@ -143,14 +143,14 @@
             // lstEmpleado
             // 
             this.lstEmpleado.FormattingEnabled = true;
-            this.lstEmpleado.Location = new System.Drawing.Point(279, 278);
+            this.lstEmpleado.Location = new System.Drawing.Point(6, 320);
             this.lstEmpleado.Name = "lstEmpleado";
-            this.lstEmpleado.Size = new System.Drawing.Size(288, 147);
+            this.lstEmpleado.Size = new System.Drawing.Size(535, 108);
             this.lstEmpleado.TabIndex = 104;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(449, 445);
+            this.btnLimpiar.Location = new System.Drawing.Point(336, 448);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 103;
@@ -160,7 +160,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(368, 445);
+            this.btnCancelar.Location = new System.Drawing.Point(255, 448);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 102;
@@ -170,7 +170,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(286, 445);
+            this.btnGuardar.Location = new System.Drawing.Point(173, 448);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 101;
@@ -325,10 +325,26 @@
             this.gpbEmpleado.Controls.Add(this.lblEmail);
             this.gpbEmpleado.Location = new System.Drawing.Point(12, 12);
             this.gpbEmpleado.Name = "gpbEmpleado";
-            this.gpbEmpleado.Size = new System.Drawing.Size(599, 477);
+            this.gpbEmpleado.Size = new System.Drawing.Size(553, 477);
             this.gpbEmpleado.TabIndex = 114;
             this.gpbEmpleado.TabStop = false;
             this.gpbEmpleado.Text = "Empleado";
+            // 
+            // cboTipoDocumento
+            // 
+            this.cboTipoDocumento.FormattingEnabled = true;
+            this.cboTipoDocumento.Location = new System.Drawing.Point(103, 114);
+            this.cboTipoDocumento.Name = "cboTipoDocumento";
+            this.cboTipoDocumento.Size = new System.Drawing.Size(61, 21);
+            this.cboTipoDocumento.TabIndex = 117;
+            // 
+            // cboSexo
+            // 
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Location = new System.Drawing.Point(62, 77);
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(102, 21);
+            this.cboSexo.TabIndex = 116;
             // 
             // lblNroDoc
             // 
@@ -339,28 +355,12 @@
             this.lblNroDoc.TabIndex = 115;
             this.lblNroDoc.Text = "Nro. Documento";
             // 
-            // cboSexo
-            // 
-            this.cboSexo.FormattingEnabled = true;
-            this.cboSexo.Location = new System.Drawing.Point(62, 77);
-            this.cboSexo.Name = "cboSexo";
-            this.cboSexo.Size = new System.Drawing.Size(102, 21);
-            this.cboSexo.TabIndex = 116;
-            // 
-            // cboTipoDocumento
-            // 
-            this.cboTipoDocumento.FormattingEnabled = true;
-            this.cboTipoDocumento.Location = new System.Drawing.Point(103, 114);
-            this.cboTipoDocumento.Name = "cboTipoDocumento";
-            this.cboTipoDocumento.Size = new System.Drawing.Size(61, 21);
-            this.cboTipoDocumento.TabIndex = 117;
-            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(630, 504);
+            this.ClientSize = new System.Drawing.Size(577, 504);
             this.Controls.Add(this.gpbEmpleado);
             this.Name = "frmEmpleado";
             this.Text = "frmEmpleado";
