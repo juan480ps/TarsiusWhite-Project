@@ -14,6 +14,7 @@ namespace TarsiusWhite
     public partial class frmArticulo : Form
     {
         public string _auxiliar;
+
         public frmArticulo()
         {
             InitializeComponent();
@@ -21,10 +22,131 @@ namespace TarsiusWhite
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            _auxiliar = "AGREGAR";
+            try
+            {
+                _auxiliar = "AGREGAR";
+                limpiarFormulario();
+                desbloquearFormulario();
+                txtCodigo.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Articulo art = (Articulo)lstArticulos.SelectedItem;
+                if (art != null)
+                {
+                    _auxiliar = "EDITAR";
+                    desbloquearFormulario();
+                    completarObjetos();
+                }
+                else
+                {
+                    MessageBox.Show("Ojo, Selecciona un Item");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Articulo art = (Articulo)lstArticulos.SelectedItem;
+                if (art != null)
+                {
+                    Articulo.eliminarArticulo(art);
+                    actualizarListadoArticullo();
+                    limpiarFormulario();
+                }
+                else
+                {
+                    MessageBox.Show("Favor seleccionar una fila de la lista");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ValidarCampos())
+                {
+                    if (_auxiliar == "AGREGAR")
+                    {
+                        Articulo art = obtenerArticuloFormulario();
+                        Articulo.agregarArticulo(art);
+                    }
+                    else if (_auxiliar == "EDITAR")
+                    {
+                        int index = lstArticulos.SelectedIndex;
+                        Articulo art = obtenerArticuloFormulario();
+                        Articulo.editarArticulo(art, index);
+                    }
+
+                    actualizarListadoArticullo();
+                    limpiarFormulario();
+                    bloquearFormulario();
+                }                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                actualizarListadoArticullo();
+                limpiarFormulario();
+                bloquearFormulario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
             limpiarFormulario();
-            desbloquearFormulario();
-            txtCodigo.Focus();
+        }
+
+        private void frmArticulo_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                actualizarListadoArticullo();
+                cboCategoria.DataSource = Enum.GetValues(typeof(Articulo._categoria));
+                cboPresentacion.DataSource = Enum.GetValues(typeof(Articulo._presentacion));
+                cboCategoria.SelectedItem = null;
+                cboPresentacion.SelectedItem = null;
+                bloquearFormulario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+        }
+
+        private void lstArticulos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            completarObjetos();
         }
 
         private void desbloquearFormulario()
@@ -57,9 +179,6 @@ namespace TarsiusWhite
             btnAgregar.Enabled = true;
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
-
-
-
         }
 
         private void limpiarFormulario()
@@ -69,40 +188,6 @@ namespace TarsiusWhite
             txtDescripcion.Text = "";
             cboCategoria.SelectedItem = null;
             cboPresentacion.SelectedItem = null;
-
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            //_auxiliar = "EDITAR";
-            //desbloquearFormulario();
-            //txtCodigo.Focus();
-
-            Articulo art = (Articulo)lstArticulos.SelectedItem;
-            if (art != null)
-            {
-                _auxiliar = "EDITAR";
-                desbloquearFormulario();
-            }
-            else
-            {
-                MessageBox.Show("Ojo, Selecciona un Item");
-            }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            Articulo art = (Articulo)lstArticulos.SelectedItem;
-            if (art != null)
-            {
-                Articulo.eliminarArticulo(art);
-                actualizarListadoArticullo();
-                limpiarFormulario();
-            }
-            else
-            {
-                MessageBox.Show("Favor seleccionar una fila de la lista");
-            }
         }
 
         private void actualizarListadoArticullo()
@@ -111,38 +196,8 @@ namespace TarsiusWhite
             lstArticulos.DataSource = Articulo.ObtenerArticulos();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            if (_auxiliar == "AGREGAR")
-            {
-                Articulo art = obtenerArticuloFormulario();
-                Articulo.agregarArticulo(art);
-            }
-            else if (_auxiliar == "EDITAR")
-            {
-                int index = lstArticulos.SelectedIndex;
-                //Articulo.listaArticulos[index] = obtenerArticuloFormulario();
-                Articulo art = obtenerArticuloFormulario();
-                Articulo.editarArticulo(art, index);
-            }
-
-            actualizarListadoArticullo();
-            limpiarFormulario();
-            bloquearFormulario();
-        }
-
         private Articulo obtenerArticuloFormulario()
         {
-            //Articulo art = new Articulo();
-
-            //art.codigo = txtCodigo.Text;
-            //art.nombre = txtNombre.Text;
-            //art.descripcion = txtDescripcion.Text;
-            //art.categoria = (Articulo._categoria)cboCategoria.SelectedItem;
-            //art.presentacion = (Articulo._presentacion)cboPresentacion.SelectedItem;
-
-            //return art;
-
             Articulo art = new Articulo();
 
             art.codigo = txtCodigo.Text;
@@ -154,38 +209,65 @@ namespace TarsiusWhite
             return art;
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {            
-            Application.Exit();
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void completarObjetos()
         {
-            limpiarFormulario();
-        }
-
-        private void frmArticulo_Load(object sender, EventArgs e)
-        {
-            actualizarListadoArticullo();
-            cboCategoria.DataSource = Enum.GetValues(typeof(Articulo._categoria));
-            cboPresentacion.DataSource = Enum.GetValues(typeof(Articulo._presentacion));
-            cboCategoria.SelectedItem = null;
-            cboPresentacion.SelectedItem = null;
-            bloquearFormulario();
-        }
-
-        private void lstArticulos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Articulo art = (Articulo)lstArticulos.SelectedItem;
-
-            if (art != null)
+            try
             {
-                txtCodigo.Text = art.codigo;
-                txtNombre.Text = art.nombre;
-                txtDescripcion.Text = art.descripcion;
-                cboCategoria.SelectedItem = art.categoria;
-                cboPresentacion.SelectedItem = art.presentacion;
+                Articulo art = (Articulo)lstArticulos.SelectedItem;
+
+                if (art != null)
+                {
+                    txtCodigo.Text = art.codigo;
+                    txtNombre.Text = art.nombre;
+                    txtDescripcion.Text = art.descripcion;
+                    cboCategoria.SelectedItem = art.categoria;
+                    cboPresentacion.SelectedItem = art.presentacion;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+        }
+
+
+        private bool ValidarCampos()
+        {
+            if (String.IsNullOrWhiteSpace(txtCodigo.Text))
+            {
+                MessageBox.Show("El codigo no puede estar vacío", "Error");
+                txtCodigo.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("El nombre no puede estar vacío", "Error");
+                txtNombre.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                MessageBox.Show("La descripcion no puede estar vacío", "Error");
+                txtDescripcion.Focus();
+                return false;
+            }
+
+            if (cboCategoria.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione una Categoria", "Error");
+                cboCategoria.Focus();
+                return false;
+            }
+
+            if (cboPresentacion.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione una Presentacion", "Error");
+                cboPresentacion.Focus();
+                return false;
+            }
+            return true;
         }
     }
 }

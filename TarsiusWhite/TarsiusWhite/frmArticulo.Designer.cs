@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblArticulo = new System.Windows.Forms.Label();
-            this.lstArticulos = new System.Windows.Forms.ListBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.cboPresentacion = new System.Windows.Forms.ComboBox();
+            this.lstArticulos = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblArticulo
@@ -57,16 +57,6 @@
             this.lblArticulo.Size = new System.Drawing.Size(207, 55);
             this.lblArticulo.TabIndex = 6;
             this.lblArticulo.Text = "Articulos";
-            // 
-            // lstArticulos
-            // 
-            this.lstArticulos.FormattingEnabled = true;
-            this.lstArticulos.Location = new System.Drawing.Point(83, 263);
-            this.lstArticulos.Name = "lstArticulos";
-            this.lstArticulos.Size = new System.Drawing.Size(419, 199);
-            this.lstArticulos.TabIndex = 18;
-//            this.lstArticulos.Click += new System.EventHandler(this.lstArticulos_Click);
-            this.lstArticulos.SelectedIndexChanged += new System.EventHandler(this.lstArticulos_SelectedIndexChanged);
             // 
             // lblCodigo
             // 
@@ -210,12 +200,21 @@
             this.cboPresentacion.Size = new System.Drawing.Size(162, 21);
             this.cboPresentacion.TabIndex = 51;
             // 
+            // lstArticulos
+            // 
+            this.lstArticulos.FormattingEnabled = true;
+            this.lstArticulos.Location = new System.Drawing.Point(22, 259);
+            this.lstArticulos.Name = "lstArticulos";
+            this.lstArticulos.Size = new System.Drawing.Size(546, 199);
+            this.lstArticulos.TabIndex = 52;
+            // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(546, 531);
+            this.ClientSize = new System.Drawing.Size(613, 531);
+            this.Controls.Add(this.lstArticulos);
             this.Controls.Add(this.cboPresentacion);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.btnEliminar);
@@ -232,7 +231,6 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.lstArticulos);
             this.Controls.Add(this.lblArticulo);
             this.Name = "frmArticulo";
             this.Text = "frmArticulo";
@@ -244,7 +242,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblArticulo;
-        private System.Windows.Forms.ListBox lstArticulos;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblNombre;
@@ -261,5 +258,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.ComboBox cboPresentacion;
+        private System.Windows.Forms.ListBox lstArticulos;
     }
 }

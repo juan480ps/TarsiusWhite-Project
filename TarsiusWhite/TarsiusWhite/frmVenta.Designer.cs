@@ -36,7 +36,7 @@
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.dtgDetalleVenta = new System.Windows.Forms.DataGridView();
+            this.dgvDetalleVenta = new System.Windows.Forms.DataGridView();
             this.lblFechaVenta = new System.Windows.Forms.Label();
             this.dtpFechaVenta = new System.Windows.Forms.DateTimePicker();
             this.lblCliente = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.lblArticulo = new System.Windows.Forms.Label();
             this.lblPrecioVenta = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardar
@@ -123,13 +123,13 @@
             this.txtCantidad.Size = new System.Drawing.Size(24, 20);
             this.txtCantidad.TabIndex = 18;
             // 
-            // dtgDetalleVenta
+            // dgvDetalleVenta
             // 
-            this.dtgDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDetalleVenta.Location = new System.Drawing.Point(12, 219);
-            this.dtgDetalleVenta.Name = "dtgDetalleVenta";
-            this.dtgDetalleVenta.Size = new System.Drawing.Size(488, 198);
-            this.dtgDetalleVenta.TabIndex = 20;
+            this.dgvDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleVenta.Location = new System.Drawing.Point(12, 219);
+            this.dgvDetalleVenta.Name = "dgvDetalleVenta";
+            this.dgvDetalleVenta.Size = new System.Drawing.Size(488, 198);
+            this.dgvDetalleVenta.TabIndex = 20;
             // 
             // lblFechaVenta
             // 
@@ -208,7 +208,7 @@
             this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.dtgDetalleVenta);
+            this.Controls.Add(this.dgvDetalleVenta);
             this.Controls.Add(this.lblFechaVenta);
             this.Controls.Add(this.dtpFechaVenta);
             this.Controls.Add(this.lblCliente);
@@ -216,7 +216,7 @@
             this.Name = "frmVenta";
             this.Text = "frmVenta";
             this.Load += new System.EventHandler(this.frmVenta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +232,7 @@
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.DataGridView dtgDetalleVenta;
+        private System.Windows.Forms.DataGridView dgvDetalleVenta;
         private System.Windows.Forms.Label lblFechaVenta;
         private System.Windows.Forms.DateTimePicker dtpFechaVenta;
         private System.Windows.Forms.Label lblCliente;

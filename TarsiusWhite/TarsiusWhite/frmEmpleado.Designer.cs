@@ -56,8 +56,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.gpbEmpleado = new System.Windows.Forms.GroupBox();
-            this.txtSexo = new System.Windows.Forms.TextBox();
             this.lblNroDoc = new System.Windows.Forms.Label();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
+            this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
             this.gpbEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -253,7 +254,7 @@
             // 
             // txtNroDocumento
             // 
-            this.txtNroDocumento.Location = new System.Drawing.Point(102, 118);
+            this.txtNroDocumento.Location = new System.Drawing.Point(179, 114);
             this.txtNroDocumento.Name = "txtNroDocumento";
             this.txtNroDocumento.Size = new System.Drawing.Size(163, 20);
             this.txtNroDocumento.TabIndex = 88;
@@ -292,8 +293,9 @@
             // 
             // gpbEmpleado
             // 
+            this.gpbEmpleado.Controls.Add(this.cboTipoDocumento);
+            this.gpbEmpleado.Controls.Add(this.cboSexo);
             this.gpbEmpleado.Controls.Add(this.lblNroDoc);
-            this.gpbEmpleado.Controls.Add(this.txtSexo);
             this.gpbEmpleado.Controls.Add(this.txtNombre);
             this.gpbEmpleado.Controls.Add(this.lblPassword);
             this.gpbEmpleado.Controls.Add(this.lblNombre);
@@ -328,13 +330,6 @@
             this.gpbEmpleado.TabStop = false;
             this.gpbEmpleado.Text = "Empleado";
             // 
-            // txtSexo
-            // 
-            this.txtSexo.Location = new System.Drawing.Point(62, 77);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(96, 20);
-            this.txtSexo.TabIndex = 114;
-            // 
             // lblNroDoc
             // 
             this.lblNroDoc.AutoSize = true;
@@ -343,6 +338,22 @@
             this.lblNroDoc.Size = new System.Drawing.Size(85, 13);
             this.lblNroDoc.TabIndex = 115;
             this.lblNroDoc.Text = "Nro. Documento";
+            // 
+            // cboSexo
+            // 
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Location = new System.Drawing.Point(62, 77);
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(102, 21);
+            this.cboSexo.TabIndex = 116;
+            // 
+            // cboTipoDocumento
+            // 
+            this.cboTipoDocumento.FormattingEnabled = true;
+            this.cboTipoDocumento.Location = new System.Drawing.Point(103, 114);
+            this.cboTipoDocumento.Name = "cboTipoDocumento";
+            this.cboTipoDocumento.Size = new System.Drawing.Size(61, 21);
+            this.cboTipoDocumento.TabIndex = 117;
             // 
             // frmEmpleado
             // 
@@ -391,6 +402,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.GroupBox gpbEmpleado;
         private System.Windows.Forms.Label lblNroDoc;
-        private System.Windows.Forms.TextBox txtSexo;
+        private System.Windows.Forms.ComboBox cboSexo;
+        private System.Windows.Forms.ComboBox cboTipoDocumento;
     }
 }

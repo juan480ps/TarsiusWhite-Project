@@ -47,13 +47,17 @@ namespace TarsiusWhite
         private void actualizarListaddoEmpleado()
         {
             lstEmpleado.DataSource = null;
-            lstEmpleado.DataSource = Empleado.ObtenerEmpleados();
+            lstEmpleado.DataSource = Empleado.ObtenerEmpleado();
         }
 
         private void frmEmpleado_Load(object sender, EventArgs e)
         {
             actualizarListaddoEmpleado();
+            cboTipoDocumento.DataSource = Enum.GetValues(typeof(Empleado._tipoDocumento));
+            cboSexo.DataSource = Enum.GetValues(typeof(Empleado._sexo));
             bloquearFomulario();
+            cboSexo.SelectedItem = null;
+            cboTipoDocumento.SelectedItem = null;
         }
 
         //_auxiliar = "AGREGAR";
@@ -66,7 +70,8 @@ namespace TarsiusWhite
         {
             txtNombre.Enabled = true;
             txtApellido.Enabled = true;
-            txtSexo.Enabled = true;
+            cboSexo.Enabled = true;
+            cboTipoDocumento.Enabled = true;
             txtNroDocumento.Enabled = true;
             dtpFechaNacimiento.Enabled = true;
             txtAcceso.Enabled = true;
@@ -90,7 +95,8 @@ namespace TarsiusWhite
         {
             txtApellido.Text = "";
             txtApellido.Text = "";
-            txtSexo.Text = "";
+            cboTipoDocumento.SelectedItem = null;
+            cboSexo.SelectedItem = null;
             dtpFechaNacimiento.Value = DateTime.Now;
             txtNroDocumento.Text = "";
             txtTelefono.Text = "";
@@ -108,7 +114,7 @@ namespace TarsiusWhite
 
             int index = lstEmpleado.SelectedIndex;
             Empleado emp = obtenerEmpleadoFormulario();
-            Empleado.editarEmpleado(index, emp);
+            Empleado.EditarEmpleado(index, emp);
 
 
             limpiarFormulario();
@@ -120,7 +126,7 @@ namespace TarsiusWhite
             if (_auxiliar == "AGREGAR")
             {
                 Empleado emp = obtenerEmpleadoFormulario();
-                Empleado.agregarEmpleado(emp);
+                Empleado.AgregarEmpleado(emp);
             }
             else if (_auxiliar == "EDITAR")
             {
@@ -138,7 +144,8 @@ namespace TarsiusWhite
         {
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
-            txtSexo.Enabled = false;
+            cboSexo.Enabled = false;
+            cboTipoDocumento.Enabled = false;
             txtNroDocumento.Enabled = false;
             txtNroDocumento.Enabled = false;
             dtpFechaNacimiento.Enabled = false;
@@ -174,17 +181,19 @@ namespace TarsiusWhite
         private Empleado obtenerEmpleadoFormulario()
         {
             Empleado emp = new Empleado();
+
             emp.nombre = txtApellido.Text;
             emp.apellido = txtApellido.Text;
-            emp.sexo = txtSexo.Text;
+            emp.sexo = (Empleado._sexo)cboSexo.SelectedItem;
+            emp.tipoDocumento = (Empleado._tipoDocumento)cboTipoDocumento.SelectedItem;
             emp.fechaNacimiento = dtpFechaNacimiento.Value.Date;
             emp.direccion = txtDireccion.Text;
             emp.nroDocumento = txtNroDocumento.Text;
             emp.telefono = txtTelefono.Text;
+            emp.email = txtEmail.Text;
             emp.acceso = txtAcceso.Text;
             emp.usuario = txtUsuario.Text;
             emp.password = txtPassword.Text;
-            emp.email = txtEmail.Text;
 
             return emp;
         }
@@ -202,7 +211,8 @@ namespace TarsiusWhite
                 txtUsuario.Text = emp.usuario;
                 txtPassword.Text = emp.password;
                 txtEmail.Text = emp.email;
-                txtSexo.Text = emp.sexo;
+                cboSexo.SelectedItem = emp.sexo;
+                cboTipoDocumento.SelectedItem = emp.tipoDocumento;
                 txtNroDocumento.Text = emp.nroDocumento;
                 dtpFechaNacimiento.Value = emp.fechaNacimiento;
             }
