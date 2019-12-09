@@ -216,3 +216,4 @@ C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\De
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.CopyComplete
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+D:\PedroArias_19_09\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
