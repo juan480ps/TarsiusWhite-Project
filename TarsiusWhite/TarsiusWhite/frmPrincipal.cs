@@ -63,5 +63,16 @@ namespace TarsiusWhite
             frmCliente frmcliente = new frmCliente();
             frmcliente.Show();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ingresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIngreso frmingreso = new frmIngreso();
+            frmingreso.Show();
+        }
     }
 }

@@ -79,7 +79,7 @@
             // 
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -97,7 +97,7 @@
             // 
             this.articulosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("articulosToolStripMenuItem.Image")));
             this.articulosToolStripMenuItem.Name = "articulosToolStripMenuItem";
-            this.articulosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.articulosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.articulosToolStripMenuItem.Text = "Articulos";
             this.articulosToolStripMenuItem.Click += new System.EventHandler(this.articulosToolStripMenuItem_Click);
             // 
@@ -127,8 +127,9 @@
             // ingresosToolStripMenuItem
             // 
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ingresosToolStripMenuItem.Text = "Ingresos";
+            this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosToolStripMenuItem_Click);
             // 
             // proveedorToolStripMenuItem
             // 
@@ -201,7 +202,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(76, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(77, 17);
             this.toolStripStatusLabel1.Text = "Tarsius White";
             // 
             // frmPrincipal
@@ -220,6 +221,7 @@
             this.MainMenuStrip = this.mnuPrincipal;
             this.Name = "frmPrincipal";
             this.Text = "frmMenu";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mnuPrincipal.ResumeLayout(false);
             this.mnuPrincipal.PerformLayout();
             this.stuPrincipal.ResumeLayout(false);
