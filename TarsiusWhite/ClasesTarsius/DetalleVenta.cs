@@ -10,7 +10,7 @@ namespace ClasesTarsius
     {
         private int IdDetalleVenta { get; set; }
         public int cantidad { get; set; }
-        public Categoria categoria { get; set; }
+        public Articulo articulo { get; set; }
         public int PrecioVenta { get; set; }
 
     }

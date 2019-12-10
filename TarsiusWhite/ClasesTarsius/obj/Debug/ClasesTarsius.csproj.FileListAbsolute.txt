@@ -65,3 +65,8 @@ C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\bin\D
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csproj.CoreCompileInputs.cache
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
+D:\Tarsiuscomit\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.dll
+D:\Tarsiuscomit\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
+D:\Tarsiuscomit\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojResolveAssemblyReference.cache
+D:\Tarsiuscomit\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
+D:\Tarsiuscomit\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb

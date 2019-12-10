@@ -25,10 +25,10 @@ namespace TarsiusWhite
             try
             {
                 dgvDetalleVenta.AutoGenerateColumns = true;
-                cmbCategoria.DataSource = Categoria.ObtenerCategoria();
+                cmbArticulo.DataSource = Articulo.ObtenerArticulo();
                 cmbCliente.DataSource = Cliente.ObtenerCliente();
                 cmbCliente.SelectedItem = null;
-                cmbCategoria.SelectedItem = null;
+                cmbArticulo.SelectedItem = null;
                 venta = new Venta();
             }
             catch (Exception ex)
@@ -46,12 +46,12 @@ namespace TarsiusWhite
                     DetalleVenta dv = new DetalleVenta();
                     dv.cantidad = Convert.ToInt32(txtCantidad.Text);
                     dv.PrecioVenta = Convert.ToInt32(txtPrecio.Text);
-                    dv.categoria = (Categoria)cmbCategoria.SelectedItem;
+                    dv.articulo = (Articulo)cmbArticulo.SelectedItem;
                     venta.detalleVenta.Add(dv);
                     ActualizarDataGrid();
 
                     txtCantidad.Text = "0";
-                    cmbCategoria.SelectedItem = null;
+                    cmbArticulo.SelectedItem = null;
                 }                
             }
             catch (Exception ex)
@@ -119,7 +119,7 @@ namespace TarsiusWhite
         private void Limpiar()
         {
             txtCantidad.Text = "0";
-            cmbCategoria.SelectedItem = null;
+            cmbArticulo.SelectedItem = null;
             cmbCliente.SelectedItem = null;
             txtPrecio.Text = "0";
         }
@@ -134,10 +134,10 @@ namespace TarsiusWhite
                 return false;
             }
 
-            if (cmbCategoria.SelectedItem == null)
+            if (cmbArticulo.SelectedItem == null)
             {
                 MessageBox.Show("Por favor seleccione una Categoria", "Error");
-                cmbCategoria.Focus();
+                cmbArticulo.Focus();
                 return false;
             }
 

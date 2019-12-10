@@ -36,13 +36,13 @@ namespace ClasesTarsius
 
                 foreach (DetalleVenta dv in v.detalleVenta)
                 {
-                    string textoCMD2 = "INSERT INTO DetalleVenta(IdVenta, cantidad, categoria, precioventa) VALUES (@IdVenta, @cantidad, @categoria, @precioventa)";
+                    string textoCMD2 = "INSERT INTO DetalleVenta(IdVenta, cantidad, articulo, precioventa) VALUES (@IdVenta, @cantidad, @categoria, @precioventa)";
                     SqlCommand cmd2 = new SqlCommand(textoCMD2, con);
 
                     SqlParameter p3 = new SqlParameter("@IdVenta", idVenta);
                     SqlParameter p4 = new SqlParameter("@cantidad", dv.cantidad);
-                    SqlParameter p5 = new SqlParameter("@categoria", dv.categoria.IDCategoria);
-                    SqlParameter p6 = new SqlParameter("@precioventa", dv.categoria.IDCategoria);
+                    SqlParameter p5 = new SqlParameter("@articulo", dv.articulo);
+                    SqlParameter p6 = new SqlParameter("@precioventa", dv.PrecioVenta);
 
                     cmd2.Parameters.Add(p3);
                     cmd2.Parameters.Add(p4);

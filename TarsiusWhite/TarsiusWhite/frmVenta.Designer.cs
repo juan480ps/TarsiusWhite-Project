@@ -32,8 +32,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.lblArti = new System.Windows.Forms.Label();
+            this.cmbArticulo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.dgvDetalleVenta = new System.Windows.Forms.DataGridView();
@@ -87,25 +87,25 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // lblCategoria
+            // lblArti
             // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(134, 151);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
-            this.lblCategoria.TabIndex = 22;
-            this.lblCategoria.Text = "Categoria";
+            this.lblArti.AutoSize = true;
+            this.lblArti.Location = new System.Drawing.Point(134, 151);
+            this.lblArti.Name = "lblArti";
+            this.lblArti.Size = new System.Drawing.Size(52, 13);
+            this.lblArti.TabIndex = 22;
+            this.lblArti.Text = "Categoria";
             // 
-            // cmbCategoria
+            // cmbArticulo
             // 
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Items.AddRange(new object[] {
+            this.cmbArticulo.FormattingEnabled = true;
+            this.cmbArticulo.Items.AddRange(new object[] {
             "Vacuna",
             "Porcina"});
-            this.cmbCategoria.Location = new System.Drawing.Point(189, 148);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(110, 21);
-            this.cmbCategoria.TabIndex = 17;
+            this.cmbArticulo.Location = new System.Drawing.Point(189, 148);
+            this.cmbArticulo.Name = "cmbArticulo";
+            this.cmbArticulo.Size = new System.Drawing.Size(110, 21);
+            this.cmbArticulo.TabIndex = 17;
             // 
             // label3
             // 
@@ -204,8 +204,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.cmbCategoria);
+            this.Controls.Add(this.lblArti);
+            this.Controls.Add(this.cmbArticulo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.dgvDetalleVenta);
@@ -228,8 +228,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.Label lblArti;
+        private System.Windows.Forms.ComboBox cmbArticulo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.DataGridView dgvDetalleVenta;
