@@ -61,23 +61,41 @@ namespace TarsiusWhite
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _auxiliar = "AGREGAR";
-            limpiarFormulario();
-            desbloquearFormulario();
-            txtNombrePresentacion.Focus();
+            try
+            {
+                if (ValidarCampos())
+                {
+                    _auxiliar = "AGREGAR";
+                    limpiarFormulario();
+                    desbloquearFormulario();
+                    txtNombrePresentacion.Focus();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
-            if (pre != null)
+            try
             {
-                _auxiliar = "EDITAR";
-                desbloquearFormulario();
+                Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
+                if (pre != null)
+                {
+                    _auxiliar = "EDITAR";
+                    desbloquearFormulario();
+                }
+                else
+                {
+                    MessageBox.Show("Ojo, Selecciona un Item");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Ojo, Selecciona un Item");
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
         }
 
@@ -96,28 +114,42 @@ namespace TarsiusWhite
 
         private void actualizarListadoPresentacion()
         {
-            lstPresentaciones.DataSource = null;
-            lstPresentaciones.DataSource = Presentacion.obtenerPresentacion();
+            try
+            {
+                lstPresentaciones.DataSource = null;
+                lstPresentaciones.DataSource = Presentacion.obtenerPresentacion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (_auxiliar == "AGREGAR")
+            try
             {
-                Presentacion pre = obtenerPresentacionFormulario();
-                Presentacion.agregarPresentacion(pre);
-            }
-            else if (_auxiliar == "EDITAR")
-            {
-                int index = lstPresentaciones.SelectedIndex;
-                //Articulo.listaArticulos[index] = obtenerArticuloFormulario();
-                Presentacion pre = obtenerPresentacionFormulario();
-                Presentacion.editarPresentacion(pre, index);
-            }
+                if (_auxiliar == "AGREGAR")
+                {
+                    Presentacion pre = obtenerPresentacionFormulario();
+                    Presentacion.agregarPresentacion(pre);
+                }
+                else if (_auxiliar == "EDITAR")
+                {
+                    int index = lstPresentaciones.SelectedIndex;
+                    //Articulo.listaArticulos[index] = obtenerArticuloFormulario();
+                    Presentacion pre = obtenerPresentacionFormulario();
+                    Presentacion.editarPresentacion(pre, index);
+                }
 
-            actualizarListadoPresentacion();
-            limpiarFormulario();
-            bloquearFormulario();
+                actualizarListadoPresentacion();
+                limpiarFormulario();
+                bloquearFormulario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
         }
 
         private Presentacion obtenerPresentacionFormulario()
@@ -131,7 +163,14 @@ namespace TarsiusWhite
         }
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
@@ -153,16 +192,23 @@ namespace TarsiusWhite
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (lstPresentaciones.SelectedItems.Count > 0)
+            try
             {
-                Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
-                Presentacion.listaPresentacion.Remove(pre);
-                actualizarListadoPresentacion();
-                limpiarFormulario();
+                if (lstPresentaciones.SelectedItems.Count > 0)
+                {
+                    Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
+                    Presentacion.listaPresentacion.Remove(pre);
+                    actualizarListadoPresentacion();
+                    limpiarFormulario();
+                }
+                else
+                {
+                    MessageBox.Show("Favor seleccionar de la lista para eliminar");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Favor seleccionar de la lista para eliminar");
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
         }
 
@@ -170,6 +216,41 @@ namespace TarsiusWhite
         {
             actualizarListadoPresentacion();
             bloquearFormulario();
+        }
+        private void completarObjetos()
+        {
+            try
+            {
+                Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
+
+                if (pre != null)
+                {
+                    txtNombrePresentacion.Text = pre.nombrePresentacion;
+                    txtDescripcionPresentacion.Text = pre.descripcionPresentacion;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+        }
+        private bool ValidarCampos()
+        {
+            if (String.IsNullOrWhiteSpace(txtNombrePresentacion.Text))
+            {
+                MessageBox.Show("El codigo no puede estar vacío", "Error");
+                txtNombrePresentacion.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtDescripcionPresentacion.Text))
+            {
+                MessageBox.Show("El nombre no puede estar vacío", "Error");
+                txtDescripcionPresentacion.Focus();
+                return false;
+            }
+
+            return true;
         }
     }
 }
