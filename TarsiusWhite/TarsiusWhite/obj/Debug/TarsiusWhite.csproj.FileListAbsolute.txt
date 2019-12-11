@@ -236,3 +236,4 @@ D:\Tarsiuscomit\TarsiusWhite\TarsiusWhite\bin\Debug\ClasesTarsius.pdb
 D:\Tarsiuscomit\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 D:\Tarsiuscomit\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
 C:\Users\Matias\Source\Repos\TarsiusWhite-Project5\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config
+C:\Users\alumno-201\Documents\tarsius\TarsiusWhite\TarsiusWhite\bin\Debug\TarsiusWhite.exe.config

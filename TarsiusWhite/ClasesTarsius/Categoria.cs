@@ -23,7 +23,7 @@ namespace ClasesTarsius
 
         public static void agregarCategoria(Categoria cat)
         {
-            // lstCategoria.Add(cat);
+           
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
