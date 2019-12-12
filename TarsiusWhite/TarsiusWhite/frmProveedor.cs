@@ -271,6 +271,10 @@ namespace TarsiusWhite
             btnAgregar.Enabled = true;
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
+
+            btnGuardar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnLimpiar.Enabled = false;
         }
 
 

@@ -62,7 +62,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Proveedor SET IdProveedor = @IdProveedor, RazonSocial = @RazonSocial, SectorComercial = @SectorComercial ,  TipoDocumento =  @TipoDocumento, NroDocumento = @NroDocumento , Direccion =  @Direccion , Telefono = @Telefono, Email = @Email";
+                string textoCMD = "UPDATE Proveedor SET RazonSocial = @RazonSocial, SectorComercial = @SectorComercial ,  TipoDocumento =  @TipoDocumento, NroDocumento = @NroDocumento , Direccion =  @Direccion , Telefono = @Telefono, Email = @Email where IdProveedor = @IdProveedor ";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = pro.ObtenerParametros(cmd, true);
@@ -145,8 +145,8 @@ namespace ClasesTarsius
 
             //p1.SqlDbType = SqlDbType.Int;
             p2.SqlDbType = SqlDbType.VarChar;
-            p3.SqlDbType = SqlDbType.VarChar;
-            p4.SqlDbType = SqlDbType.VarChar;
+            p3.SqlDbType = SqlDbType.Int;
+            p4.SqlDbType = SqlDbType.Int;
             p5.SqlDbType = SqlDbType.VarChar; 
             p6.SqlDbType = SqlDbType.VarChar;
             p7.SqlDbType = SqlDbType.VarChar;

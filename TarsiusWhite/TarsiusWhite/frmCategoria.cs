@@ -119,8 +119,8 @@ namespace TarsiusWhite
                     }
                     else if (_auxiliar == "EDITAR")
                     {
-                        int index = lstCategoria.SelectedIndex;
-                       Categoria cat = obtenerCategoria();
+                      int index = lstCategoria.SelectedIndex;
+                      Categoria cat = obtenerCategoria();
                       Categoria.editarCategoria(cat, index);
                     }
 
