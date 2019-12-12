@@ -48,7 +48,6 @@ namespace TarsiusWhite
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
         }
