@@ -70,3 +70,7 @@ D:\Tarsiuscomit\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
 D:\Tarsiuscomit\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojResolveAssemblyReference.cache
 D:\Tarsiuscomit\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 D:\Tarsiuscomit\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
+C:\Users\alumno-201\Documents\tarsius\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.dll
+C:\Users\alumno-201\Documents\tarsius\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
+C:\Users\alumno-201\Documents\tarsius\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
+C:\Users\alumno-201\Documents\tarsius\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb

@@ -12,7 +12,7 @@ namespace ClasesTarsius
 
         public int IdProveedor { get; set; }
         public string RazonSocial { get; set; }
-        public _sector sector { get; set; }
+        public _sector sectorcomercial { get; set; }
         public _tipodocumento tipodocumento { get; set; }
         public  string NroDocumento { get; set; }
         public string Direccion { get; set; }
@@ -45,19 +45,13 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCmd = "INSERT INTO Proveedor VALUES (@IdProveedor, @RazonSocial, @SectorComercial , @TipoDocumento, @NumeroDocumento , @Direccion , @Telefono, @Email)";
+                string textoCmd = "INSERT INTO Proveedor VALUES (@RazonSocial, @SectorComercial , @TipoDocumento, @NroDocumento , @Direccion , @Telefono, @Email)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 cmd = pro.ObtenerParametros(cmd);
                 cmd.ExecuteNonQuery();
 
 
-                foreach (Proveedor a in pro.listaproveedor)
-                {
-                    string textoCmd2 = "INSERT INTO Proveedor VALUES (@IdProveedor, @RazonSocial, @SectorComercial , @TipoDocumento, @NumeroDocumento , @Direccion , @Telefono, @Email)";
-                    SqlCommand cmd2 = new SqlCommand(textoCmd2, con);
-                    cmd2 = pro.ObtenerParametros(cmd);
-                    cmd2.ExecuteNonQuery();
-                }
+
             }
         }
 
@@ -68,7 +62,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Proveedor SET IdProveedor = @IdProveedor, RazonSocial = @RazonSocial, SectorComercial = @SectorComercial ,  TipoDocumento =  @TipoDocumento, NumeroDocumento = @NumeroDocumento , Direccion =  @Direccion , Telefono = @Telefono, Email = @Email";
+                string textoCMD = "UPDATE Proveedor SET IdProveedor = @IdProveedor, RazonSocial = @RazonSocial, SectorComercial = @SectorComercial ,  TipoDocumento =  @TipoDocumento, NroDocumento = @NroDocumento , Direccion =  @Direccion , Telefono = @Telefono, Email = @Email";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = pro.ObtenerParametros(cmd, true);
@@ -116,17 +110,17 @@ namespace ClasesTarsius
                     while (elLectorDeDatos.Read())
                     {
                         pro = new Proveedor();
-                        pro.IdProveedor = elLectorDeDatos.GetInt32(0);
-                        pro.NroDocumento = elLectorDeDatos.GetString(1);
-                        pro.Direccion = elLectorDeDatos.GetString(2);
-                        pro.Email = elLectorDeDatos.GetString(3);
-                        pro.RazonSocial = elLectorDeDatos.GetString(4);
-                        pro.Telefono = elLectorDeDatos.GetString(5);
-                        
-                        pro.sector = (_sector)elLectorDeDatos.GetInt32(6);
-                        pro.tipodocumento = (_tipodocumento)elLectorDeDatos.GetInt32(7);
 
-                         listaproveedores.Add(pro);
+                        pro.IdProveedor = elLectorDeDatos.GetInt32(0);
+                        pro.NroDocumento = elLectorDeDatos.GetString(4);
+                        pro.Direccion = elLectorDeDatos.GetString(5);
+                        pro.Email = elLectorDeDatos.GetString(7);
+                        pro.RazonSocial = elLectorDeDatos.GetString(1);
+                        pro.Telefono = elLectorDeDatos.GetString(6);                        
+                        pro.sectorcomercial = (_sector)elLectorDeDatos.GetInt32(2);
+                        pro.tipodocumento = (_tipodocumento)elLectorDeDatos.GetInt32(3);
+
+                        listaproveedores.Add(pro);
                     }
                 }
                 catch (Exception ex)
@@ -140,16 +134,16 @@ namespace ClasesTarsius
 
         private SqlCommand ObtenerParametros(SqlCommand cmd, Boolean id = false)
         {
-            SqlParameter p1 = new SqlParameter("@IdProveedor", this.IdProveedor);
+            //SqlParameter p1 = new SqlParameter("@IdProveedor", this.IdProveedor);
             SqlParameter p2 = new SqlParameter("@RazonSocial", this.RazonSocial);
-            SqlParameter p3 = new SqlParameter("@SectorComerial", this.sector);
+            SqlParameter p3 = new SqlParameter("@SectorComercial", this.sectorcomercial);
             SqlParameter p4 = new SqlParameter("@TipoDocumento", this.tipodocumento);
             SqlParameter p5 = new SqlParameter("@NroDocumento", this.NroDocumento);
             SqlParameter p6 = new SqlParameter("@Direccion", this.Direccion);
             SqlParameter p7 = new SqlParameter("@Telefono", this.Telefono);
             SqlParameter p8 = new SqlParameter("@Email", this.Email);
 
-            p1.SqlDbType = SqlDbType.Int;
+            //p1.SqlDbType = SqlDbType.Int;
             p2.SqlDbType = SqlDbType.VarChar;
             p3.SqlDbType = SqlDbType.VarChar;
             p4.SqlDbType = SqlDbType.VarChar;
@@ -160,7 +154,7 @@ namespace ClasesTarsius
 
 
 
-            cmd.Parameters.Add(p1);
+            //cmd.Parameters.Add(p1);
             cmd.Parameters.Add(p2);
             cmd.Parameters.Add(p3);
             cmd.Parameters.Add(p4);
@@ -212,7 +206,7 @@ namespace ClasesTarsius
 
         public override string ToString()
         {
-            return IdProveedor + " " + RazonSocial + " " + sector + " " + Telefono + " " ;
+            return IdProveedor + " " + RazonSocial + " " + sectorcomercial + " " + Telefono + " " ;
         }
 
 

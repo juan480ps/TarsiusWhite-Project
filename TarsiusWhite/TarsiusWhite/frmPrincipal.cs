@@ -74,5 +74,16 @@ namespace TarsiusWhite
             frmIngreso frmingreso = new frmIngreso();
             frmingreso.Show();
         }
+
+        private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProveedor frmproveedor = new frmProveedor();
+            frmproveedor.Show();
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

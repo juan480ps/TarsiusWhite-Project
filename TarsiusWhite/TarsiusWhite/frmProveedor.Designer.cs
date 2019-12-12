@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtIdProveedor = new System.Windows.Forms.TextBox();
-            this.lblIdProveedor = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtrazonsocial = new System.Windows.Forms.TextBox();
             this.lblRazonSocial = new System.Windows.Forms.Label();
             this.lblTipoDocumento = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -53,29 +51,12 @@
             this.txtnrodocumento = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txtIdProveedor
+            // txtrazonsocial
             // 
-            this.txtIdProveedor.Location = new System.Drawing.Point(114, 25);
-            this.txtIdProveedor.Name = "txtIdProveedor";
-            this.txtIdProveedor.Size = new System.Drawing.Size(163, 20);
-            this.txtIdProveedor.TabIndex = 108;
-            this.txtIdProveedor.TextChanged += new System.EventHandler(this.txtIdProveedor_TextChanged);
-            // 
-            // lblIdProveedor
-            // 
-            this.lblIdProveedor.AutoSize = true;
-            this.lblIdProveedor.Location = new System.Drawing.Point(21, 28);
-            this.lblIdProveedor.Name = "lblIdProveedor";
-            this.lblIdProveedor.Size = new System.Drawing.Size(68, 13);
-            this.lblIdProveedor.TabIndex = 109;
-            this.lblIdProveedor.Text = "Id Proveedor";
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Location = new System.Drawing.Point(392, 21);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(163, 20);
-            this.txtApellido.TabIndex = 110;
+            this.txtrazonsocial.Location = new System.Drawing.Point(392, 21);
+            this.txtrazonsocial.Name = "txtrazonsocial";
+            this.txtrazonsocial.Size = new System.Drawing.Size(163, 20);
+            this.txtrazonsocial.TabIndex = 110;
             // 
             // lblRazonSocial
             // 
@@ -103,11 +84,12 @@
             this.btnEliminar.TabIndex = 131;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblSector
             // 
             this.lblSector.AutoSize = true;
-            this.lblSector.Location = new System.Drawing.Point(21, 70);
+            this.lblSector.Location = new System.Drawing.Point(11, 75);
             this.lblSector.Name = "lblSector";
             this.lblSector.Size = new System.Drawing.Size(87, 13);
             this.lblSector.TabIndex = 115;
@@ -121,6 +103,7 @@
             this.btnEditar.TabIndex = 130;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // cboSector
             // 
@@ -139,6 +122,7 @@
             this.btnAgregar.TabIndex = 129;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cboTipoDocumento
             // 
@@ -155,6 +139,7 @@
             this.lstProveedor.Name = "lstProveedor";
             this.lstProveedor.Size = new System.Drawing.Size(288, 199);
             this.lstProveedor.TabIndex = 128;
+            this.lstProveedor.SelectedIndexChanged += new System.EventHandler(this.lstProveedor_SelectedIndexChanged);
             // 
             // btnLimpiar
             // 
@@ -164,6 +149,7 @@
             this.btnLimpiar.TabIndex = 127;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // txtDireccion
             // 
@@ -180,6 +166,7 @@
             this.btnCancelar.TabIndex = 126;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblDireccion
             // 
@@ -198,6 +185,7 @@
             this.btnGuardar.TabIndex = 125;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblTelefono
             // 
@@ -255,9 +243,7 @@
             this.ClientSize = new System.Drawing.Size(590, 473);
             this.Controls.Add(this.txtnrodocumento);
             this.Controls.Add(this.lblNroDocumento);
-            this.Controls.Add(this.txtIdProveedor);
-            this.Controls.Add(this.lblIdProveedor);
-            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtrazonsocial);
             this.Controls.Add(this.lblRazonSocial);
             this.Controls.Add(this.lblTipoDocumento);
             this.Controls.Add(this.btnEliminar);
@@ -278,16 +264,14 @@
             this.Controls.Add(this.lblEmail);
             this.Name = "frmProveedor";
             this.Text = "frmProveedor";
+            this.Load += new System.EventHandler(this.frmProveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtIdProveedor;
-        private System.Windows.Forms.Label lblIdProveedor;
-        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtrazonsocial;
         private System.Windows.Forms.Label lblRazonSocial;
         private System.Windows.Forms.Label lblTipoDocumento;
         private System.Windows.Forms.Button btnEliminar;
