@@ -26,11 +26,17 @@ namespace TarsiusWhite
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            _auxiliar = "AGREGAR";
-            limpiarFormulario();
-            desbloquearFormulario();
-            txtNombre.Focus();
-
+            try
+            {
+                _auxiliar = "AGREGAR";
+                limpiarFormulario();
+                desbloquearFormulario();
+                txtNombre.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
 
         }
 
@@ -58,43 +64,57 @@ namespace TarsiusWhite
 
         private void limpiarFormulario()
         {
-            txtApellido.Text = "";
+            txtNombre.Text = "";
             txtApellido.Text = "";
             cboSexo.SelectedItem = null;
             dtpFechaNacimiento.Value = DateTime.Now;
             cboTipoDocumento.SelectedItem = null;
+            txtNroDocumento.Text = "";
+            txtDireccion.Text = "";
             txtTelefono.Text = "";
             txtEmail.Text = "";
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = (Cliente)lstCliente.SelectedItem;
-            if (cliente != null)
+            try
             {
-                _auxiliar = "EDITAR";
-                desbloquearFormulario();
+                Cliente cliente = (Cliente)lstCliente.SelectedItem;
+                if (cliente != null)
+                {
+                    _auxiliar = "EDITAR";
+                    desbloquearFormulario();
+                }
+                else
+                {
+                    MessageBox.Show("Ojo, Selecciona un Item");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Ojo, Selecciona un Item");
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
 
-            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
-            Cliente cliente = (Cliente)lstCliente.SelectedItem;
-            if (cliente != null)
+            try
             {
-                Cliente.EliminarCliente(cliente);
-                actualizarListadoCliente();
-                limpiarFormulario();
+                Cliente cliente = (Cliente)lstCliente.SelectedItem;
+                if (cliente != null)
+                {
+                    Cliente.EliminarCliente(cliente);
+                    actualizarListadoCliente();
+                    limpiarFormulario();
+                }
+                else
+                {
+                    MessageBox.Show("Favor seleccionar una fila de la lista");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Favor seleccionar una fila de la lista");
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
 
         }
@@ -106,26 +126,32 @@ namespace TarsiusWhite
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-            if (_auxiliar == "AGREGAR")
+            if (ValidarCampos())
             {
-                Cliente cli = obtenerClienteFormulario();
-                Cliente.AgregarCliente(cli);
+                try
+                {
+                    if (_auxiliar == "AGREGAR")
+                    {
+                        Cliente cli = obtenerClienteFormulario();
+                        Cliente.AgregarCliente(cli);
+                    }
+                    else if (_auxiliar == "EDITAR")
+                    {
+                        int index = lstCliente.SelectedIndex;
+                        Cliente cliente = obtenerClienteFormulario();
+                        Cliente.EditarCliente(index, cliente);
+                    }
+
+                    actualizarListadoCliente();
+                    limpiarFormulario();
+                    bloquearFomulario();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+                }
             }
-            else if (_auxiliar == "EDITAR")
-            {
-                int index = lstCliente.SelectedIndex;
-                Cliente cliente = obtenerClienteFormulario();
-                Cliente.EditarCliente(index, cliente);
-            }
-
-            actualizarListadoCliente();
-            limpiarFormulario();
-            bloquearFomulario();
-
-
-
-            
         }
 
         private void bloquearFomulario()
@@ -153,7 +179,16 @@ namespace TarsiusWhite
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                actualizarListadoCliente();
+                limpiarFormulario();
+                bloquearFomulario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
 
         }
 
@@ -180,12 +215,19 @@ namespace TarsiusWhite
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            actualizarListadoCliente();
-            cboSexo.DataSource = Enum.GetValues(typeof(Cliente._sexo));
-            cboTipoDocumento.DataSource = Enum.GetValues(typeof(Cliente._tipoDocumento));
-            bloquearFomulario();
-            cboSexo.SelectedItem = null;
-            cboTipoDocumento.SelectedItem = null;
+            try
+            {
+                actualizarListadoCliente();
+                cboSexo.DataSource = Enum.GetValues(typeof(Cliente._sexo));
+                cboTipoDocumento.DataSource = Enum.GetValues(typeof(Cliente._tipoDocumento));
+                bloquearFomulario();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+
         }
 
         private Cliente obtenerClienteFormulario()
@@ -223,6 +265,68 @@ namespace TarsiusWhite
                 txtEmail.Text = c.email;
 
             }
+        }
+
+        private bool ValidarCampos()
+        {
+            if (String.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("El nombre no puede estar vacío", "Error");
+                txtNombre.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtApellido.Text))
+            {
+                MessageBox.Show("El apellido no puede estar vacío", "Error");
+                txtApellido.Focus();
+                return false;
+            }
+
+            if (cboSexo.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione una opcion de sexo", "Error");
+                cboSexo.Focus();
+                return false;
+            }
+
+            if (dtpFechaNacimiento.Value >= DateTime.Now)
+            {
+                MessageBox.Show("Por favor ingrese una fecha de valida", "Error");
+                dtpFechaNacimiento.Focus();
+                return false;
+            }
+
+            if (cboTipoDocumento.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione una opcion de tipo de documento", "Error");
+                cboTipoDocumento.Focus();
+                return false;
+            }
+
+
+            if (String.IsNullOrWhiteSpace(txtDireccion.Text))
+            {
+                MessageBox.Show("La direccion no puede estar vacío", "Error");
+                txtDireccion.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtTelefono.Text))
+            {
+                MessageBox.Show("El telefono no puede estar vacío", "Error");
+                txtTelefono.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                MessageBox.Show("El email no puede estar vacío", "Error");
+                txtEmail.Focus();
+                return false;
+            }
+
+            return true;
         }
     }
 }
