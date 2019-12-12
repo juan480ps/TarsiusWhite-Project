@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblArticulo = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -46,18 +45,8 @@
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.cboPresentacion = new System.Windows.Forms.ComboBox();
             this.lstArticulos = new System.Windows.Forms.ListBox();
+            this.lblArticulo = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblArticulo
-            // 
-            this.lblArticulo.AutoSize = true;
-            this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulo.Location = new System.Drawing.Point(16, 11);
-            this.lblArticulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(261, 69);
-            this.lblArticulo.TabIndex = 6;
-            this.lblArticulo.Text = "Articulos";
             // 
             // lblCodigo
             // 
@@ -72,7 +61,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(98, 84);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(216, 22);
             this.txtCodigo.TabIndex = 26;
@@ -90,7 +79,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(98, 125);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 22);
             this.txtNombre.TabIndex = 28;
@@ -108,7 +97,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(98, 161);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(216, 22);
             this.txtDescripcion.TabIndex = 30;
@@ -135,8 +124,8 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(437, 521);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Location = new System.Drawing.Point(437, 495);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btnLimpiar.TabIndex = 46;
@@ -146,8 +135,8 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(329, 521);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(329, 495);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
             this.btnCancelar.TabIndex = 45;
@@ -157,8 +146,8 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(221, 521);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Location = new System.Drawing.Point(221, 495);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 28);
             this.btnGuardar.TabIndex = 44;
@@ -168,8 +157,8 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(437, 194);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(437, 207);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 49;
@@ -179,8 +168,8 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(329, 194);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Location = new System.Drawing.Point(329, 207);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
             this.btnEditar.TabIndex = 48;
@@ -190,8 +179,8 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(221, 194);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Location = new System.Drawing.Point(221, 207);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 28);
             this.btnAgregar.TabIndex = 47;
@@ -203,7 +192,7 @@
             // 
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(440, 88);
-            this.cboCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(215, 24);
             this.cboCategoria.TabIndex = 50;
@@ -212,7 +201,7 @@
             // 
             this.cboPresentacion.FormattingEnabled = true;
             this.cboPresentacion.Location = new System.Drawing.Point(440, 125);
-            this.cboPresentacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboPresentacion.Margin = new System.Windows.Forms.Padding(4);
             this.cboPresentacion.Name = "cboPresentacion";
             this.cboPresentacion.Size = new System.Drawing.Size(215, 24);
             this.cboPresentacion.TabIndex = 51;
@@ -222,17 +211,28 @@
             this.lstArticulos.FormattingEnabled = true;
             this.lstArticulos.ItemHeight = 16;
             this.lstArticulos.Location = new System.Drawing.Point(13, 243);
-            this.lstArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.lstArticulos.Name = "lstArticulos";
             this.lstArticulos.Size = new System.Drawing.Size(727, 244);
             this.lstArticulos.TabIndex = 52;
+            // 
+            // lblArticulo
+            // 
+            this.lblArticulo.AutoSize = true;
+            this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArticulo.Location = new System.Drawing.Point(16, 11);
+            this.lblArticulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblArticulo.Name = "lblArticulo";
+            this.lblArticulo.Size = new System.Drawing.Size(161, 42);
+            this.lblArticulo.TabIndex = 6;
+            this.lblArticulo.Text = "Articulos";
             // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(753, 567);
+            this.ClientSize = new System.Drawing.Size(753, 534);
             this.Controls.Add(this.lstArticulos);
             this.Controls.Add(this.cboPresentacion);
             this.Controls.Add(this.cboCategoria);
@@ -252,10 +252,10 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblArticulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Articulo";
+            this.Text = "...:::Articulo:::...";
             this.Load += new System.EventHandler(this.frmArticulo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -263,7 +263,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblArticulo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblNombre;
@@ -281,5 +280,6 @@
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.ComboBox cboPresentacion;
         private System.Windows.Forms.ListBox lstArticulos;
+        private System.Windows.Forms.Label lblArticulo;
     }
 }

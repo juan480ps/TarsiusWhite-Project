@@ -49,7 +49,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(579, 519);
+            this.btnGuardar.Location = new System.Drawing.Point(573, 485);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(88, 33);
@@ -61,7 +61,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 250);
+            this.label4.Location = new System.Drawing.Point(2, 216);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
@@ -70,7 +70,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(260, 223);
+            this.btnEliminar.Location = new System.Drawing.Point(254, 189);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
@@ -81,7 +81,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(145, 223);
+            this.btnAgregar.Location = new System.Drawing.Point(139, 189);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 28);
@@ -93,7 +93,7 @@
             // lblArti
             // 
             this.lblArti.AutoSize = true;
-            this.lblArti.Location = new System.Drawing.Point(179, 186);
+            this.lblArti.Location = new System.Drawing.Point(173, 152);
             this.lblArti.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArti.Name = "lblArti";
             this.lblArti.Size = new System.Drawing.Size(69, 17);
@@ -106,7 +106,7 @@
             this.cmbArticulo.Items.AddRange(new object[] {
             "Vacuna",
             "Porcina"});
-            this.cmbArticulo.Location = new System.Drawing.Point(252, 182);
+            this.cmbArticulo.Location = new System.Drawing.Point(246, 148);
             this.cmbArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbArticulo.Name = "cmbArticulo";
             this.cmbArticulo.Size = new System.Drawing.Size(145, 24);
@@ -115,7 +115,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 186);
+            this.label3.Location = new System.Drawing.Point(21, 152);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
@@ -124,7 +124,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(129, 182);
+            this.txtCantidad.Location = new System.Drawing.Point(123, 148);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(31, 22);
@@ -132,8 +132,9 @@
             // 
             // dgvDetalleVenta
             // 
+            this.dgvDetalleVenta.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalleVenta.Location = new System.Drawing.Point(16, 270);
+            this.dgvDetalleVenta.Location = new System.Drawing.Point(10, 236);
             this.dgvDetalleVenta.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDetalleVenta.Name = "dgvDetalleVenta";
             this.dgvDetalleVenta.Size = new System.Drawing.Size(651, 244);
@@ -142,7 +143,7 @@
             // lblFechaVenta
             // 
             this.lblFechaVenta.AutoSize = true;
-            this.lblFechaVenta.Location = new System.Drawing.Point(27, 107);
+            this.lblFechaVenta.Location = new System.Drawing.Point(21, 73);
             this.lblFechaVenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaVenta.Name = "lblFechaVenta";
             this.lblFechaVenta.Size = new System.Drawing.Size(47, 17);
@@ -152,7 +153,7 @@
             // dtpFechaVenta
             // 
             this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVenta.Location = new System.Drawing.Point(129, 100);
+            this.dtpFechaVenta.Location = new System.Drawing.Point(123, 66);
             this.dtpFechaVenta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
             this.dtpFechaVenta.Size = new System.Drawing.Size(117, 22);
@@ -161,7 +162,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(27, 142);
+            this.lblCliente.Location = new System.Drawing.Point(21, 108);
             this.lblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(51, 17);
@@ -171,7 +172,7 @@
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(128, 137);
+            this.cmbCliente.Location = new System.Drawing.Point(122, 103);
             this.cmbCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(269, 24);
@@ -180,18 +181,18 @@
             // lblArticulo
             // 
             this.lblArticulo.AutoSize = true;
-            this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArticulo.Location = new System.Drawing.Point(24, 11);
             this.lblArticulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(186, 69);
+            this.lblArticulo.Size = new System.Drawing.Size(116, 42);
             this.lblArticulo.TabIndex = 27;
             this.lblArticulo.Text = "Venta";
             // 
             // lblPrecioVenta
             // 
             this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(428, 191);
+            this.lblPrecioVenta.Location = new System.Drawing.Point(422, 157);
             this.lblPrecioVenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
             this.lblPrecioVenta.Size = new System.Drawing.Size(48, 17);
@@ -200,7 +201,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(485, 187);
+            this.txtPrecio.Location = new System.Drawing.Point(479, 153);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(144, 22);
@@ -210,8 +211,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(683, 559);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(683, 525);
             this.Controls.Add(this.lblPrecioVenta);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblArticulo);

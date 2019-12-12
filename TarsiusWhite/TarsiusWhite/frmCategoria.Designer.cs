@@ -44,7 +44,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(369, 297);
+            this.btnEliminar.Location = new System.Drawing.Point(233, 167);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
@@ -55,7 +55,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(369, 261);
+            this.btnEditar.Location = new System.Drawing.Point(125, 167);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
@@ -66,7 +66,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(369, 225);
+            this.btnAgregar.Location = new System.Drawing.Point(17, 167);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 28);
@@ -77,7 +77,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(263, 464);
+            this.btnLimpiar.Location = new System.Drawing.Point(233, 471);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
@@ -88,7 +88,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(152, 459);
+            this.btnCancelar.Location = new System.Drawing.Point(125, 471);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
@@ -99,7 +99,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(44, 464);
+            this.btnGuardar.Location = new System.Drawing.Point(17, 471);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 28);
@@ -111,7 +111,7 @@
             // lblDescripcionCategoria
             // 
             this.lblDescripcionCategoria.AutoSize = true;
-            this.lblDescripcionCategoria.Location = new System.Drawing.Point(67, 139);
+            this.lblDescripcionCategoria.Location = new System.Drawing.Point(20, 107);
             this.lblDescripcionCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcionCategoria.Name = "lblDescripcionCategoria";
             this.lblDescripcionCategoria.Size = new System.Drawing.Size(82, 17);
@@ -120,7 +120,7 @@
             // 
             // txtDescripcionCategoria
             // 
-            this.txtDescripcionCategoria.Location = new System.Drawing.Point(279, 130);
+            this.txtDescripcionCategoria.Location = new System.Drawing.Point(110, 104);
             this.txtDescripcionCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcionCategoria.Name = "txtDescripcionCategoria";
             this.txtDescripcionCategoria.Size = new System.Drawing.Size(216, 22);
@@ -129,7 +129,7 @@
             // lblNombreCategoria
             // 
             this.lblNombreCategoria.AutoSize = true;
-            this.lblNombreCategoria.Location = new System.Drawing.Point(67, 103);
+            this.lblNombreCategoria.Location = new System.Drawing.Point(20, 71);
             this.lblNombreCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCategoria.Name = "lblNombreCategoria";
             this.lblNombreCategoria.Size = new System.Drawing.Size(58, 17);
@@ -138,7 +138,7 @@
             // 
             // txtNombreCategoria
             // 
-            this.txtNombreCategoria.Location = new System.Drawing.Point(279, 95);
+            this.txtNombreCategoria.Location = new System.Drawing.Point(110, 69);
             this.txtNombreCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCategoria.Name = "txtNombreCategoria";
             this.txtNombreCategoria.Size = new System.Drawing.Size(216, 22);
@@ -148,21 +148,21 @@
             // 
             this.lstCategoria.FormattingEnabled = true;
             this.lstCategoria.ItemHeight = 16;
-            this.lstCategoria.Location = new System.Drawing.Point(67, 196);
+            this.lstCategoria.Location = new System.Drawing.Point(30, 203);
             this.lstCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.lstCategoria.Name = "lstCategoria";
-            this.lstCategoria.Size = new System.Drawing.Size(269, 260);
+            this.lstCategoria.Size = new System.Drawing.Size(296, 260);
             this.lstCategoria.TabIndex = 53;
             this.lstCategoria.SelectedIndexChanged += new System.EventHandler(this.lstCategoria_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 11);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 69);
+            this.label1.Size = new System.Drawing.Size(180, 42);
             this.label1.TabIndex = 52;
             this.label1.Text = "Categoria";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -172,7 +172,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(505, 502);
+            this.ClientSize = new System.Drawing.Size(352, 513);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);

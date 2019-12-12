@@ -53,12 +53,13 @@
             this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
             this.cboSexo = new System.Windows.Forms.ComboBox();
             this.lblNroDoc = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.gpbEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(400, 279);
+            this.btnEliminar.Location = new System.Drawing.Point(371, 279);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
@@ -69,7 +70,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(292, 279);
+            this.btnEditar.Location = new System.Drawing.Point(263, 279);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
@@ -80,7 +81,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(184, 279);
+            this.btnAgregar.Location = new System.Drawing.Point(155, 279);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 28);
@@ -96,12 +97,12 @@
             this.lstEmpleado.Location = new System.Drawing.Point(8, 315);
             this.lstEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.lstEmpleado.Name = "lstEmpleado";
-            this.lstEmpleado.Size = new System.Drawing.Size(712, 132);
+            this.lstEmpleado.Size = new System.Drawing.Size(605, 132);
             this.lstEmpleado.TabIndex = 104;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(400, 455);
+            this.btnLimpiar.Location = new System.Drawing.Point(371, 455);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
@@ -112,7 +113,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(292, 455);
+            this.btnCancelar.Location = new System.Drawing.Point(263, 455);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
@@ -123,7 +124,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(183, 455);
+            this.btnGuardar.Location = new System.Drawing.Point(155, 455);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 28);
@@ -285,14 +286,13 @@
             this.gpbEmpleado.Controls.Add(this.txtEmail);
             this.gpbEmpleado.Controls.Add(this.txtTelefono);
             this.gpbEmpleado.Controls.Add(this.lblEmail);
-            this.gpbEmpleado.Location = new System.Drawing.Point(16, 69);
+            this.gpbEmpleado.Location = new System.Drawing.Point(13, 55);
             this.gpbEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.gpbEmpleado.Name = "gpbEmpleado";
             this.gpbEmpleado.Padding = new System.Windows.Forms.Padding(4);
-            this.gpbEmpleado.Size = new System.Drawing.Size(737, 497);
+            this.gpbEmpleado.Size = new System.Drawing.Size(634, 497);
             this.gpbEmpleado.TabIndex = 114;
             this.gpbEmpleado.TabStop = false;
-            this.gpbEmpleado.Text = "Empleado";
             // 
             // cboTipoDocumento
             // 
@@ -322,13 +322,26 @@
             this.lblNroDoc.TabIndex = 115;
             this.lblNroDoc.Text = "Nro. Documento";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 42);
+            this.label1.TabIndex = 117;
+            this.label1.Text = "Empleado";
+            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(769, 581);
+            this.ClientSize = new System.Drawing.Size(663, 565);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.gpbEmpleado);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -337,6 +350,7 @@
             this.gpbEmpleado.ResumeLayout(false);
             this.gpbEmpleado.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -366,5 +380,6 @@
         private System.Windows.Forms.Label lblNroDoc;
         private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.ComboBox cboTipoDocumento;
+        private System.Windows.Forms.Label label1;
     }
 }
