@@ -91,5 +91,10 @@ namespace TarsiusWhite
             frmUsuario frmUsuario = new frmUsuario();
             frmUsuario.Show();
         }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este software fue desarrollado por el grupo de alumnos TarsiusWhite de la materia Intro. a la P.O.O. C# de la UAA. Integrantes: Vivian Nalerio, Fatima Gaona, Catherin Gonzalez y Juan Correa", "Acerca de...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
