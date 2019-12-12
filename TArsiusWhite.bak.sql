@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [TarsiusWhite]    Script Date: 12/12/2019 11:37:14 a. m. ******/
+/****** Object:  Database [TarsiusWhite]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 CREATE DATABASE [TarsiusWhite]
 GO
 ALTER DATABASE [TarsiusWhite] SET COMPATIBILITY_LEVEL = 130
@@ -72,7 +72,7 @@ ALTER DATABASE [TarsiusWhite] SET QUERY_STORE = OFF
 GO
 USE [TarsiusWhite]
 GO
-/****** Object:  Table [dbo].[Articulo]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[Articulo]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -90,7 +90,7 @@ CREATE TABLE [dbo].[Articulo](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categoria]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[Categoria]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -105,7 +105,7 @@ CREATE TABLE [dbo].[Categoria](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Cliente]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[Cliente]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -127,7 +127,7 @@ CREATE TABLE [dbo].[Cliente](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[DetalleVenta]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[DetalleVenta]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -144,7 +144,7 @@ CREATE TABLE [dbo].[DetalleVenta](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Empleado]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[Empleado]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -153,22 +153,20 @@ CREATE TABLE [dbo].[Empleado](
 	[IdEmpleado] [int] IDENTITY(1,1) NOT NULL,
 	[Nombre] [varchar](50) NULL,
 	[Apellido] [varchar](50) NULL,
-	[Sexo] [char](1) NULL,
+	[Sexo] [int] NULL,
 	[FechaNacimiento] [date] NULL,
+	[TipoDocumento] [int] NULL,
 	[NroDocumento] [varchar](50) NULL,
 	[Direccion] [varchar](50) NULL,
 	[Telefono] [varchar](50) NULL,
 	[Email] [varchar](50) NULL,
-	[Acceso] [varchar](50) NULL,
-	[Usuario] [varchar](50) NULL,
-	[Password] [varchar](50) NULL,
  CONSTRAINT [PK_Empleado] PRIMARY KEY CLUSTERED 
 (
 	[IdEmpleado] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Ingreso]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[Ingreso]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -187,7 +185,7 @@ CREATE TABLE [dbo].[Ingreso](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Presentacion]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[Presentacion]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -202,7 +200,7 @@ CREATE TABLE [dbo].[Presentacion](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Proveedor]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[Proveedor]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -222,7 +220,7 @@ CREATE TABLE [dbo].[Proveedor](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -237,7 +235,7 @@ CREATE TABLE [dbo].[Usuario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Venta]    Script Date: 12/12/2019 11:37:15 a. m. ******/
+/****** Object:  Table [dbo].[Venta]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
