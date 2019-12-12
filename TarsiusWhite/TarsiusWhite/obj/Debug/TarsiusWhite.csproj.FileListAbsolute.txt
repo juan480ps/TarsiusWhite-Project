@@ -274,3 +274,5 @@ C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project\TarsiusWhite\TarsiusW
 C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.csproj.GenerateResource.Cache
 C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.exe
 C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.pdb
+C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmLogin.resources
+C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project\TarsiusWhite\TarsiusWhite\obj\Debug\TarsiusWhite.frmUsuario.resources
