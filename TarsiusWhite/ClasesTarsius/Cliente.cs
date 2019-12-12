@@ -62,10 +62,10 @@ namespace ClasesTarsius
 
             {
                 con.Open();
-                string SENTENCIA_SQL = "delete from Cliente where Id = @Id";
+                string SENTENCIA_SQL = "delete from Cliente where IdCliente = @IdCliente";
 
                 SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
-                SqlParameter p1 = new SqlParameter("@Id", cliente.IdCliente);
+                SqlParameter p1 = new SqlParameter("@IdCliente", cliente.IdCliente);
                 p1.SqlDbType = SqlDbType.Int;
                 cmd.Parameters.Add(p1);
 

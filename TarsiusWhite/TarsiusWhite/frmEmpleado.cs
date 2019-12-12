@@ -39,16 +39,16 @@ namespace TarsiusWhite
         {
             try
             {
-                if (lstEmpleado.SelectedItems.Count == 0)
+                Empleado emp = (Empleado)lstEmpleado.SelectedItem;
+                if (emp != null)
                 {
-                    MessageBox.Show("Favor seleccionar para eliminar");
+                    Empleado.EliminarEmplado(emp);
+                    actualizarListaddoEmpleado();
+                    limpiarFormulario();
                 }
                 else
                 {
-                    Empleado emp = (Empleado)lstEmpleado.SelectedItem;
-                    Empleado.listaEmpleados.Remove(emp);
-                    actualizarListaddoEmpleado();
-                    limpiarFormulario();
+                    MessageBox.Show("Favor seleccionar una fila de la lista");
                 }
             }
             catch (Exception ex)

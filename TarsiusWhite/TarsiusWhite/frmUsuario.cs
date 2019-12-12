@@ -22,6 +22,13 @@ namespace TarsiusWhite
         {
             Usuario.CrearUsuario(txtUsuario.Text, txtPassword.Text);
             MessageBox.Show("Usuario creado exitosamente");
+            limpiar();
+        }
+
+        private void limpiar()
+        {
+            txtPassword.Text = "";
+            txtUsuario.Text = "";
         }
     }
 }

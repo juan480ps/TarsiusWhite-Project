@@ -63,14 +63,10 @@ namespace TarsiusWhite
         {
             try
             {
-                if (ValidarCampos())
-                {
-                    _auxiliar = "AGREGAR";
-                    limpiarFormulario();
-                    desbloquearFormulario();
-                    txtNombrePresentacion.Focus();
-
-                }
+                _auxiliar = "AGREGAR";
+                limpiarFormulario();
+                desbloquearFormulario();
+                txtNombrePresentacion.Focus();
             }
             catch (Exception ex)
             {
@@ -192,18 +188,37 @@ namespace TarsiusWhite
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    if (lstPresentaciones.SelectedItems.Count > 0)
+            //    {
+            //        Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
+            //        Presentacion.listaPresentacion.Remove(pre);
+            //        actualizarListadoPresentacion();
+            //        limpiarFormulario();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Favor seleccionar de la lista para eliminar");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            //}
+
             try
             {
-                if (lstPresentaciones.SelectedItems.Count > 0)
+                Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
+                if (pre != null)
                 {
-                    Presentacion pre = (Presentacion)lstPresentaciones.SelectedItem;
-                    Presentacion.listaPresentacion.Remove(pre);
+                    Presentacion.eliminarPresentacion(pre);
                     actualizarListadoPresentacion();
                     limpiarFormulario();
                 }
                 else
                 {
-                    MessageBox.Show("Favor seleccionar de la lista para eliminar");
+                    MessageBox.Show("Favor seleccionar una fila de la lista");
                 }
             }
             catch (Exception ex)

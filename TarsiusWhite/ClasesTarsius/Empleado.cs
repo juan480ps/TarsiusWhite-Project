@@ -69,10 +69,10 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string SENTENCIA_SQL = "delete from Empleado where Id = @Id";
+                string SENTENCIA_SQL = "delete from Empleado where IdEmpleado = @IdEmpleado";
 
                 SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
-                SqlParameter p1 = new SqlParameter("@Id", e.idEmpleado);
+                SqlParameter p1 = new SqlParameter("@IdEmpleado", e.idEmpleado);
                 p1.SqlDbType = SqlDbType.Int;
                 cmd.Parameters.Add(p1);
 
@@ -189,7 +189,7 @@ namespace ClasesTarsius
 
         private SqlCommand ObtenerParametrosId(SqlCommand cmd)
         {
-            SqlParameter p10 = new SqlParameter("@IdCliente", this.idEmpleado);
+            SqlParameter p10 = new SqlParameter("@IdEmpleado", this.idEmpleado);
             p10.SqlDbType = SqlDbType.Int;
             cmd.Parameters.Add(p10);
             return cmd;

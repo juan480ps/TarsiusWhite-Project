@@ -10,14 +10,9 @@ namespace ClasesTarsius
 {
     public class Categoria
     {
-       public int IDCategoria;
-       public string NombreCategoria;
-       public string DescripcionCategoria;
-
-        public Categoria()
-        {
-
-        }
+        public int IDCategoria { get; set; }
+        public string NombreCategoria { get; set; }
+        public string DescripcionCategoria { get; set; }
 
         public static List<Categoria> lstCategoria = new List<Categoria>();
 
@@ -55,9 +50,9 @@ namespace ClasesTarsius
             return cmd;
         }
 
-        private SqlCommand ObtenerParametrosId(SqlCommand cmd, Boolean id = false)
+        private SqlCommand ObtenerParametrosId(SqlCommand cmd)//, Boolean id = false)
         {
-            SqlParameter p1 = new SqlParameter("@id", this.IDCategoria);
+            SqlParameter p1 = new SqlParameter("@IdCategoria", this.IDCategoria);
             p1.SqlDbType = SqlDbType.Int;
             cmd.Parameters.Add(p1);
             return cmd;
@@ -68,7 +63,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Categoria SET NombreCategoria = @NombreCategoria, DescripcionCategoria = @DescripcionCategoria";
+                string textoCMD = "UPDATE Categoria SET NombreCategoria = @NombreCategoria, DescripcionCategoria = @DescripcionCategoria where IdCategoria = @IdCategoria";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = cat.ObtenerParametros(cmd, true);
@@ -126,7 +121,7 @@ namespace ClasesTarsius
 
         public override string ToString()
         {
-            return this.DescripcionCategoria;
+            return this.NombreCategoria + " " + this.DescripcionCategoria;
         }
     }
 

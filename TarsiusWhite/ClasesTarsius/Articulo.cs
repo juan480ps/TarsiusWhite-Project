@@ -44,15 +44,6 @@ namespace ClasesTarsius
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 cmd = art.ObtenerParametros(cmd);
                 cmd.ExecuteNonQuery();
-
-
-                foreach (Articulo a in art.listaArticulo)
-                {
-                    string textoCmd2 = "INSERT INTO Articulo VALUES (@codigo, @nombre, @descripcion , @categoria, @presentacion)";
-                    SqlCommand cmd2 = new SqlCommand(textoCmd2, con);
-                    cmd2 = art.ObtenerParametros(cmd);
-                    cmd2.ExecuteNonQuery();
-                }
             }
         }
 
@@ -61,7 +52,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Articulo SET codigo = @codigo, nombre = @nombre, descripcion = @descripcion, categoria = @categoria, presentacion = @presentacion where idarticulo = @id";
+                string textoCMD = @"UPDATE Articulo SET codigo = @codigo, nombre = @nombre, descripcion = @descripcion, categoria = @categoria, presentacion = @presentacion where idarticulo = @idarticulo";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = art.ObtenerParametros(cmd, true);
@@ -155,7 +146,7 @@ namespace ClasesTarsius
 
         private SqlCommand ObtenerParametrosId(SqlCommand cmd)
         {
-            SqlParameter p9 = new SqlParameter("@id", this.idArticulo);
+            SqlParameter p9 = new SqlParameter("@idarticulo", this.idArticulo);
             p9.SqlDbType = SqlDbType.Int;
             cmd.Parameters.Add(p9);
             return cmd;

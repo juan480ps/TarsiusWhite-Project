@@ -19,11 +19,6 @@ namespace TarsiusWhite
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -43,9 +38,11 @@ namespace TarsiusWhite
         {
             txtDescripcionCategoria.Enabled = true;
             txtNombreCategoria.Enabled = true;
+
             btnGuardar.Enabled = true;
             btnCancelar.Enabled = true;
             btnLimpiar.Enabled = true;
+
             btnAgregar.Enabled = false;
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -54,6 +51,7 @@ namespace TarsiusWhite
         {
             txtDescripcionCategoria.Enabled = false;
             txtNombreCategoria.Enabled = false;
+
             btnGuardar.Enabled = false;
             btnCancelar.Enabled = false;
             btnLimpiar.Enabled = false;

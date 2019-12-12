@@ -75,7 +75,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string SENTENCIA_SQL = "delete from Presentacion where Id = @Id";
+                string SENTENCIA_SQL = "delete from Presentacion where idPresentacion = @idPresentacion";
 
                 SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
                 SqlParameter p3 = new SqlParameter("@idPresentacion", pre.idPresentacion);
