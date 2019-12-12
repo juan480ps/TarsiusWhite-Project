@@ -45,7 +45,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(369, 297);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 67;
@@ -56,7 +56,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(369, 261);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
             this.btnEditar.TabIndex = 66;
@@ -67,7 +67,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(369, 225);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 28);
             this.btnAgregar.TabIndex = 65;
@@ -78,7 +78,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(263, 464);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btnLimpiar.TabIndex = 64;
@@ -89,7 +89,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(152, 459);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
             this.btnCancelar.TabIndex = 63;
@@ -100,7 +100,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(44, 464);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 28);
             this.btnGuardar.TabIndex = 62;
@@ -121,7 +121,7 @@
             // txtDescripcionCategoria
             // 
             this.txtDescripcionCategoria.Location = new System.Drawing.Point(279, 130);
-            this.txtDescripcionCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcionCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcionCategoria.Name = "txtDescripcionCategoria";
             this.txtDescripcionCategoria.Size = new System.Drawing.Size(216, 22);
             this.txtDescripcionCategoria.TabIndex = 58;
@@ -139,7 +139,7 @@
             // txtNombreCategoria
             // 
             this.txtNombreCategoria.Location = new System.Drawing.Point(279, 95);
-            this.txtNombreCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCategoria.Name = "txtNombreCategoria";
             this.txtNombreCategoria.Size = new System.Drawing.Size(216, 22);
             this.txtNombreCategoria.TabIndex = 56;
@@ -149,7 +149,7 @@
             this.lstCategoria.FormattingEnabled = true;
             this.lstCategoria.ItemHeight = 16;
             this.lstCategoria.Location = new System.Drawing.Point(67, 196);
-            this.lstCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.lstCategoria.Name = "lstCategoria";
             this.lstCategoria.Size = new System.Drawing.Size(269, 260);
             this.lstCategoria.TabIndex = 53;
@@ -186,8 +186,9 @@
             this.Controls.Add(this.lstCategoria);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "...:::Categotria:::...";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
             this.ResumeLayout(false);

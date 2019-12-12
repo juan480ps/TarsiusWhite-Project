@@ -54,7 +54,7 @@
             // txtrazonsocial
             // 
             this.txtrazonsocial.Location = new System.Drawing.Point(523, 26);
-            this.txtrazonsocial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtrazonsocial.Margin = new System.Windows.Forms.Padding(4);
             this.txtrazonsocial.Name = "txtrazonsocial";
             this.txtrazonsocial.Size = new System.Drawing.Size(216, 22);
             this.txtrazonsocial.TabIndex = 110;
@@ -82,7 +82,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(271, 463);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 131;
@@ -103,7 +103,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(152, 463);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
             this.btnEditar.TabIndex = 130;
@@ -115,7 +115,7 @@
             // 
             this.cboSector.FormattingEnabled = true;
             this.cboSector.Location = new System.Drawing.Point(152, 82);
-            this.cboSector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboSector.Margin = new System.Windows.Forms.Padding(4);
             this.cboSector.Name = "cboSector";
             this.cboSector.Size = new System.Drawing.Size(216, 24);
             this.cboSector.TabIndex = 116;
@@ -124,7 +124,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(16, 463);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 28);
             this.btnAgregar.TabIndex = 129;
@@ -136,7 +136,7 @@
             // 
             this.cboTipoDocumento.FormattingEnabled = true;
             this.cboTipoDocumento.Location = new System.Drawing.Point(152, 128);
-            this.cboTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
             this.cboTipoDocumento.Size = new System.Drawing.Size(216, 24);
             this.cboTipoDocumento.TabIndex = 117;
@@ -146,7 +146,7 @@
             this.lstProveedor.FormattingEnabled = true;
             this.lstProveedor.ItemHeight = 16;
             this.lstProveedor.Location = new System.Drawing.Point(387, 271);
-            this.lstProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstProveedor.Margin = new System.Windows.Forms.Padding(4);
             this.lstProveedor.Name = "lstProveedor";
             this.lstProveedor.Size = new System.Drawing.Size(383, 244);
             this.lstProveedor.TabIndex = 128;
@@ -155,7 +155,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(644, 539);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btnLimpiar.TabIndex = 127;
@@ -166,7 +166,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(152, 171);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(216, 22);
             this.txtDireccion.TabIndex = 119;
@@ -174,7 +174,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(523, 539);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
             this.btnCancelar.TabIndex = 126;
@@ -195,7 +195,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(415, 539);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 28);
             this.btnGuardar.TabIndex = 125;
@@ -216,7 +216,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(152, 271);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(216, 22);
             this.txtEmail.TabIndex = 124;
@@ -224,7 +224,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(152, 215);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(216, 22);
             this.txtTelefono.TabIndex = 122;
@@ -252,7 +252,7 @@
             // txtnrodocumento
             // 
             this.txtnrodocumento.Location = new System.Drawing.Point(523, 86);
-            this.txtnrodocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnrodocumento.Margin = new System.Windows.Forms.Padding(4);
             this.txtnrodocumento.Name = "txtnrodocumento";
             this.txtnrodocumento.Size = new System.Drawing.Size(216, 22);
             this.txtnrodocumento.TabIndex = 133;
@@ -285,8 +285,9 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lblEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProveedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "...:::Proveedor:::...";
             this.Load += new System.EventHandler(this.frmProveedor_Load);
             this.ResumeLayout(false);

@@ -84,9 +84,9 @@
             this.gpbCliente.Controls.Add(this.txtTelefono);
             this.gpbCliente.Controls.Add(this.lblEmail);
             this.gpbCliente.Location = new System.Drawing.Point(29, 15);
-            this.gpbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbCliente.Margin = new System.Windows.Forms.Padding(4);
             this.gpbCliente.Name = "gpbCliente";
-            this.gpbCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbCliente.Padding = new System.Windows.Forms.Padding(4);
             this.gpbCliente.Size = new System.Drawing.Size(799, 587);
             this.gpbCliente.TabIndex = 115;
             this.gpbCliente.TabStop = false;
@@ -96,7 +96,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(83, 44);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 22);
             this.txtNombre.TabIndex = 84;
@@ -114,7 +114,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(397, 43);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(216, 22);
             this.txtApellido.TabIndex = 86;
@@ -132,7 +132,7 @@
             // txtNroDocumento
             // 
             this.txtNroDocumento.Location = new System.Drawing.Point(227, 142);
-            this.txtNroDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNroDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.txtNroDocumento.Name = "txtNroDocumento";
             this.txtNroDocumento.Size = new System.Drawing.Size(216, 22);
             this.txtNroDocumento.TabIndex = 88;
@@ -160,7 +160,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(227, 342);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 107;
@@ -181,7 +181,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(119, 342);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
             this.btnEditar.TabIndex = 106;
@@ -193,7 +193,7 @@
             // 
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Location = new System.Drawing.Point(83, 89);
-            this.cboSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboSexo.Margin = new System.Windows.Forms.Padding(4);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(135, 24);
             this.cboSexo.TabIndex = 92;
@@ -201,7 +201,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(11, 342);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 28);
             this.btnAgregar.TabIndex = 105;
@@ -213,7 +213,7 @@
             // 
             this.cboTipoDocumento.FormattingEnabled = true;
             this.cboTipoDocumento.Location = new System.Drawing.Point(132, 140);
-            this.cboTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
             this.cboTipoDocumento.Size = new System.Drawing.Size(80, 24);
             this.cboTipoDocumento.TabIndex = 93;
@@ -223,7 +223,7 @@
             this.lstCliente.FormattingEnabled = true;
             this.lstCliente.ItemHeight = 16;
             this.lstCliente.Location = new System.Drawing.Point(365, 283);
-            this.lstCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstCliente.Margin = new System.Windows.Forms.Padding(4);
             this.lstCliente.Name = "lstCliente";
             this.lstCliente.Size = new System.Drawing.Size(383, 244);
             this.lstCliente.TabIndex = 104;
@@ -233,7 +233,7 @@
             // 
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(400, 85);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(163, 22);
             this.dtpFechaNacimiento.TabIndex = 94;
@@ -241,7 +241,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(617, 535);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btnLimpiar.TabIndex = 103;
@@ -252,7 +252,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(108, 183);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(335, 22);
             this.txtDireccion.TabIndex = 95;
@@ -260,7 +260,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(509, 535);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
             this.btnCancelar.TabIndex = 102;
@@ -281,7 +281,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(400, 535);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 28);
             this.btnGuardar.TabIndex = 101;
@@ -302,7 +302,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(392, 228);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(216, 22);
             this.txtEmail.TabIndex = 100;
@@ -310,7 +310,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(108, 226);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(216, 22);
             this.txtTelefono.TabIndex = 98;
@@ -333,8 +333,9 @@
             this.ClientSize = new System.Drawing.Size(863, 645);
             this.Controls.Add(this.gpbCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "...:::Cliente:::...";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.gpbCliente.ResumeLayout(false);

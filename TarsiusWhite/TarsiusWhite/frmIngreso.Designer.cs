@@ -51,7 +51,7 @@
             // txtIgv
             // 
             this.txtIgv.Location = new System.Drawing.Point(201, 176);
-            this.txtIgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIgv.Margin = new System.Windows.Forms.Padding(4);
             this.txtIgv.Name = "txtIgv";
             this.txtIgv.Size = new System.Drawing.Size(269, 22);
             this.txtIgv.TabIndex = 50;
@@ -79,7 +79,7 @@
             // txtCorrelativo
             // 
             this.txtCorrelativo.Location = new System.Drawing.Point(201, 127);
-            this.txtCorrelativo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorrelativo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorrelativo.Name = "txtCorrelativo";
             this.txtCorrelativo.Size = new System.Drawing.Size(269, 22);
             this.txtCorrelativo.TabIndex = 45;
@@ -108,7 +108,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(696, 254);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 42;
@@ -119,7 +119,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(557, 254);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 28);
             this.btnAgregar.TabIndex = 41;
@@ -150,7 +150,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(201, 85);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(269, 22);
             this.txtCantidad.TabIndex = 36;
@@ -159,7 +159,7 @@
             // 
             this.dgtbDetalleIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgtbDetalleIngreso.Location = new System.Drawing.Point(195, 338);
-            this.dgtbDetalleIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgtbDetalleIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.dgtbDetalleIngreso.Name = "dgtbDetalleIngreso";
             this.dgtbDetalleIngreso.Size = new System.Drawing.Size(601, 244);
             this.dgtbDetalleIngreso.TabIndex = 38;
@@ -178,7 +178,7 @@
             // 
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaIngreso.Location = new System.Drawing.Point(201, 4);
-            this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(117, 22);
             this.dtpFechaIngreso.TabIndex = 33;
@@ -197,7 +197,7 @@
             // 
             this.cmbTipoComprobante.FormattingEnabled = true;
             this.cmbTipoComprobante.Location = new System.Drawing.Point(201, 46);
-            this.cmbTipoComprobante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoComprobante.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoComprobante.Name = "cmbTipoComprobante";
             this.cmbTipoComprobante.Size = new System.Drawing.Size(269, 24);
             this.cmbTipoComprobante.TabIndex = 35;
@@ -205,7 +205,7 @@
             // txtEstado
             // 
             this.txtEstado.Location = new System.Drawing.Point(201, 222);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(269, 22);
             this.txtEstado.TabIndex = 51;
@@ -234,8 +234,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbTipoComprobante);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmIngreso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "...:::Ingreso:::...";
             this.Load += new System.EventHandler(this.Ingreso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgtbDetalleIngreso)).EndInit();

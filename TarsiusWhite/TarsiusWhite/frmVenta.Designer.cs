@@ -71,7 +71,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(260, 223);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 24;
@@ -82,7 +82,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(145, 223);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 28);
             this.btnAgregar.TabIndex = 23;
@@ -107,7 +107,7 @@
             "Vacuna",
             "Porcina"});
             this.cmbArticulo.Location = new System.Drawing.Point(252, 182);
-            this.cmbArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbArticulo.Name = "cmbArticulo";
             this.cmbArticulo.Size = new System.Drawing.Size(145, 24);
             this.cmbArticulo.TabIndex = 17;
@@ -125,7 +125,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(129, 182);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(31, 22);
             this.txtCantidad.TabIndex = 18;
@@ -134,7 +134,7 @@
             // 
             this.dgvDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleVenta.Location = new System.Drawing.Point(16, 270);
-            this.dgvDetalleVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDetalleVenta.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDetalleVenta.Name = "dgvDetalleVenta";
             this.dgvDetalleVenta.Size = new System.Drawing.Size(651, 244);
             this.dgvDetalleVenta.TabIndex = 20;
@@ -153,7 +153,7 @@
             // 
             this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaVenta.Location = new System.Drawing.Point(129, 100);
-            this.dtpFechaVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaVenta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
             this.dtpFechaVenta.Size = new System.Drawing.Size(117, 22);
             this.dtpFechaVenta.TabIndex = 14;
@@ -172,7 +172,7 @@
             // 
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(128, 137);
-            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(269, 24);
             this.cmbCliente.TabIndex = 16;
@@ -201,7 +201,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(485, 187);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(144, 22);
             this.txtPrecio.TabIndex = 28;
@@ -229,8 +229,9 @@
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cmbCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "...:::Venta:::...";
             this.Load += new System.EventHandler(this.frmVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).EndInit();
