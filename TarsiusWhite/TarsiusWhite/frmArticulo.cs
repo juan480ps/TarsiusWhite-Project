@@ -94,7 +94,19 @@ namespace TarsiusWhite
                     {
                         int index = lstArticulos.SelectedIndex;
                         Articulo art = obtenerArticuloFormulario();
-                        Articulo.editarArticulo(art, index);
+                        
+
+                        //Articulo art = (Articulo)lstArticulos.SelectedItem;
+                        if (art != null)
+                        {
+                            Articulo.editarArticulo(art);
+                            actualizarListadoArticullo();
+                            limpiarFormulario();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Favor seleccionar una fila de la lista");
+                        }
                     }
 
                     actualizarListadoArticullo();
@@ -199,7 +211,7 @@ namespace TarsiusWhite
         private Articulo obtenerArticuloFormulario()
         {
             Articulo art = new Articulo();
-
+            art.idArticulo = Convert.ToInt32(txtID.Text);
             art.codigo = txtCodigo.Text;
             art.nombre = txtNombre.Text;
             art.descripcion = txtDescripcion.Text;
@@ -217,6 +229,7 @@ namespace TarsiusWhite
 
                 if (art != null)
                 {
+                    txtID.Text = Convert.ToString(art.idArticulo);
                     txtCodigo.Text = art.codigo;
                     txtNombre.Text = art.nombre;
                     txtDescripcion.Text = art.descripcion;

@@ -47,18 +47,92 @@ namespace ClasesTarsius
             }
         }
 
-        public static void editarArticulo(Articulo art, int indice)
+        public static void editarArticulo(Articulo art)//, int indice)
         {
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = @"UPDATE Articulo SET codigo = @codigo, nombre = @nombre, descripcion = @descripcion, categoria = @categoria, presentacion = @presentacion where idarticulo = @idarticulo";
+                string textoCMD = @"UPDATE Articulo SET codigo = @codigo, Nombre = @nombre, descripcion = @descripcion, categoria = @categoria, presentacion = @presentacion where idarticulo = @idarticulo";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = art.ObtenerParametros(cmd, true);
 
                 cmd.ExecuteNonQuery();
             }
+            //string rpta = "";
+            //SqlConnection SqlCon = new SqlConnection();
+            //try
+            //{
+            //    //Código
+            //    SqlCon.ConnectionString = Conexion.CADENA_CONEXION;
+            //    SqlCon.Open();
+            //    //Establecer el Comando
+            //    SqlCommand SqlCmd = new SqlCommand();
+            //    SqlCmd.Connection = SqlCon;
+            //    SqlCmd.CommandText = "speditar_articulo";
+            //    SqlCmd.CommandType = CommandType.StoredProcedure;
+
+            //    SqlParameter ParIdarticulo = new SqlParameter();
+            //    ParIdarticulo.ParameterName = "@idarticulo";
+            //    ParIdarticulo.SqlDbType = SqlDbType.Int;
+            //    ParIdarticulo.Value = Articulo.Idarticulo;
+            //    SqlCmd.Parameters.Add(ParIdarticulo);
+
+            //    SqlParameter ParCodigo = new SqlParameter();
+            //    ParCodigo.ParameterName = "@codigo";
+            //    ParCodigo.SqlDbType = SqlDbType.VarChar;
+            //    ParCodigo.Size = 50;
+            //    ParCodigo.Value = Articulo.Codigo;
+            //    SqlCmd.Parameters.Add(ParCodigo);
+
+            //    SqlParameter ParNombre = new SqlParameter();
+            //    ParNombre.ParameterName = "@nombre";
+            //    ParNombre.SqlDbType = SqlDbType.VarChar;
+            //    ParNombre.Size = 50;
+            //    ParNombre.Value = Articulo.Nombre;
+            //    SqlCmd.Parameters.Add(ParNombre);
+
+            //    SqlParameter ParDescripcion = new SqlParameter();
+            //    ParDescripcion.ParameterName = "@descripcion";
+            //    ParDescripcion.SqlDbType = SqlDbType.VarChar;
+            //    ParDescripcion.Size = 1024;
+            //    ParDescripcion.Value = Articulo.Descripcion;
+            //    SqlCmd.Parameters.Add(ParDescripcion);
+
+            //    SqlParameter ParImagen = new SqlParameter();
+            //    ParImagen.ParameterName = "@imagen";
+            //    ParImagen.SqlDbType = SqlDbType.Image;
+            //    ParImagen.Value = Articulo.Imagen;
+            //    SqlCmd.Parameters.Add(ParImagen);
+
+            //    SqlParameter ParIdcategoria = new SqlParameter();
+            //    ParIdcategoria.ParameterName = "@idcategoria";
+            //    ParIdcategoria.SqlDbType = SqlDbType.VarChar;
+            //    ParIdcategoria.Value = Articulo.Idcategoria;
+            //    SqlCmd.Parameters.Add(ParIdcategoria);
+
+            //    SqlParameter ParIdpresentacion = new SqlParameter();
+            //    ParIdpresentacion.ParameterName = "@idpresentacion";
+            //    ParIdpresentacion.SqlDbType = SqlDbType.VarChar;
+            //    ParIdpresentacion.Value = Articulo.Idpresentacion;
+            //    SqlCmd.Parameters.Add(ParIdpresentacion);
+
+
+            //    //Ejecutamos nuestro comando
+
+            //    rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Actualizo el Registro";
+
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    rpta = ex.Message;
+            //}
+            //finally
+            //{
+            //    if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            //}
+            //return rpta;
         }
         public static void eliminarArticulo(Articulo art)
         {
@@ -73,7 +147,6 @@ namespace ClasesTarsius
                 p1.SqlDbType = SqlDbType.Int;
                 cmd.Parameters.Add(p1);
 
-                cmd.ExecuteNonQuery();
                 con.Close();
             }
         }
@@ -138,7 +211,9 @@ namespace ClasesTarsius
 
             if (id == true)
             {
-                cmd = ObtenerParametrosId(cmd);
+                SqlParameter p9 = new SqlParameter("@idarticulo", this.idArticulo);
+                p9.SqlDbType = SqlDbType.Int;
+                cmd.Parameters.Add(p9);
             }
             return cmd;
 

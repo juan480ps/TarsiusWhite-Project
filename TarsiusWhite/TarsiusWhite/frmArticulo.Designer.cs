@@ -46,6 +46,7 @@
             this.cboPresentacion = new System.Windows.Forms.ComboBox();
             this.lstArticulos = new System.Windows.Forms.ListBox();
             this.lblArticulo = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -227,12 +228,22 @@
             this.lblArticulo.TabIndex = 6;
             this.lblArticulo.Text = "Articulos";
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(120, 57);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(26, 22);
+            this.txtID.TabIndex = 53;
+            this.txtID.Visible = false;
+            // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(753, 534);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.lstArticulos);
             this.Controls.Add(this.cboPresentacion);
             this.Controls.Add(this.cboCategoria);
@@ -281,5 +292,6 @@
         private System.Windows.Forms.ComboBox cboPresentacion;
         private System.Windows.Forms.ListBox lstArticulos;
         private System.Windows.Forms.Label lblArticulo;
+        private System.Windows.Forms.TextBox txtID;
     }
 }
