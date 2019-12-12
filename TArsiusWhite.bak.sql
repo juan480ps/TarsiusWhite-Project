@@ -1,6 +1,6 @@
-﻿USE [master]
+USE [master]
 GO
-/****** Object:  Database [TarsiusWhite]    Script Date: 11/12/2019 19:36:02 ******/
+/****** Object:  Database [TarsiusWhite]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 CREATE DATABASE [TarsiusWhite]
 GO
 ALTER DATABASE [TarsiusWhite] SET COMPATIBILITY_LEVEL = 130
@@ -68,31 +68,11 @@ ALTER DATABASE [TarsiusWhite] SET TARGET_RECOVERY_TIME = 60 SECONDS
 GO
 ALTER DATABASE [TarsiusWhite] SET DELAYED_DURABILITY = DISABLED 
 GO
-EXEC sys.sp_db_vardecimal_storage_format N'TarsiusWhite', N'ON'
-GO
 ALTER DATABASE [TarsiusWhite] SET QUERY_STORE = OFF
 GO
 USE [TarsiusWhite]
 GO
-ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 0;
-GO
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY;
-GO
-ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = OFF;
-GO
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY;
-GO
-ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = ON;
-GO
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY;
-GO
-ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = OFF;
-GO
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET QUERY_OPTIMIZER_HOTFIXES = PRIMARY;
-GO
-USE [TarsiusWhite]
-GO
-/****** Object:  Table [dbo].[Articulo]    Script Date: 11/12/2019 19:36:03 ******/
+/****** Object:  Table [dbo].[Articulo]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -109,9 +89,8 @@ CREATE TABLE [dbo].[Articulo](
 	[IdArticulo] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
-/****** Object:  Table [dbo].[Categoria]    Script Date: 11/12/2019 19:36:03 ******/
+/****** Object:  Table [dbo].[Categoria]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -125,9 +104,8 @@ CREATE TABLE [dbo].[Categoria](
 	[IdCategoria] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
-/****** Object:  Table [dbo].[Cliente]    Script Date: 11/12/2019 19:36:03 ******/
+/****** Object:  Table [dbo].[Cliente]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -148,9 +126,8 @@ CREATE TABLE [dbo].[Cliente](
 	[IdCliente] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
-/****** Object:  Table [dbo].[DetalleVenta]    Script Date: 11/12/2019 19:36:03 ******/
+/****** Object:  Table [dbo].[DetalleVenta]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -166,9 +143,8 @@ CREATE TABLE [dbo].[DetalleVenta](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
-/****** Object:  Table [dbo].[Empleado]    Script Date: 11/12/2019 19:36:03 ******/
+/****** Object:  Table [dbo].[Empleado]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -177,23 +153,20 @@ CREATE TABLE [dbo].[Empleado](
 	[IdEmpleado] [int] IDENTITY(1,1) NOT NULL,
 	[Nombre] [varchar](50) NULL,
 	[Apellido] [varchar](50) NULL,
-	[Sexo] [char](1) NULL,
+	[Sexo] [int] NULL,
 	[FechaNacimiento] [date] NULL,
+	[TipoDocumento] [int] NULL,
 	[NroDocumento] [varchar](50) NULL,
 	[Direccion] [varchar](50) NULL,
 	[Telefono] [varchar](50) NULL,
 	[Email] [varchar](50) NULL,
-	[Acceso] [varchar](50) NULL,
-	[Usuario] [varchar](50) NULL,
-	[Password] [varchar](50) NULL,
  CONSTRAINT [PK_Empleado] PRIMARY KEY CLUSTERED 
 (
 	[IdEmpleado] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
-/****** Object:  Table [dbo].[Ingreso]    Script Date: 11/12/2019 19:36:03 ******/
+/****** Object:  Table [dbo].[Ingreso]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -211,9 +184,8 @@ CREATE TABLE [dbo].[Ingreso](
 	[IdIngreso] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
-/****** Object:  Table [dbo].[Presentacion]    Script Date: 11/12/2019 19:36:03 ******/
+/****** Object:  Table [dbo].[Presentacion]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -227,9 +199,8 @@ CREATE TABLE [dbo].[Presentacion](
 	[IdPresentacion] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
-/****** Object:  Table [dbo].[Proveedor]    Script Date: 11/12/2019 19:36:03 ******/
+/****** Object:  Table [dbo].[Proveedor]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -248,9 +219,23 @@ CREATE TABLE [dbo].[Proveedor](
 	[IdProveedor] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
-/****** Object:  Table [dbo].[Venta]    Script Date: 11/12/2019 19:36:03 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 12/12/2019 11:47:44 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Usuario](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Usuario] [varchar](50) NOT NULL,
+	[Password] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Venta]    Script Date: 12/12/2019 11:47:44 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -264,7 +249,6 @@ CREATE TABLE [dbo].[Venta](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
 USE [master]
 GO
