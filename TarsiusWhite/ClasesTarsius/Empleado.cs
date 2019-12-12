@@ -33,9 +33,9 @@ namespace ClasesTarsius
         public string direccion { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
-        public string acceso { get; set; }
-        public string usuario { get; set; }
-        public string password { get; set; }
+        //public string acceso { get; set; }
+        //public string usuario { get; set; }
+        //public string password { get; set; }
 
 
 
@@ -57,7 +57,7 @@ namespace ClasesTarsius
                 //cmd.ExecuteNonQuery();
 
                 con.Open();
-                string textoCmd = "insert into empleado VALUES (@Nombre, @Apellido, @Sexo, @FechaNacimiento, @TipoDocumento, @NroDocumento, @Direccion, @Telefono, @Email, @Acceso, @Usuario, @Password)";
+                string textoCmd = "insert into empleado VALUES (@Nombre, @Apellido, @Sexo, @FechaNacimiento, @TipoDocumento, @NroDocumento, @Direccion, @Telefono, @Email)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 cmd = e.ObtenerParametros(cmd);
                 cmd.ExecuteNonQuery();
@@ -123,9 +123,9 @@ namespace ClasesTarsius
                     empleado.email = elLectorDeDatos.GetString(7);
                     empleado.nroDocumento = elLectorDeDatos.GetString(8);
                     empleado.telefono = elLectorDeDatos.GetString(9);
-                    empleado.acceso = elLectorDeDatos.GetString(10);
-                    empleado.usuario = elLectorDeDatos.GetString(11);
-                    empleado.password = elLectorDeDatos.GetString(12);
+                    //empleado.acceso = elLectorDeDatos.GetString(10);
+                    //empleado.usuario = elLectorDeDatos.GetString(11);
+                    //empleado.password = elLectorDeDatos.GetString(12);
 
                     listaEmpleados.Add(empleado);
 
@@ -147,9 +147,9 @@ namespace ClasesTarsius
             SqlParameter p7 = new SqlParameter("@Email", this.email);
             SqlParameter p8 = new SqlParameter("@NroDocumento", this.nroDocumento);
             SqlParameter p9 = new SqlParameter("@Telefono", this.telefono);
-            SqlParameter p10 = new SqlParameter("@Acceso", this.acceso);
-            SqlParameter p11 = new SqlParameter("@Usuario", this.usuario);
-            SqlParameter p12 = new SqlParameter("@Password", this.password);
+            //SqlParameter p10 = new SqlParameter("@Acceso", this.acceso);
+            //SqlParameter p11 = new SqlParameter("@Usuario", this.usuario);
+            //SqlParameter p12 = new SqlParameter("@Password", this.password);
 
 
             p1.SqlDbType = SqlDbType.VarChar;
@@ -161,9 +161,9 @@ namespace ClasesTarsius
             p7.SqlDbType = SqlDbType.VarChar;
             p8.SqlDbType = SqlDbType.VarChar;
             p9.SqlDbType = SqlDbType.VarChar;
-            p10.SqlDbType = SqlDbType.VarChar;
-            p11.SqlDbType = SqlDbType.VarChar;
-            p12.SqlDbType = SqlDbType.VarChar;
+            //p10.SqlDbType = SqlDbType.VarChar;
+            //p11.SqlDbType = SqlDbType.VarChar;
+            //p12.SqlDbType = SqlDbType.VarChar;
 
             cmd.Parameters.Add(p1);
             cmd.Parameters.Add(p2);
@@ -174,9 +174,9 @@ namespace ClasesTarsius
             cmd.Parameters.Add(p7);
             cmd.Parameters.Add(p8);
             cmd.Parameters.Add(p9);
-            cmd.Parameters.Add(p10);
-            cmd.Parameters.Add(p11);
-            cmd.Parameters.Add(p12);
+            //cmd.Parameters.Add(p10);
+            //cmd.Parameters.Add(p11);
+            //cmd.Parameters.Add(p12);
 
             if (id == true)
             {
@@ -197,7 +197,7 @@ namespace ClasesTarsius
 
         public override string ToString()
         {
-            return nombre + " " + apellido + " " + sexo + " " + fechaNacimiento + " " + tipoDocumento + " " + nroDocumento + " " + direccion + " " + telefono + " " + email + " " + acceso + " " + usuario;
+            return nombre + " " + apellido + " " + sexo + " " + fechaNacimiento + " " + tipoDocumento + " " + nroDocumento + " " + direccion + " " + telefono + " " + email;
         }
     }
 }

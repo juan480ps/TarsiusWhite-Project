@@ -149,9 +149,9 @@ namespace TarsiusWhite
             emp.nroDocumento = txtNroDocumento.Text;
             emp.telefono = txtTelefono.Text;
             emp.email = txtEmail.Text;
-            emp.acceso = txtAcceso.Text;
-            emp.usuario = txtUsuario.Text;
-            emp.password = txtPassword.Text;
+            //emp.acceso = txtAcceso.Text;
+            //emp.usuario = txtUsuario.Text;
+            //emp.password = txtPassword.Text;
 
             return emp;
         }
@@ -165,9 +165,9 @@ namespace TarsiusWhite
                 txtApellido.Text = emp.nombre;
                 txtApellido.Text = emp.apellido;
                 txtTelefono.Text = emp.telefono;
-                txtAcceso.Text = emp.acceso;
-                txtUsuario.Text = emp.usuario;
-                txtPassword.Text = emp.password;
+                //txtAcceso.Text = emp.acceso;
+                //txtUsuario.Text = emp.usuario;
+                //txtPassword.Text = emp.password;
                 txtEmail.Text = emp.email;
                 cboSexo.SelectedItem = emp.sexo;
                 cboTipoDocumento.SelectedItem = emp.tipoDocumento;
@@ -190,9 +190,9 @@ namespace TarsiusWhite
             cboTipoDocumento.Enabled = true;
             txtNroDocumento.Enabled = true;
             dtpFechaNacimiento.Enabled = true;
-            txtAcceso.Enabled = true;
-            txtUsuario.Enabled = true;
-            txtPassword.Enabled = true;
+            //txtAcceso.Enabled = true;
+            //txtUsuario.Enabled = true;
+            //txtPassword.Enabled = true;
             txtEmail.Enabled = true;
             txtDireccion.Enabled = true;
             txtTelefono.Enabled = true;
@@ -215,9 +215,9 @@ namespace TarsiusWhite
             dtpFechaNacimiento.Value = DateTime.Now;
             txtNroDocumento.Text = "";
             txtTelefono.Text = "";
-            txtAcceso.Text = "";
-            txtUsuario.Text = "";
-            txtPassword.Text = "";
+            //txtAcceso.Text = "";
+            //txtUsuario.Text = "";
+            //txtPassword.Text = "";
             txtEmail.Text = "";
         }
 
@@ -230,9 +230,9 @@ namespace TarsiusWhite
             txtNroDocumento.Enabled = false;
             txtNroDocumento.Enabled = false;
             dtpFechaNacimiento.Enabled = false;
-            txtAcceso.Enabled = false;
-            txtUsuario.Enabled = false;
-            txtPassword.Enabled = false;
+            //txtAcceso.Enabled = false;
+            //txtUsuario.Enabled = false;
+            //txtPassword.Enabled = false;
             txtEmail.Enabled = false;
             txtDireccion.Enabled = false;
             txtTelefono.Enabled = false;
@@ -305,26 +305,26 @@ namespace TarsiusWhite
                 return false;
             }
 
-            if (String.IsNullOrWhiteSpace(txtAcceso.Text))
-            {
-                MessageBox.Show("El acceso no puede estar vacío", "Error");
-                txtAcceso.Focus();
-                return false;
-            }
+            //if (String.IsNullOrWhiteSpace(txtAcceso.Text))
+            //{
+            //    MessageBox.Show("El acceso no puede estar vacío", "Error");
+            //    txtAcceso.Focus();
+            //    return false;
+            //}
 
-            if (String.IsNullOrWhiteSpace(txtUsuario.Text))
-            {
-                MessageBox.Show("El usuario no puede estar vacío", "Error");
-                txtUsuario.Focus();
-                return false;
-            }
+            //if (String.IsNullOrWhiteSpace(txtUsuario.Text))
+            //{
+            //    MessageBox.Show("El usuario no puede estar vacío", "Error");
+            //    txtUsuario.Focus();
+            //    return false;
+            //}
 
-            if (String.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                MessageBox.Show("El password no puede estar vacío", "Error");
-                txtPassword.Focus();
-                return false;
-            }            
+            //if (String.IsNullOrWhiteSpace(txtPassword.Text))
+            //{
+            //    MessageBox.Show("El password no puede estar vacío", "Error");
+            //    txtPassword.Focus();
+            //    return false;
+            //}            
             return true;
         }
     }

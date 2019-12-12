@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.lblAcceso = new System.Windows.Forms.Label();
-            this.txtAcceso = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -62,57 +56,9 @@
             this.gpbEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(11, 301);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(53, 13);
-            this.lblPassword.TabIndex = 113;
-            this.lblPassword.Text = "Password";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(83, 294);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(163, 20);
-            this.txtPassword.TabIndex = 112;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(11, 264);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
-            this.lblUsuario.TabIndex = 111;
-            this.lblUsuario.Text = "Usuario";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(81, 257);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(163, 20);
-            this.txtUsuario.TabIndex = 110;
-            // 
-            // lblAcceso
-            // 
-            this.lblAcceso.AutoSize = true;
-            this.lblAcceso.Location = new System.Drawing.Point(11, 227);
-            this.lblAcceso.Name = "lblAcceso";
-            this.lblAcceso.Size = new System.Drawing.Size(43, 13);
-            this.lblAcceso.TabIndex = 109;
-            this.lblAcceso.Text = "Acceso";
-            // 
-            // txtAcceso
-            // 
-            this.txtAcceso.Location = new System.Drawing.Point(81, 220);
-            this.txtAcceso.Name = "txtAcceso";
-            this.txtAcceso.Size = new System.Drawing.Size(163, 20);
-            this.txtAcceso.TabIndex = 108;
-            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(449, 264);
+            this.btnEliminar.Location = new System.Drawing.Point(300, 227);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 107;
@@ -122,7 +68,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(368, 264);
+            this.btnEditar.Location = new System.Drawing.Point(219, 227);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 106;
@@ -132,7 +78,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(287, 264);
+            this.btnAgregar.Location = new System.Drawing.Point(138, 227);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 105;
@@ -143,14 +89,14 @@
             // lstEmpleado
             // 
             this.lstEmpleado.FormattingEnabled = true;
-            this.lstEmpleado.Location = new System.Drawing.Point(6, 320);
+            this.lstEmpleado.Location = new System.Drawing.Point(6, 256);
             this.lstEmpleado.Name = "lstEmpleado";
             this.lstEmpleado.Size = new System.Drawing.Size(535, 108);
             this.lstEmpleado.TabIndex = 104;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(336, 448);
+            this.btnLimpiar.Location = new System.Drawing.Point(300, 370);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 103;
@@ -160,7 +106,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(255, 448);
+            this.btnCancelar.Location = new System.Drawing.Point(219, 370);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 102;
@@ -170,7 +116,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(173, 448);
+            this.btnGuardar.Location = new System.Drawing.Point(137, 370);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 101;
@@ -297,17 +243,11 @@
             this.gpbEmpleado.Controls.Add(this.cboSexo);
             this.gpbEmpleado.Controls.Add(this.lblNroDoc);
             this.gpbEmpleado.Controls.Add(this.txtNombre);
-            this.gpbEmpleado.Controls.Add(this.lblPassword);
             this.gpbEmpleado.Controls.Add(this.lblNombre);
-            this.gpbEmpleado.Controls.Add(this.txtPassword);
             this.gpbEmpleado.Controls.Add(this.txtApellido);
-            this.gpbEmpleado.Controls.Add(this.lblUsuario);
             this.gpbEmpleado.Controls.Add(this.lblApellido);
-            this.gpbEmpleado.Controls.Add(this.txtUsuario);
             this.gpbEmpleado.Controls.Add(this.txtNroDocumento);
-            this.gpbEmpleado.Controls.Add(this.lblAcceso);
             this.gpbEmpleado.Controls.Add(this.lblFechaNacimiento);
-            this.gpbEmpleado.Controls.Add(this.txtAcceso);
             this.gpbEmpleado.Controls.Add(this.btnEliminar);
             this.gpbEmpleado.Controls.Add(this.lblSexo);
             this.gpbEmpleado.Controls.Add(this.btnEditar);
@@ -323,9 +263,9 @@
             this.gpbEmpleado.Controls.Add(this.txtEmail);
             this.gpbEmpleado.Controls.Add(this.txtTelefono);
             this.gpbEmpleado.Controls.Add(this.lblEmail);
-            this.gpbEmpleado.Location = new System.Drawing.Point(12, 12);
+            this.gpbEmpleado.Location = new System.Drawing.Point(12, 56);
             this.gpbEmpleado.Name = "gpbEmpleado";
-            this.gpbEmpleado.Size = new System.Drawing.Size(553, 477);
+            this.gpbEmpleado.Size = new System.Drawing.Size(553, 404);
             this.gpbEmpleado.TabIndex = 114;
             this.gpbEmpleado.TabStop = false;
             this.gpbEmpleado.Text = "Empleado";
@@ -360,7 +300,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(577, 504);
+            this.ClientSize = new System.Drawing.Size(577, 472);
             this.Controls.Add(this.gpbEmpleado);
             this.Name = "frmEmpleado";
             this.Text = "frmEmpleado";
@@ -372,13 +312,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label lblAcceso;
-        private System.Windows.Forms.TextBox txtAcceso;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
