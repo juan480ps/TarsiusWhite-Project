@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -17,7 +17,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCmd = "INSERT INTO USUARIO (usuario, password) values(@Usuario, @password)";
+                string textoCmd = "INSERT INTO USUARIO (usuario, password) values(@Usuario, @Password)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 SqlParameter p1 = new SqlParameter("@Usuario", usuario.Trim());
                 p1.SqlDbType = SqlDbType.VarChar;
@@ -38,11 +38,11 @@ namespace ClasesTarsius
 
         public static bool Autenticar(string usuario, string password)
         {
-            string password_protegido = "123"; //EncodePassword(password);
+            string password_protegido = EncodePassword(password);
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCmd = "SELECT Usuario, password from Usuario where Usuario = @Usuario and password = @password";
+                string textoCmd = "SELECT Usuario, password from Usuario where Usuario = @Usuario and password = @Password";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 SqlParameter p1 = new SqlParameter("@Usuario", usuario.Trim());
                 p1.SqlDbType = SqlDbType.VarChar;
@@ -77,7 +77,7 @@ namespace ClasesTarsius
         public static string EncodePassword(string originalPassword)
         {
             SHA1 sha1 = new SHA1CryptoServiceProvider();
-            string salt = "123";
+            string salt = "0d71ee4472658cd5874c5578410a9d8611fc9aef";
             string passwordSalt = salt + originalPassword;
             byte[] inputBytes = (new UnicodeEncoding()).GetBytes(passwordSalt);
             byte[] hash = sha1.ComputeHash(inputBytes);
