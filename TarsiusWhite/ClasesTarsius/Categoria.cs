@@ -16,9 +16,11 @@ namespace ClasesTarsius
 
         public static List<Categoria> lstCategoria = new List<Categoria>();
 
+
+
         public static void agregarCategoria(Categoria cat)
         {
-           
+
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
@@ -31,17 +33,17 @@ namespace ClasesTarsius
 
         private SqlCommand ObtenerParametros(SqlCommand cmd, Boolean id = false)
         {
-            
+
             SqlParameter p1 = new SqlParameter("@NombreCategoria", this.NombreCategoria);
-            SqlParameter p2 = new SqlParameter("@DescripcionCategoria", this.DescripcionCategoria);            
+            SqlParameter p2 = new SqlParameter("@DescripcionCategoria", this.DescripcionCategoria);
 
-           
+
             p1.SqlDbType = SqlDbType.VarChar;
-            p2.SqlDbType = SqlDbType.VarChar;           
+            p2.SqlDbType = SqlDbType.VarChar;
 
-          
+
             cmd.Parameters.Add(p1);
-            cmd.Parameters.Add(p2);         
+            cmd.Parameters.Add(p2);
 
             if (id == true)
             {
@@ -110,7 +112,7 @@ namespace ClasesTarsius
                     cat = new Categoria();
                     cat.IDCategoria = elLectorDeDatos.GetInt32(0);
                     cat.NombreCategoria = elLectorDeDatos.GetString(1);
-                    cat.DescripcionCategoria = elLectorDeDatos.GetString(2);                    
+                    cat.DescripcionCategoria = elLectorDeDatos.GetString(2);
 
                     lstCategoria.Add(cat);
                 }
@@ -123,9 +125,36 @@ namespace ClasesTarsius
         {
             return this.NombreCategoria + " " + this.DescripcionCategoria;
         }
+
+
+
+        public static Categoria ObtenerCategorias(int id)
+        {
+            Categoria categoria = null;
+
+            if (lstCategoria.Count == 0) Categoria.ObtenerCategoria();
+
+            foreach (Categoria c in lstCategoria)
+            {
+                if (c.IDCategoria == id)
+                {
+                    categoria = c;
+                    break;
+                }
+
+            }
+            return categoria;
+
+            /*
+            O se puede utilizar la forma más corta con Linq:
+            return Proveedor.ObtenerProveedores().Find(p => p.Id == id);
+
+            */
+
+
+        }
     }
 
-    //cambios 
 
 }  
 

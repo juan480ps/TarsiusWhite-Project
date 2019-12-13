@@ -10,7 +10,7 @@ namespace ClasesTarsius
 {
     public class Presentacion
     {
-        private int idPresentacion { get; set; }
+        public int idPresentacion { get; set; }
         public string nombrePresentacion { get; set; }
         public string descripcionPresentacion { get; set; }
 
@@ -136,6 +136,33 @@ namespace ClasesTarsius
         public override string ToString()
         {
             return nombrePresentacion;
+        }
+
+
+        public static Presentacion ObtenerPresentaciones(int id)
+        {
+            Presentacion presentacion = null;
+
+            if (listaPresentacion.Count == 0) Presentacion.obtenerPresentacion();
+
+            foreach (Presentacion p in listaPresentacion)
+            {
+                if (p.idPresentacion == id)
+                {
+                    presentacion = p;
+                    break;
+                }
+
+            }
+            return presentacion;
+
+            /*
+            O se puede utilizar la forma más corta con Linq:
+            return Proveedor.ObtenerProveedores().Find(p => p.Id == id);
+
+            */
+
+
         }
     }
 }

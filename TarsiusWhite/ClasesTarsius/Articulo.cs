@@ -26,8 +26,8 @@ namespace ClasesTarsius
         public string codigo { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
-        public _categoria categoria { get; set; }
-        public _presentacion presentacion { get; set; }
+        public Categoria categoria { get; set; }
+        public Presentacion presentacion { get; set; }
 
         //public Articulo articulo;
 
@@ -174,8 +174,8 @@ namespace ClasesTarsius
                         art.codigo = elLectorDeDatos.GetString(1);
                         art.nombre = elLectorDeDatos.GetString(2);
                         art.descripcion = elLectorDeDatos.GetString(3);
-                        art.categoria = (_categoria)elLectorDeDatos.GetInt32(4);
-                        art.presentacion = (_presentacion)elLectorDeDatos.GetInt32(5);
+                        art.categoria = Categoria.ObtenerCategorias(elLectorDeDatos.GetInt32(4));
+                        art.presentacion = Presentacion.ObtenerPresentaciones(elLectorDeDatos.GetInt32(5));
 
                         listaArticulos.Add(art);
                     }
@@ -194,8 +194,8 @@ namespace ClasesTarsius
             SqlParameter p1 = new SqlParameter("@codigo", this.codigo);
             SqlParameter p2 = new SqlParameter("@nombre", this.nombre);
             SqlParameter p3 = new SqlParameter("@descripcion", this.descripcion);
-            SqlParameter p4 = new SqlParameter("@presentacion", this.presentacion);
-            SqlParameter p5 = new SqlParameter("@categoria", this.categoria);
+            SqlParameter p4 = new SqlParameter("@presentacion", this.presentacion.idPresentacion);
+            SqlParameter p5 = new SqlParameter("@categoria", this.categoria.IDCategoria);
 
             p1.SqlDbType = SqlDbType.VarChar;
             p2.SqlDbType = SqlDbType.VarChar;
