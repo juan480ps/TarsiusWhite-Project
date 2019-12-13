@@ -76,14 +76,44 @@ namespace TarsiusWhite
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    int index = lstEmpleado.SelectedIndex;
+            //    Empleado emp = obtenerEmpleadoFormulario();
+            //    //Empleado.EditarEmpleado(index, emp);
+
+            //    //limpiarFormulario();
+            //    //actualizarListaddoEmpleado();
+
+            //    //int index = lstArticulos.SelectedIndex;
+            //    //Articulo art = obtenerArticuloFormularioEditar();
+
+
+            //    //Articulo art = (Articulo)lstArticulos.SelectedItem;
+            //    if (emp != null)
+            //    {
+            //        Empleado.EditarEmpleado(index, emp);
+            //        actualizarListaddoEmpleado();
+            //        limpiarFormulario();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            //}
             try
             {
-                int index = lstEmpleado.SelectedIndex;
-                Empleado emp = obtenerEmpleadoFormulario();
-                Empleado.EditarEmpleado(index, emp);
-
-                limpiarFormulario();
-                actualizarListaddoEmpleado();
+                Empleado emp = (Empleado)lstEmpleado.SelectedItem;
+                if (emp != null)
+                {
+                    _auxiliar = "EDITAR";
+                    desbloquearFormulario();
+                    completarObjetos();
+                }
+                else
+                {
+                    MessageBox.Show("Ojo, Selecciona un Item");
+                }
             }
             catch (Exception ex)
             {
@@ -140,7 +170,7 @@ namespace TarsiusWhite
         {
             Empleado emp = new Empleado();
 
-            emp.nombre = txtApellido.Text;
+            emp.nombre = txtNombre.Text;
             emp.apellido = txtApellido.Text;
             emp.sexo = (Empleado._sexo)cboSexo.SelectedItem;
             emp.tipoDocumento = (Empleado._tipoDocumento)cboTipoDocumento.SelectedItem;
@@ -312,6 +342,32 @@ namespace TarsiusWhite
         private void gpbEmpleado_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void completarObjetos()
+        {
+            try
+            {
+                Empleado emp = (Empleado)lstEmpleado.SelectedItem;
+
+                if (emp != null)
+                {
+                    txtId.Text = Convert.ToString(emp.idEmpleado);
+                    txtNombre.Text = emp.nombre;
+                    txtApellido.Text = emp.apellido;
+                    cboSexo.SelectedItem = emp.sexo;
+                    cboTipoDocumento.SelectedItem = emp.tipoDocumento;
+                    dtpFechaNacimiento.Value = emp.fechaNacimiento;
+                    txtNroDocumento.Text = emp.nroDocumento;
+                    txtDireccion.Text = emp.direccion;
+                    txtTelefono.Text = emp.telefono;
+                    txtEmail.Text = emp.email;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
         }
     }
 }

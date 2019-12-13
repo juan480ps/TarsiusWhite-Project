@@ -213,6 +213,7 @@ namespace TarsiusWhite
         private Articulo obtenerArticuloFormularioEditar()
         {
             Articulo art = new Articulo();
+
             art.idArticulo = Convert.ToInt32(txtID.Text);
             art.codigo = txtCodigo.Text;
             art.nombre = txtNombre.Text;
