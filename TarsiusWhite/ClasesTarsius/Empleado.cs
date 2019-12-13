@@ -37,13 +37,6 @@ namespace ClasesTarsius
         //public string usuario { get; set; }
         //public string password { get; set; }
 
-
-
-        public Empleado()
-        {
-
-        }
-
         public static List<Empleado> listaEmpleados = new List<Empleado>();
 
         public static void AgregarEmpleado(Empleado e)
