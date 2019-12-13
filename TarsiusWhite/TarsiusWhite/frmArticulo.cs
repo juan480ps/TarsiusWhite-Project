@@ -144,8 +144,10 @@ namespace TarsiusWhite
             try
             {
                 actualizarListadoArticullo();
-                cboCategoria.DataSource = Enum.GetValues(typeof(Articulo._categoria));
-                cboPresentacion.DataSource = Enum.GetValues(typeof(Articulo._presentacion));
+                //cboCategoria.DataSource = Enum.GetValues(typeof(Articulo._categoria));
+                //cboPresentacion.DataSource = Enum.GetValues(typeof(Articulo._presentacion));
+                cboCategoria.DataSource = Categoria.ObtenerCategoria();
+                cboPresentacion.DataSource = Presentacion.obtenerPresentacion();
                 cboCategoria.SelectedItem = null;
                 cboPresentacion.SelectedItem = null;
                 bloquearFormulario();
@@ -215,8 +217,10 @@ namespace TarsiusWhite
             art.codigo = txtCodigo.Text;
             art.nombre = txtNombre.Text;
             art.descripcion = txtDescripcion.Text;
-            art.categoria = (Articulo._categoria)cboCategoria.SelectedItem;
-            art.presentacion = (Articulo._presentacion)cboCategoria.SelectedItem;
+            //art.categoria = (Articulo._categoria)cboCategoria.SelectedItem;
+            //art.presentacion = (Articulo._presentacion)cboCategoria.SelectedItem;
+            cboCategoria.DataSource = Categoria.ObtenerCategoria();
+            cboPresentacion.DataSource = Presentacion.obtenerPresentacion();
 
             return art;
         }

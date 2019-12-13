@@ -29,7 +29,7 @@ namespace ClasesTarsius
         public _categoria categoria { get; set; }
         public _presentacion presentacion { get; set; }
 
-        public Articulo articulo;
+        //public Articulo articulo;
 
         public List<Articulo> listaArticulo = new List<Articulo>();
 
