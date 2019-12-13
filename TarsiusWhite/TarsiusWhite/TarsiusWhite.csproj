@@ -74,6 +74,12 @@
     <Compile Include="frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCodigo_de_Barras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCodigo_de_Barras.Designer.cs">
+      <DependentUpon>frmCodigo_de_Barras.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCodigo_de_Barras.resx">
+      <DependentUpon>frmCodigo_de_Barras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleado.resx">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
