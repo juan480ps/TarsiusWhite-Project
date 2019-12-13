@@ -286,5 +286,11 @@ namespace TarsiusWhite
             }
             return true;
         }
+
+        private void btnCodigoBarra_Click(object sender, EventArgs e)
+        {
+            frmCodigo_de_Barras frmcodigo = new frmCodigo_de_Barras();
+            frmcodigo.Show();
+        }
     }
 }

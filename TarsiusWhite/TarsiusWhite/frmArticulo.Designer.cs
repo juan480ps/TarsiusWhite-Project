@@ -47,6 +47,7 @@
             this.lstArticulos = new System.Windows.Forms.ListBox();
             this.lblArticulo = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.btnCodigoBarra = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -224,9 +225,9 @@
             this.lblArticulo.Location = new System.Drawing.Point(16, 11);
             this.lblArticulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(161, 42);
+            this.lblArticulo.Size = new System.Drawing.Size(142, 42);
             this.lblArticulo.TabIndex = 6;
-            this.lblArticulo.Text = "Articulos";
+            this.lblArticulo.Text = "Articulo";
             // 
             // txtID
             // 
@@ -237,12 +238,24 @@
             this.txtID.TabIndex = 53;
             this.txtID.Visible = false;
             // 
+            // btnCodigoBarra
+            // 
+            this.btnCodigoBarra.Location = new System.Drawing.Point(607, 495);
+            this.btnCodigoBarra.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCodigoBarra.Name = "btnCodigoBarra";
+            this.btnCodigoBarra.Size = new System.Drawing.Size(100, 28);
+            this.btnCodigoBarra.TabIndex = 54;
+            this.btnCodigoBarra.Text = "Codigo";
+            this.btnCodigoBarra.UseVisualStyleBackColor = true;
+            this.btnCodigoBarra.Click += new System.EventHandler(this.btnCodigoBarra_Click);
+            // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(753, 534);
+            this.Controls.Add(this.btnCodigoBarra);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lstArticulos);
             this.Controls.Add(this.cboPresentacion);
@@ -293,5 +306,6 @@
         private System.Windows.Forms.ListBox lstArticulos;
         private System.Windows.Forms.Label lblArticulo;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnCodigoBarra;
     }
 }

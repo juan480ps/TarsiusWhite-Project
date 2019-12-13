@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClasesTarsius;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TarsiusWhite
 {
-    public partial class Acerca_de : Form
+    public partial class frmAcercade : Form
     {
-        public Acerca_de()
+        public frmAcercade()
         {
             InitializeComponent();
         }

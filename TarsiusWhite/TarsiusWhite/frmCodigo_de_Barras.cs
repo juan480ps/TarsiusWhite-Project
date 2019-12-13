@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BarcodeLib;
+using System.Drawing.Imaging;
 
 namespace TarsiusWhite
 {
@@ -21,8 +23,12 @@ namespace TarsiusWhite
         {
             BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
             Codigo.IncludeLabel = true;
-            panelResultado.BackgroundImage = Codigo.Encode(BarcodeLib.Type.CODE128, txtCodigo.Text, Color.White, 400, 100);
+            //panelResultado.BackgroundImage = Codigo.Encode(TYPE.UPCA, Convert.ToString(txtCodigo), Color.Black, Color.White, 290, 120);
+
+            panelResultado.BackgroundImage = Codigo.Encode(TYPE.CODE128, txtCodigo.Text, Color.Black, Color.White, 290, 120);
             btnGuardar.Enabled = true;
+
+           // Image img = Codigo.Encode(TYPE.UPCA, "dsfsdvfdsfv", Color.Black, Color.White, 290, 120);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
