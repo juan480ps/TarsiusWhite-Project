@@ -87,13 +87,13 @@ namespace TarsiusWhite
                 {
                     if (_auxiliar == "AGREGAR")
                     {
-                        Articulo art = obtenerArticuloFormulario();
+                        Articulo art = obtenerArticuloFormularioAgregar();
                         Articulo.agregarArticulo(art);
                     }
                     else if (_auxiliar == "EDITAR")
                     {
                         int index = lstArticulos.SelectedIndex;
-                        Articulo art = obtenerArticuloFormulario();
+                        Articulo art = obtenerArticuloFormularioEditar();
                         
 
                         //Articulo art = (Articulo)lstArticulos.SelectedItem;
@@ -210,7 +210,7 @@ namespace TarsiusWhite
             lstArticulos.DataSource = Articulo.ObtenerArticulos();
         }
 
-        private Articulo obtenerArticuloFormulario()
+        private Articulo obtenerArticuloFormularioEditar()
         {
             Articulo art = new Articulo();
             art.idArticulo = Convert.ToInt32(txtID.Text);
@@ -219,8 +219,23 @@ namespace TarsiusWhite
             art.descripcion = txtDescripcion.Text;
             //art.categoria = (Articulo._categoria)cboCategoria.SelectedItem;
             //art.presentacion = (Articulo._presentacion)cboCategoria.SelectedItem;
-            cboCategoria.DataSource = Categoria.ObtenerCategoria();
-            cboPresentacion.DataSource = Presentacion.obtenerPresentacion();
+            art.categoria = (Categoria)cboCategoria.SelectedItem;
+            art.presentacion = (Presentacion)cboPresentacion.SelectedItem;
+
+            return art;
+        }
+
+        private Articulo obtenerArticuloFormularioAgregar()
+        {
+            Articulo art = new Articulo();
+            //art.idArticulo = Convert.ToInt32(txtID.Text);
+            art.codigo = txtCodigo.Text;
+            art.nombre = txtNombre.Text;
+            art.descripcion = txtDescripcion.Text;
+            //art.categoria = (Articulo._categoria)cboCategoria.SelectedItem;
+            //art.presentacion = (Articulo._presentacion)cboCategoria.SelectedItem;
+            art.categoria = (Categoria)cboCategoria.SelectedItem;
+            art.presentacion = (Presentacion)cboPresentacion.SelectedItem;
 
             return art;
         }
