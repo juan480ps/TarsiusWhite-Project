@@ -307,5 +307,10 @@ namespace TarsiusWhite
             frmCodigo_de_Barras frmcodigo = new frmCodigo_de_Barras();
             frmcodigo.Show();
         }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

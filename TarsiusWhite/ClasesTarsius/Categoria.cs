@@ -93,7 +93,7 @@ namespace ClasesTarsius
 
         public static List<Categoria> ObtenerCategoria()
         {
-            //return lstCategoria;
+           
 
             Categoria cat;
 
