@@ -8,14 +8,22 @@ namespace ClasesTarsius
 {
    public class Ingreso
     {
-        public int IdIngreso;
+       public int IdIngreso;
        public DateTime FechaIngreso;
-       public string TipoComprobante;
-       public string Serie;
+        public _tipocomprobante tipocomprobante { get; set; }
+        public string Serie;
        public string Correlativo;
        public string Igv;
        public string Estado;
 
+
+        public enum _tipocomprobante
+        {
+            Factura,
+            Boleta_de_Venta,
+            Recibo,
+
+        }
 
         public List<DetalleIngreso> detalleIngreso = new List<DetalleIngreso>();
 

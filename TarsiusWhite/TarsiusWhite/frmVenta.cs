@@ -25,10 +25,10 @@ namespace TarsiusWhite
             try
             {
                 dgvDetalleVenta.AutoGenerateColumns = true;
-                cmbArticulo.DataSource = Articulo.ObtenerArticulo();
+                cboArticulo.DataSource = Articulo.ObtenerArticulo();
                 cmbCliente.DataSource = Cliente.ObtenerCliente();
                 cmbCliente.SelectedItem = null;
-                cmbArticulo.SelectedItem = null;
+                cboArticulo.SelectedItem = null;
                 venta = new Venta();
             }
             catch (Exception ex)
@@ -46,12 +46,12 @@ namespace TarsiusWhite
                     DetalleVenta dv = new DetalleVenta();
                     dv.cantidad = Convert.ToInt32(txtCantidad.Text);
                     dv.PrecioVenta = Convert.ToInt32(txtPrecio.Text);
-                    dv.articulo = (Articulo)cmbArticulo.SelectedItem;
+                    dv.articulo = (Articulo)cboArticulo.SelectedItem;
                     venta.detalleVenta.Add(dv);
                     ActualizarDataGrid();
 
                     txtCantidad.Text = "0";
-                    cmbArticulo.SelectedItem = null;
+                    cboArticulo.SelectedItem = null;
                 }                
             }
             catch (Exception ex)
@@ -119,25 +119,19 @@ namespace TarsiusWhite
         private void Limpiar()
         {
             txtCantidad.Text = "0";
-            cmbArticulo.SelectedItem = null;
+            cboArticulo.SelectedItem = null;
             cmbCliente.SelectedItem = null;
             txtPrecio.Text = "0";
         }
 
         private bool ValidarCampos()
         {
-            var fechaIncorrecta = new DateTime(2100, 1, 1);
-            if (dtpFechaVenta.Value < DateTime.Now || dtpFechaVenta.Value > DateTime.Parse("01/01/2100") || dtpFechaVenta.Value > fechaIncorrecta)
-            {
-                MessageBox.Show("Por favor ingrese una fecha de valida", "Error");
-                dtpFechaVenta.Focus();
-                return false;
-            }
+            
 
-            if (cmbArticulo.SelectedItem == null)
+            if (cboArticulo.SelectedItem == null)
             {
                 MessageBox.Show("Por favor seleccione una Categoria", "Error");
-                cmbArticulo.Focus();
+                cboArticulo.Focus();
                 return false;
             }
 

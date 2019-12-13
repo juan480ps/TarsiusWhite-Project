@@ -26,7 +26,7 @@ namespace TarsiusWhite
                 _auxiliar = "AGREGAR";
                 limpiarFormulario();
                 desbloquearFormulario();
-                txtDescripcionCategoria.Focus();
+                txtNombreCategoria.Focus();
             }
             catch (Exception ex)
             {

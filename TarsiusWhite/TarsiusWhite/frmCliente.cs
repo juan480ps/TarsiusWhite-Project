@@ -220,6 +220,8 @@ namespace TarsiusWhite
                 actualizarListadoCliente();
                 cboSexo.DataSource = Enum.GetValues(typeof(Cliente._sexo));
                 cboTipoDocumento.DataSource = Enum.GetValues(typeof(Cliente._tipoDocumento));
+                cboSexo.SelectedItem = null;
+                cboTipoDocumento.SelectedItem = null;
                 bloquearFomulario();
 
             }
@@ -327,6 +329,11 @@ namespace TarsiusWhite
             }
 
             return true;
+        }
+
+        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
