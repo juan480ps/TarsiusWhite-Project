@@ -80,8 +80,8 @@ C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\D
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
 C:\Users\juan480ps\Desktop\TarsiusWhite-Project\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojAssemblyReference.cache
-C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project4\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.dll
-C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project4\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
-C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project4\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csprojResolveAssemblyReference.cache
-C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project4\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
-C:\Users\alumno-201\Documents\tarsius\TarsiusWhite-Project4\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
+C:\Users\DELL\Desktop\xD\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.dll
+C:\Users\DELL\Desktop\xD\TarsiusWhite\ClasesTarsius\bin\Debug\ClasesTarsius.pdb
+C:\Users\DELL\Desktop\xD\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\xD\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.dll
+C:\Users\DELL\Desktop\xD\TarsiusWhite\ClasesTarsius\obj\Debug\ClasesTarsius.pdb
