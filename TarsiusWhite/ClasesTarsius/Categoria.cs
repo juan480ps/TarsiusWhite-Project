@@ -65,7 +65,7 @@ namespace ClasesTarsius
             using (SqlConnection con = new SqlConnection(Conexion.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Categoria SET NombreCategoria = @NombreCategoria, DescripcionCategoria = @DescripcionCategoria where IdCategoria = @IdCategoria";
+                string textoCMD = @"UPDATE Categoria SET NombreCategoria = @NombreCategoria, DescripcionCategoria = @DescripcionCategoria where IdCategoria = @IdCategoria";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = cat.ObtenerParametros(cmd, true);

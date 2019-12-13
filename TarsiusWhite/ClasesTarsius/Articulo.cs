@@ -244,6 +244,28 @@ namespace ClasesTarsius
         }
 
 
+
+        public static Articulo ObtenerArticulo(int id)
+        {
+            Articulo articulo = null;
+
+            if (listaArticulos.Count == 0) Articulo.ObtenerArticulo();
+
+            foreach (Articulo c in listaArticulos)
+            {
+                if (c.idArticulo == id)
+                {
+                    articulo = c;
+                    break;
+                }
+
+            }
+            return articulo;
+
+            
+
+        }
+
         public static void Eliminar(Articulo a)
         {
             listaArticulos.Remove(a);
@@ -259,5 +281,9 @@ namespace ClasesTarsius
             return codigo + " " + nombre + " " + descripcion + " " + categoria + " " + presentacion;
         }
     }
-}
+
+
+
+    }
+
 

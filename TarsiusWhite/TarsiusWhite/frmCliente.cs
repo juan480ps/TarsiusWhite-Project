@@ -78,11 +78,12 @@ namespace TarsiusWhite
         {
             try
             {
-                Cliente cliente = (Cliente)lstCliente.SelectedItem;
-                if (cliente != null)
+                Cliente cli = (Cliente)lstCliente.SelectedItem;
+                if (cli != null)
                 {
                     _auxiliar = "EDITAR";
                     desbloquearFormulario();
+                    completarObjetos();
                 }
                 else
                 {
@@ -94,6 +95,31 @@ namespace TarsiusWhite
                 MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
 
+        }
+
+        private void completarObjetos()
+        {
+            try
+            {
+                Cliente cli = (Cliente)lstCliente.SelectedItem;
+
+                if (cli != null)
+                {
+                    txtID.Text = Convert.ToString(cli.IdCliente);
+                    txtApellido.Text = cli.apellido;
+                    txtNombre.Text = cli.nombre;
+                    txtDireccion.Text = cli.direccion;
+                    txtEmail.Text = cli.email;
+                    txtNroDocumento.Text = cli.nroDocumento;
+                    txtTelefono.Text = cli.telefono;
+                    cboSexo.SelectedItem = cli.sexo;
+                    cboTipoDocumento.SelectedItem = cli.tipoDocumento;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -137,9 +163,28 @@ namespace TarsiusWhite
                     }
                     else if (_auxiliar == "EDITAR")
                     {
+                        //int index = lstCliente.SelectedIndex;
+
+                        //Cliente.listaClientes[index] = obtenerClienteFormulario();
+                        //Cliente cliente = obtenerClienteFormulario();
+                        //Cliente.EditarCliente(index, cliente);
+
+
                         int index = lstCliente.SelectedIndex;
-                        Cliente cliente = obtenerClienteFormulario();
-                        Cliente.EditarCliente(index, cliente);
+                        Cliente cli = obtenerClienteFormulario();
+
+
+                        //Articulo art = (Articulo)lstArticulos.SelectedItem;
+                        if (cli != null)
+                        {
+                            Cliente.EditarCliente(index, cli);
+                            actualizarListadoCliente();
+                            limpiarFormulario();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Favor seleccionar una fila de la lista");
+                        }
                     }
 
                     actualizarListadoCliente();
@@ -246,6 +291,7 @@ namespace TarsiusWhite
             cli.email = txtEmail.Text;
             cli.nroDocumento = txtNroDocumento.Text;
             cli.direccion = txtDireccion.Text;
+            cli.IdCliente = Convert.ToInt32(txtID.Text);
 
 
             return cli;

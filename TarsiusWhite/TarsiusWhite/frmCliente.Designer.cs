@@ -54,6 +54,7 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.gpbCliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -309,12 +310,21 @@
             this.label1.TabIndex = 116;
             this.label1.Text = "Cliente";
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(126, 20);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(20, 20);
+            this.txtID.TabIndex = 117;
+            this.txtID.Visible = false;
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(526, 486);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gpbCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -357,5 +367,6 @@
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

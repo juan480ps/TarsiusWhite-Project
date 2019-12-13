@@ -71,9 +71,17 @@ namespace TarsiusWhite
         {
             try
             {
-                _auxiliar = "EDITAR";
-                desbloquearFormulario();
-                txtNombreCategoria.Focus();
+                Categoria cat = (Categoria)lstCategoria.SelectedItem;
+                if (cat != null)
+                {
+                    _auxiliar = "EDITAR";
+                    desbloquearFormulario();
+                    completarObjetos();
+                }
+                else
+                {
+                    MessageBox.Show("Ojo, Selecciona un Item");
+                }
             }
             catch (Exception ex)
             {
@@ -187,7 +195,7 @@ namespace TarsiusWhite
         private Categoria obtenerCategoriaFormulario()
         {
             Categoria cat = new Categoria();
-
+            cat.IDCategoria = Convert.ToInt32(txtID.Text);
             cat.NombreCategoria = txtNombreCategoria.Text;
             cat.DescripcionCategoria = txtDescripcionCategoria.Text;
 
@@ -221,6 +229,7 @@ namespace TarsiusWhite
 
                 if (cat != null)
                 {
+                    txtID.Text = Convert.ToString(cat.IDCategoria);
                     txtDescripcionCategoria.Text = cat.DescripcionCategoria;
                     txtNombreCategoria.Text = cat.NombreCategoria;
                 }
@@ -229,6 +238,33 @@ namespace TarsiusWhite
             {
                 MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
+        }
+
+
+
+        private Categoria obtenerCategoriaFormularioEditar()
+        {
+            Categoria cat = new Categoria();
+            cat.IDCategoria = Convert.ToInt32(txtID.Text);
+            cat.DescripcionCategoria = txtDescripcionCategoria.Text;
+            cat.NombreCategoria = txtNombreCategoria.Text;
+            
+            
+          
+            return cat;
+        }
+
+
+
+        private Categoria obtenerCategoriaFormularioAgregar()
+        {
+            Categoria cat = new Categoria();
+            cat.IDCategoria = Convert.ToInt32(txtID.Text);
+            cat.NombreCategoria = txtNombreCategoria.Text;
+            cat.DescripcionCategoria = txtDescripcionCategoria.Text;
+            
+
+            return cat;
         }
     }
 }

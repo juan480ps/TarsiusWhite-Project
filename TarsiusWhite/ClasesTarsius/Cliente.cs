@@ -178,6 +178,28 @@ namespace ClasesTarsius
             p10.SqlDbType = SqlDbType.Int;
             cmd.Parameters.Add(p10);
             return cmd;
-        }                  
+        }
+
+
+        public static Cliente ObtenerCliente(int id)
+        {
+            Cliente cliente = null;
+
+            if (listaClientes.Count == 0) Cliente.ObtenerCliente();
+
+            foreach (Cliente c in listaClientes)
+            {
+                if (c.IdCliente == id)
+                {
+                    cliente = c;
+                    break;
+                }
+
+            }
+            return cliente;
+
+
+
+        }
     }
 }
