@@ -305,27 +305,13 @@ namespace TarsiusWhite
                 return false;
             }
 
-            //if (String.IsNullOrWhiteSpace(txtAcceso.Text))
-            //{
-            //    MessageBox.Show("El acceso no puede estar vacío", "Error");
-            //    txtAcceso.Focus();
-            //    return false;
-            //}
-
-            //if (String.IsNullOrWhiteSpace(txtUsuario.Text))
-            //{
-            //    MessageBox.Show("El usuario no puede estar vacío", "Error");
-            //    txtUsuario.Focus();
-            //    return false;
-            //}
-
-            //if (String.IsNullOrWhiteSpace(txtPassword.Text))
-            //{
-            //    MessageBox.Show("El password no puede estar vacío", "Error");
-            //    txtPassword.Focus();
-            //    return false;
-            //}            
+         
             return true;
+        }
+
+        private void gpbEmpleado_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

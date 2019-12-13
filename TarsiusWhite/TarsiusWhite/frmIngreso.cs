@@ -13,6 +13,15 @@ namespace TarsiusWhite
 {
     public partial class frmIngreso : Form
     {
+
+        public enum _tipocomprobante
+        {
+            Factura,
+            Boleta_de_Venta,
+            Recibo,
+
+        }
+
         Ingreso ingreso; 
         public frmIngreso()
         {
@@ -51,6 +60,7 @@ namespace TarsiusWhite
         {
             dgtbDetalleIngreso.AutoGenerateColumns = true;
             cmbTipoComprobante.SelectedItem = null;
+            cmbTipoComprobante.DataSource = Enum.GetValues(typeof(Ingreso._tipocomprobante));
             txtCorrelativo.Text = null; 
             txtEstado.Text = null;
             txtIgv.Text = null;
@@ -75,6 +85,11 @@ namespace TarsiusWhite
             dtpFechaIngreso.Value = System.DateTime.Now;
             cmbTipoComprobante.SelectedItem = null;
             ingreso = new Ingreso();
+        }
+
+        private void cmbTipoComprobante_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
